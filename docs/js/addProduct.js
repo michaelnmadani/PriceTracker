@@ -169,8 +169,15 @@ async function handleSubmit() {
     saving.classList.add('hidden');
 
     if (resp.ok && result.success) {
-      // Show success message
-      success.classList.remove('hidden');
+      // Inject the new product into client-side state and re-render immediately
+      App.products.push(result.product);
+      mergeData();
+      populateCategories();
+      updateSummary();
+      renderTable(getFilteredData());
+
+      // Close the modal
+      document.getElementById('add-product-modal').classList.add('hidden');
     } else {
       // API returned an error — fall back to manual mode
       const errMsg = result.error || `HTTP ${resp.status}`;

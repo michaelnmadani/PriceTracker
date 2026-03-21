@@ -16,9 +16,10 @@ const App = {
 
 async function loadData() {
   try {
+    const cacheBuster = `?v=${Date.now()}`;
     const [productsRes, pricesRes] = await Promise.all([
-      fetch('data/products.json'),
-      fetch('data/prices.json'),
+      fetch('data/products.json' + cacheBuster),
+      fetch('data/prices.json' + cacheBuster),
     ]);
 
     const productsData = await productsRes.json();
