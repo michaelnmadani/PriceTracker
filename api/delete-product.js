@@ -10,14 +10,14 @@ const BRANCH = process.env.GITHUB_BRANCH || 'claude/product-price-tracker-FwFd5'
 
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'DELETE, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
 
-  if (req.method !== 'DELETE') {
+  if (req.method !== 'DELETE' && req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -26,7 +26,17 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ error: 'Server misconfigured: missing GITHUB_TOKEN' });
   }
 
-  const { id } = req.body;
+  // Parse body manually if Vercel didn't auto-parse it (common for DELETE)
+  let body = req.body;
+  if (!body || typeof body === 'string') {
+    try {
+      body = typeof body === 'string' ? JSON.parse(body) : {};
+    } catch (_) {
+      body = {};
+    }
+  }
+
+  const { id } = body;
 
   if (!id) {
     return res.status(400).json({ error: 'Product id is required' });
