@@ -33,7 +33,8 @@ async function loadData() {
     const el = document.getElementById('last-updated');
     if (lastUpdated) {
       const date = new Date(lastUpdated);
-      el.textContent = `Last updated: ${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+      const opts = { timeZone: 'Australia/Sydney', dateStyle: 'medium', timeStyle: 'short' };
+      el.textContent = `Last updated: ${date.toLocaleString('en-AU', opts)} (AEST)`;
     } else {
       el.textContent = 'No price data yet — run the scraper or wait for the daily update.';
     }
