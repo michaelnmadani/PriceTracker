@@ -149,9 +149,24 @@
         </div>
       </form>
 
-      <!-- Output section shown after form submission -->
+      <!-- Saving indicator -->
+      <div id="add-product-saving" class="hidden">
+        <p class="saving-message">Saving product...</p>
+      </div>
+
+      <!-- Success message after auto-save -->
+      <div id="add-product-success" class="hidden">
+        <h3>Product Saved!</h3>
+        <p>The product has been added and will appear after the page reloads.</p>
+        <div class="form-actions">
+          <button id="reload-page-btn" class="btn btn-primary">Reload Page</button>
+          <button class="btn btn-secondary" data-close-modal="add-product-modal">Close</button>
+        </div>
+      </div>
+
+      <!-- Fallback output section (shown if auto-save fails) -->
       <div id="add-product-output" class="hidden">
-        <h3>Product Added!</h3>
+        <h3>Auto-save failed</h3>
         <p>Copy the JSON below and add it to your <code>data/products.json</code> file:</p>
         <pre id="product-json-output"></pre>
         <div class="form-actions">

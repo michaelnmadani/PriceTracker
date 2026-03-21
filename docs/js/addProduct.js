@@ -1,6 +1,8 @@
 /**
  * addProduct.js — "Add Product" modal form logic.
- * Generates JSON for the new product and provides download/GitHub edit options.
+ * Submits new products to the /api/add-product serverless function,
+ * which commits them to the repo via the GitHub API.
+ * Falls back to manual copy/download if the API call fails.
  */
 
 const MAX_URLS = 5;
@@ -9,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const addBtn = document.getElementById('add-product-btn');
   const modal = document.getElementById('add-product-modal');
   const form = document.getElementById('add-product-form');
-  const output = document.getElementById('add-product-output');
   const addUrlBtn = document.getElementById('add-url-btn');
   const urlFields = document.getElementById('url-fields');
 
@@ -36,14 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     urlFields.appendChild(row);
 
-    // Update remove button visibility
     updateRemoveButtons();
 
     if (urlFields.querySelectorAll('.url-field-row').length >= MAX_URLS) {
       addUrlBtn.disabled = true;
     }
 
-    // Remove URL field handler
     row.querySelector('.btn-remove-url').addEventListener('click', () => {
       row.remove();
       addUrlBtn.disabled = false;
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleSubmit();
   });
 
-  // Copy JSON button
+  // Copy JSON button (fallback)
   document.getElementById('copy-json-btn').addEventListener('click', () => {
     const jsonText = document.getElementById('product-json-output').textContent;
     navigator.clipboard.writeText(jsonText).then(() => {
@@ -67,20 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Download JSON button
+  // Download JSON button (fallback)
   document.getElementById('download-json-btn').addEventListener('click', () => {
     downloadProductsJson();
+  });
+
+  // Reload page button (after successful save)
+  document.getElementById('reload-page-btn').addEventListener('click', () => {
+    window.location.reload();
   });
 });
 
 function resetForm() {
   const form = document.getElementById('add-product-form');
+  const saving = document.getElementById('add-product-saving');
+  const success = document.getElementById('add-product-success');
   const output = document.getElementById('add-product-output');
   const addUrlBtn = document.getElementById('add-url-btn');
   const urlFields = document.getElementById('url-fields');
 
   form.reset();
   form.classList.remove('hidden');
+  saving.classList.add('hidden');
+  success.classList.add('hidden');
   output.classList.add('hidden');
   addUrlBtn.disabled = false;
 
@@ -106,7 +114,7 @@ function generateId() {
   return Math.random().toString(36).substring(2, 10);
 }
 
-function handleSubmit() {
+async function handleSubmit() {
   const name = document.getElementById('product-name').value.trim();
   const category = document.getElementById('product-category').value;
   const targetPrice = document.getElementById('target-price').value;
@@ -125,44 +133,76 @@ function handleSubmit() {
 
   if (!name || urls.length === 0) return;
 
-  const product = {
-    id: generateId(),
-    name: name,
-    urls: urls,
+  const form = document.getElementById('add-product-form');
+  const saving = document.getElementById('add-product-saving');
+  const success = document.getElementById('add-product-success');
+  const output = document.getElementById('add-product-output');
+
+  // Show saving state
+  form.classList.add('hidden');
+  saving.classList.remove('hidden');
+
+  const payload = {
+    name,
+    urls,
     category: category || undefined,
     target_price: targetPrice ? parseFloat(targetPrice) : undefined,
     alert_enabled: alertEnabled,
+  };
+
+  try {
+    const resp = await fetch('/api/add-product', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await resp.json();
+
+    saving.classList.add('hidden');
+
+    if (resp.ok && result.success) {
+      // Show success message
+      success.classList.remove('hidden');
+    } else {
+      // API returned an error — fall back to manual mode
+      showFallbackOutput(name, urls, category, targetPrice, alertEnabled);
+    }
+  } catch (err) {
+    // Network error — fall back to manual mode
+    console.error('Failed to save product:', err);
+    saving.classList.add('hidden');
+    showFallbackOutput(name, urls, category, targetPrice, alertEnabled);
+  }
+}
+
+function showFallbackOutput(name, urls, category, targetPrice, alertEnabled) {
+  const output = document.getElementById('add-product-output');
+
+  const product = {
+    id: generateId(),
+    name,
+    urls,
     added_date: new Date().toISOString().split('T')[0],
     active: true,
   };
+  if (category) product.category = category;
+  if (targetPrice) product.target_price = parseFloat(targetPrice);
+  product.alert_enabled = alertEnabled;
 
-  // Clean undefined fields
-  Object.keys(product).forEach(key => {
-    if (product[key] === undefined) delete product[key];
-  });
-
-  // Show output
-  const form = document.getElementById('add-product-form');
-  const output = document.getElementById('add-product-output');
-
-  form.classList.add('hidden');
-  output.classList.remove('hidden');
-
-  // Build the full products.json content
   const existingProducts = App.products || [];
   const updatedProducts = { products: [...existingProducts, product] };
   const jsonStr = JSON.stringify(updatedProducts, null, 2);
 
   document.getElementById('product-json-output').textContent = jsonStr;
 
-  // GitHub edit link
   const githubLink = document.getElementById('github-edit-link');
   const repoUrl = 'https://github.com/michaelnmadani/PriceTracker';
   githubLink.href = `${repoUrl}/edit/main/data/products.json`;
   githubLink.textContent = 'Edit on GitHub';
 
-  // Store for download
   output.dataset.json = jsonStr;
+  output.classList.remove('hidden');
 }
 
 function downloadProductsJson() {
