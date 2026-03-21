@@ -45,7 +45,7 @@ async function loadData() {
     checkAlerts();
   } catch (err) {
     console.error('Failed to load data:', err);
-    document.getElementById('last-updated').textContent = 'Failed to load data.';
+    document.getElementById('last-updated').textContent = `Failed to load data: ${err.message}`;
     document.getElementById('empty-state').classList.remove('hidden');
   }
 }
