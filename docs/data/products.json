@@ -14,6 +14,21 @@
       "category": "electronics",
       "target_price": 700,
       "alert_enabled": true
+    },
+    {
+      "id": "k2wj0tq1",
+      "name": "Mars 5 Ultra",
+      "urls": [
+        {
+          "url": "https://au.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
+          "label": "Elegoo"
+        }
+      ],
+      "added_date": "2026-03-21",
+      "active": true,
+      "category": "electronics",
+      "target_price": 500,
+      "alert_enabled": true
     }
   ]
 }
