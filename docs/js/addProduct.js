@@ -157,7 +157,14 @@ async function handleSubmit() {
       body: JSON.stringify(payload),
     });
 
-    const result = await resp.json();
+    let result;
+    const contentType = resp.headers.get('content-type') || '';
+    if (contentType.includes('application/json')) {
+      result = await resp.json();
+    } else {
+      const text = await resp.text();
+      result = { error: `HTTP ${resp.status}: ${text.substring(0, 200)}` };
+    }
 
     saving.classList.add('hidden');
 
@@ -166,18 +173,26 @@ async function handleSubmit() {
       success.classList.remove('hidden');
     } else {
       // API returned an error — fall back to manual mode
-      showFallbackOutput(name, urls, category, targetPrice, alertEnabled);
+      const errMsg = result.error || `HTTP ${resp.status}`;
+      console.error('API error:', resp.status, result);
+      showFallbackOutput(name, urls, category, targetPrice, alertEnabled, errMsg);
     }
   } catch (err) {
     // Network error — fall back to manual mode
     console.error('Failed to save product:', err);
     saving.classList.add('hidden');
-    showFallbackOutput(name, urls, category, targetPrice, alertEnabled);
+    showFallbackOutput(name, urls, category, targetPrice, alertEnabled, err.message);
   }
 }
 
-function showFallbackOutput(name, urls, category, targetPrice, alertEnabled) {
+function showFallbackOutput(name, urls, category, targetPrice, alertEnabled, errorMsg) {
   const output = document.getElementById('add-product-output');
+
+  // Show error details
+  const heading = output.querySelector('h3');
+  if (heading && errorMsg) {
+    heading.textContent = `Auto-save failed: ${errorMsg}`;
+  }
 
   const product = {
     id: generateId(),
