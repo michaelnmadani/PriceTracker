@@ -1,26 +1,26 @@
 {
-  "last_updated": "2026-03-21T04:03:18.380461+00:00",
+  "last_updated": "2026-03-21T06:00:00.000000+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
         "https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 2.0,
+          "current_price": 899.00,
           "current_availability": true,
-          "all_time_low": 2.0,
+          "all_time_low": 899.00,
           "all_time_low_date": "2026-03-21",
           "history": [
             {
               "date": "2026-03-21",
-              "price": 2.0,
+              "price": 899.00,
               "available": true
             }
           ]
         }
       },
-      "best_current_price": 2.0,
+      "best_current_price": 899.00,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 2.0,
+      "overall_all_time_low": 899.00,
       "overall_all_time_low_date": "2026-03-21",
       "overall_all_time_low_source": "Elegoo"
     },
@@ -28,22 +28,22 @@
       "urls": {
         "https://au.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 6.0,
+          "current_price": 599.00,
           "current_availability": true,
-          "all_time_low": 6.0,
+          "all_time_low": 599.00,
           "all_time_low_date": "2026-03-21",
           "history": [
             {
               "date": "2026-03-21",
-              "price": 6.0,
+              "price": 599.00,
               "available": true
             }
           ]
         }
       },
-      "best_current_price": 6.0,
+      "best_current_price": 599.00,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 6.0,
+      "overall_all_time_low": 599.00,
       "overall_all_time_low_date": "2026-03-21",
       "overall_all_time_low_source": "Elegoo"
     }
