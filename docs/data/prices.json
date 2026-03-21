@@ -1,26 +1,26 @@
 {
-  "last_updated": "2026-03-21T06:00:00.000000+00:00",
+  "last_updated": "2026-03-21T21:13:51.387121+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
         "https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 899.00,
+          "current_price": 899.0,
           "current_availability": true,
-          "all_time_low": 899.00,
+          "all_time_low": 899.0,
           "all_time_low_date": "2026-03-21",
           "history": [
             {
               "date": "2026-03-21",
-              "price": 899.00,
+              "price": 899.0,
               "available": true
             }
           ]
         }
       },
-      "best_current_price": 899.00,
+      "best_current_price": 899.0,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 899.00,
+      "overall_all_time_low": 899.0,
       "overall_all_time_low_date": "2026-03-21",
       "overall_all_time_low_source": "Elegoo"
     },
@@ -28,24 +28,75 @@
       "urls": {
         "https://au.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 599.00,
+          "current_price": 599.0,
           "current_availability": true,
-          "all_time_low": 599.00,
+          "all_time_low": 599.0,
           "all_time_low_date": "2026-03-21",
           "history": [
             {
               "date": "2026-03-21",
-              "price": 599.00,
+              "price": 599.0,
               "available": true
             }
           ]
         }
       },
-      "best_current_price": 599.00,
+      "best_current_price": 599.0,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 599.00,
+      "overall_all_time_low": 599.0,
       "overall_all_time_low_date": "2026-03-21",
       "overall_all_time_low_source": "Elegoo"
+    },
+    "cmekk87t": {
+      "urls": {
+        "https://www.officeworks.com.au/shop/officeworks/p/logitech-m350s-pebble-2-wireless-mouse-graphite-logm350sgr": {
+          "label": "Officeworks",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-03-21",
+              "price": null,
+              "available": false
+            }
+          ]
+        },
+        "https://www.jbhifi.com.au/products/logitech-m350s-pebble-2-wireless-mouse-graphite": {
+          "label": "jbhifi",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-03-21",
+              "price": null,
+              "available": false
+            }
+          ]
+        },
+        "https://www.amazon.com.au/Logitech-M350s-Pebble-Mouse-Graphite/dp/B0CGCZHGW1/ref=asc_df_B0CGCZHGW1?mcid=6be8e0c709763a70a9686f61f49d73cc&tag=googleshopdsk-22&linkCode=df0&hvadid=712295321479&hvpos=&hvnetw=g&hvrand=17071749289155668058&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9071765&hvtargid=pla-2208617408372&hvocijid=17071749289155668058-B0CGCZHGW1-&hvexpln=0&gad_source=1&th=1": {
+          "label": "Amazon",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-03-21",
+              "price": null,
+              "available": false
+            }
+          ]
+        }
+      },
+      "best_current_price": null,
+      "best_current_source": null,
+      "overall_all_time_low": null,
+      "overall_all_time_low_date": null,
+      "overall_all_time_low_source": null
     }
   }
 }
