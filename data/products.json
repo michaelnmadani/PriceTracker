@@ -1,3 +1,19 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "ad5kqspd",
+      "name": "Saturn 4 Ultra",
+      "urls": [
+        {
+          "url": "https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
+          "label": "Elegoo"
+        }
+      ],
+      "added_date": "2026-03-21",
+      "active": true,
+      "category": "electronics",
+      "target_price": 700,
+      "alert_enabled": true
+    }
+  ]
 }
