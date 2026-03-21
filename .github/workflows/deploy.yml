@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - claude/product-price-tracker-FwFd5
-    paths:
-      - 'docs/**'
   workflow_dispatch:
 
 permissions:
