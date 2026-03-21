@@ -29,6 +29,29 @@
       "category": "electronics",
       "target_price": 500,
       "alert_enabled": true
+    },
+    {
+      "id": "cmekk87t",
+      "name": "Logitech Pebble M350s 2",
+      "urls": [
+        {
+          "url": "https://www.officeworks.com.au/shop/officeworks/p/logitech-m350s-pebble-2-wireless-mouse-graphite-logm350sgr",
+          "label": "Officeworks"
+        },
+        {
+          "url": "https://www.jbhifi.com.au/products/logitech-m350s-pebble-2-wireless-mouse-graphite",
+          "label": "jbhifi"
+        },
+        {
+          "url": "https://www.amazon.com.au/Logitech-M350s-Pebble-Mouse-Graphite/dp/B0CGCZHGW1/ref=asc_df_B0CGCZHGW1?mcid=6be8e0c709763a70a9686f61f49d73cc&tag=googleshopdsk-22&linkCode=df0&hvadid=712295321479&hvpos=&hvnetw=g&hvrand=17071749289155668058&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9071765&hvtargid=pla-2208617408372&hvocijid=17071749289155668058-B0CGCZHGW1-&hvexpln=0&gad_source=1&th=1",
+          "label": "Amazon"
+        }
+      ],
+      "added_date": "2026-03-21",
+      "active": true,
+      "category": "computers",
+      "target_price": 30,
+      "alert_enabled": true
     }
   ]
 }
