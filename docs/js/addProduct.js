@@ -6,16 +6,41 @@
  */
 
 const MAX_URLS = 5;
+const AUTH_KEY = 'pt_device_authorized';
+
+// Check for authorization via URL parameter (e.g. ?auth=SECRET)
+// The secret is set once and stored in localStorage permanently
+function checkDeviceAuth() {
+  const params = new URLSearchParams(window.location.search);
+  const authParam = params.get('auth');
+  if (authParam) {
+    localStorage.setItem(AUTH_KEY, authParam);
+    // Clean the URL so the secret isn't visible
+    const clean = window.location.pathname + window.location.hash;
+    window.history.replaceState({}, '', clean);
+  }
+  return !!localStorage.getItem(AUTH_KEY);
+}
+
+function isDeviceAuthorized() {
+  return !!localStorage.getItem(AUTH_KEY);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+  checkDeviceAuth();
+
   const addBtn = document.getElementById('add-product-btn');
   const modal = document.getElementById('add-product-modal');
   const form = document.getElementById('add-product-form');
   const addUrlBtn = document.getElementById('add-url-btn');
   const urlFields = document.getElementById('url-fields');
 
-  // Open modal
+  // Open modal (with device check)
   addBtn.addEventListener('click', () => {
+    if (!isDeviceAuthorized()) {
+      showUnauthorizedMessage();
+      return;
+    }
     resetForm();
     modal.classList.remove('hidden');
   });
@@ -90,6 +115,9 @@ function resetForm() {
   saving.classList.add('hidden');
   success.classList.add('hidden');
   output.classList.add('hidden');
+
+  const unauthMsg = document.getElementById('unauthorized-message');
+  if (unauthMsg) unauthMsg.classList.add('hidden');
   addUrlBtn.disabled = false;
 
   // Reset to single URL field
@@ -238,4 +266,34 @@ function downloadProductsJson() {
   a.download = 'products.json';
   a.click();
   URL.revokeObjectURL(url);
+}
+
+function showUnauthorizedMessage() {
+  const modal = document.getElementById('add-product-modal');
+  const form = document.getElementById('add-product-form');
+  const saving = document.getElementById('add-product-saving');
+  const success = document.getElementById('add-product-success');
+  const output = document.getElementById('add-product-output');
+
+  form.classList.add('hidden');
+  saving.classList.add('hidden');
+  success.classList.add('hidden');
+  output.classList.add('hidden');
+
+  // Show or create the unauthorized message
+  let msg = document.getElementById('unauthorized-message');
+  if (!msg) {
+    msg = document.createElement('div');
+    msg.id = 'unauthorized-message';
+    msg.style.textAlign = 'center';
+    msg.style.padding = '2rem 1rem';
+    msg.innerHTML = `
+      <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">😊</p>
+      <p style="font-size: 1.1rem; color: var(--text);">This feature has been limited to the creator only.</p>
+    `;
+    modal.querySelector('.modal-content').appendChild(msg);
+  }
+  msg.classList.remove('hidden');
+
+  modal.classList.remove('hidden');
 }
