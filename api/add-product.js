@@ -6,7 +6,7 @@
 
 const REPO_OWNER = 'michaelnmadani';
 const REPO_NAME = 'PriceTracker';
-const BRANCH = 'main';
+const BRANCH = process.env.GITHUB_BRANCH || 'claude/product-price-tracker-FwFd5';
 
 module.exports = async function handler(req, res) {
   // CORS headers
@@ -82,7 +82,7 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ success: true, product });
   } catch (err) {
     console.error('Failed to save product:', err);
-    return res.status(500).json({ error: 'Failed to save product to repository' });
+    return res.status(500).json({ error: err.message || 'Failed to save product to repository' });
   }
 }
 
