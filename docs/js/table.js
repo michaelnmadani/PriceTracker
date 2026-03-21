@@ -69,6 +69,7 @@ function createProductRow(product) {
     </td>
     <td>
       <button class="btn btn-sm btn-secondary view-chart-btn" data-product-id="${product.id}">Chart</button>
+      ${isDeviceAuthorized() ? `<button class="btn btn-sm btn-secondary edit-product-btn" data-product-id="${product.id}">Edit</button>` : ''}
     </td>
   `;
 
@@ -98,6 +99,14 @@ function createProductRow(product) {
   tr.querySelector('.view-chart-btn').addEventListener('click', () => {
     showPriceChart(product);
   });
+
+  // Edit button (only present for authorized users)
+  const editBtn = tr.querySelector('.edit-product-btn');
+  if (editBtn) {
+    editBtn.addEventListener('click', () => {
+      openEditModal(product.id);
+    });
+  }
 
   return tr;
 }

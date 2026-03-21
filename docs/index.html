@@ -178,12 +178,84 @@
     </div>
   </div>
 
+  <!-- Edit Product Modal -->
+  <div id="edit-product-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Product</h2>
+        <button class="modal-close" data-close-modal="edit-product-modal">&times;</button>
+      </div>
+      <form id="edit-product-form">
+        <div class="form-group">
+          <label for="edit-product-name">Product Name *</label>
+          <input type="text" id="edit-product-name" required placeholder="e.g., Sony WH-1000XM5">
+        </div>
+
+        <div class="form-group">
+          <label>Product URLs (up to 5)</label>
+          <div id="edit-url-fields"></div>
+          <button type="button" id="edit-add-url-btn" class="btn btn-sm btn-secondary">+ Add Another URL</button>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-product-category">Category</label>
+          <select id="edit-product-category">
+            <option value="">None</option>
+            <option value="electronics">Electronics</option>
+            <option value="headphones">Headphones</option>
+            <option value="computers">Computers</option>
+            <option value="home">Home</option>
+            <option value="gaming">Gaming</option>
+            <option value="appliances">Appliances</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-target-price">Target Price ($)</label>
+          <input type="number" id="edit-target-price" step="0.01" min="0" placeholder="Alert when price drops to this">
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="edit-alert-enabled" checked>
+            Enable price alert
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="button" id="edit-delete-btn" class="btn btn-danger">Delete Product</button>
+          <button type="button" class="btn btn-secondary" data-close-modal="edit-product-modal">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Saving indicator -->
+      <div id="edit-product-saving" class="hidden">
+        <p class="saving-message">Saving changes...</p>
+      </div>
+
+      <!-- Delete confirmation -->
+      <div id="edit-delete-confirm" class="hidden">
+        <div class="delete-confirm-content">
+          <p>Are you sure you want to delete <strong id="edit-delete-product-name"></strong>?</p>
+          <p class="delete-warning">This will permanently remove the product and cannot be undone.</p>
+          <div class="form-actions">
+            <button type="button" id="edit-delete-confirm-btn" class="btn btn-danger">Yes, Delete</button>
+            <button type="button" id="edit-delete-cancel-btn" class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer></footer>
 
   <script src="js/app.js"></script>
   <script src="js/table.js"></script>
   <script src="js/chart.js"></script>
   <script src="js/addProduct.js"></script>
+  <script src="js/editProduct.js"></script>
   <script src="js/alerts.js"></script>
 </body>
 </html>

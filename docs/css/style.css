@@ -453,6 +453,27 @@ main {
   font-size: 1rem;
 }
 
+/* Delete button */
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #bb2d3b;
+}
+
+.delete-confirm-content {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.delete-warning {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
 .hidden {
   display: none !important;
 }
