@@ -1,5 +1,12 @@
 {
-  "outputDirectory": "docs",
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "docs/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/docs/$1" }
+  ],
   "functions": {
     "api/*.js": {
       "memory": 256,
