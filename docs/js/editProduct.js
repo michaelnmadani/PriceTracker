@@ -128,7 +128,7 @@ async function handleEditSubmit() {
   };
 
   try {
-    const resp = await fetch('/api/update-product', {
+    const resp = await fetch(API_BASE + '/api/update-product', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -194,7 +194,7 @@ async function handleDeleteProduct() {
   saving.querySelector('.saving-message').textContent = 'Deleting product...';
 
   try {
-    const resp = await fetch('/api/delete-product', {
+    const resp = await fetch(API_BASE + '/api/delete-product', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: editingProductId }),

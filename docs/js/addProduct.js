@@ -179,7 +179,7 @@ async function handleSubmit() {
   };
 
   try {
-    const resp = await fetch('/api/add-product', {
+    const resp = await fetch(API_BASE + '/api/add-product', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
