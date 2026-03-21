@@ -101,6 +101,11 @@ class GenericFetcher(BaseFetcher):
                     except (ValueError, TypeError):
                         continue
 
+                    # Shopify stores sometimes report prices in cents (e.g. 89900 for $899.00)
+                    currency = offer.get("priceCurrency", "")
+                    if price > 10000 and currency:
+                        price = price / 100.0
+
                     availability = offer.get("availability", "")
                     available = "OutOfStock" not in str(availability)
 
@@ -158,19 +163,29 @@ class GenericFetcher(BaseFetcher):
     def _extract_regex(self, html: str) -> dict | None:
         """Last resort: extract price using regex patterns."""
         patterns = [
-            r'\$\s*(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)',
-            r'"price"\s*:\s*["\']?(\d+(?:\.\d{2})?)["\']?',
-            r'class="[^"]*price[^"]*"[^>]*>\s*\$?\s*(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)',
+            r'\$\s*(\d{1,3}(?:,\d{3})*\.\d{2})',
+            r'"price"\s*:\s*["\']?(\d+\.\d{2})["\']?',
+            r'class="[^"]*price[^"]*"[^>]*>\s*\$?\s*(\d{1,3}(?:,\d{3})*\.\d{2})',
         ]
 
+        # Collect all candidate prices across all patterns
+        candidates = []
         for pattern in patterns:
             matches = re.findall(pattern, html, re.IGNORECASE)
-            if matches:
+            for m in matches:
                 try:
-                    price = float(matches[0].replace(",", ""))
-                    if 0.01 <= price <= 100000:  # sanity check
-                        return {"price": price}
+                    price = float(m.replace(",", ""))
+                    # Require decimal cents and a realistic product price range
+                    if 10.0 <= price <= 100000:
+                        candidates.append(price)
                 except (ValueError, TypeError):
                     continue
 
-        return None
+        if not candidates:
+            return None
+
+        # Pick the most frequently occurring price (likely the real product price)
+        from collections import Counter
+        price_counts = Counter(candidates)
+        best_price = price_counts.most_common(1)[0][0]
+        return {"price": best_price}
