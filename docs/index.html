@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- Alert Banner -->
+  <div id="alert-banner" class="alert-banner hidden"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>Price Tracker</h1>
+      <p id="last-updated" class="subtitle">Loading...</p>
+    </div>
+    <button id="add-product-btn" class="btn btn-primary">+ Add Product</button>
+  </header>
+
+  <main>
+    <!-- Summary Cards -->
+    <section id="summary" class="summary-cards">
+      <div class="card">
+        <span class="card-value" id="total-products">0</span>
+        <span class="card-label">Products</span>
+      </div>
+      <div class="card">
+        <span class="card-value" id="at-all-time-low">0</span>
+        <span class="card-label">At All-Time Low</span>
+      </div>
+      <div class="card">
+        <span class="card-value" id="active-alerts">0</span>
+        <span class="card-label">Price Alerts</span>
+      </div>
+      <div class="card">
+        <span class="card-value" id="unavailable-count">0</span>
+        <span class="card-label">Unavailable</span>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <input type="text" id="search-input" placeholder="Search products..." class="search-input">
+      <select id="category-filter" class="filter-select">
+        <option value="">All Categories</option>
+      </select>
+    </section>
+
+    <!-- Product Table -->
+    <section id="product-table-container">
+      <div class="table-wrapper">
+        <table id="product-table">
+          <thead>
+            <tr>
+              <th data-sort="name">Name <span class="sort-icon"></span></th>
+              <th data-sort="best_price">Best Price <span class="sort-icon"></span></th>
+              <th data-sort="availability">Availability <span class="sort-icon"></span></th>
+              <th data-sort="all_time_low">All-Time Low <span class="sort-icon"></span></th>
+              <th data-sort="price_change">Change <span class="sort-icon"></span></th>
+              <th data-sort="alert">Alert <span class="sort-icon"></span></th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="product-tbody">
+          </tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty-state hidden">
+        No products tracked yet. Click <strong>"+ Add Product"</strong> to get started.
+      </p>
+    </section>
+  </main>
+
+  <!-- Chart Modal -->
+  <div id="chart-modal" class="modal hidden">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h2 id="chart-title">Price History</h2>
+        <button class="modal-close" data-close-modal="chart-modal">&times;</button>
+      </div>
+      <div class="chart-controls">
+        <button class="btn btn-sm active" data-range="30">30 Days</button>
+        <button class="btn btn-sm" data-range="90">90 Days</button>
+        <button class="btn btn-sm" data-range="365">1 Year</button>
+        <button class="btn btn-sm" data-range="0">All Time</button>
+      </div>
+      <div class="chart-container">
+        <canvas id="price-chart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Product Modal -->
+  <div id="add-product-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add Product</h2>
+        <button class="modal-close" data-close-modal="add-product-modal">&times;</button>
+      </div>
+      <form id="add-product-form">
+        <div class="form-group">
+          <label for="product-name">Product Name *</label>
+          <input type="text" id="product-name" required placeholder="e.g., Sony WH-1000XM5">
+        </div>
+
+        <div class="form-group">
+          <label>Product URLs (up to 5)</label>
+          <div id="url-fields">
+            <div class="url-field-row">
+              <input type="url" placeholder="https://www.example.com/product" required class="url-input">
+              <input type="text" placeholder="Retailer name" required class="label-input">
+              <button type="button" class="btn btn-icon btn-remove-url" title="Remove" style="visibility: hidden;">&times;</button>
+            </div>
+          </div>
+          <button type="button" id="add-url-btn" class="btn btn-sm btn-secondary">+ Add Another URL</button>
+        </div>
+
+        <div class="form-group">
+          <label for="product-category">Category</label>
+          <select id="product-category">
+            <option value="">None</option>
+            <option value="electronics">Electronics</option>
+            <option value="headphones">Headphones</option>
+            <option value="computers">Computers</option>
+            <option value="home">Home</option>
+            <option value="gaming">Gaming</option>
+            <option value="appliances">Appliances</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="target-price">Target Price ($)</label>
+          <input type="number" id="target-price" step="0.01" min="0" placeholder="Alert when price drops to this">
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="alert-enabled" checked>
+            Enable price alert
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Add Product</button>
+          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Output section shown after form submission -->
+      <div id="add-product-output" class="hidden">
+        <h3>Product Added!</h3>
+        <p>Copy the JSON below and add it to your <code>data/products.json</code> file:</p>
+        <pre id="product-json-output"></pre>
+        <div class="form-actions">
+          <button id="copy-json-btn" class="btn btn-primary">Copy JSON</button>
+          <a id="github-edit-link" class="btn btn-secondary" target="_blank" rel="noopener">Edit on GitHub</a>
+          <button id="download-json-btn" class="btn btn-secondary">Download products.json</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Prices updated daily via GitHub Actions. <a href="https://github.com/michaelnmadani/PriceTracker" target="_blank" rel="noopener">View on GitHub</a></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/addProduct.js"></script>
+  <script src="js/alerts.js"></script>
+</body>
+</html>

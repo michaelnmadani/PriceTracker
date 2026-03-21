@@ -1,0 +1,41 @@
+name: Daily Price Scrape
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 6:00 AM UTC daily
+  workflow_dispatch:       # Allow manual triggering from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper
+        run: python scraper/scrape.py
+
+      - name: Copy data for frontend
+        run: |
+          mkdir -p docs/data
+          cp data/products.json docs/data/products.json
+          cp data/prices.json docs/data/prices.json
+
+      - name: Commit and push updated prices
+        run: |
+          git config user.name "Price Tracker Bot"
+          git config user.email "bot@pricetracker.local"
+          git add data/prices.json docs/data/
+          git diff --staged --quiet || git commit -m "Update prices $(date -u +%Y-%m-%d)"
+          git push
