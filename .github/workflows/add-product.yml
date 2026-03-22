@@ -1,75 +1,85 @@
 name: Add Product
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Product name'
-        required: true
-      urls_json:
-        description: 'URLs as JSON array, e.g. [{"url":"https://...","label":"Store"}]'
-        required: true
-      category:
-        description: 'Category (electronics, headphones, computers, home, gaming, appliances, other)'
-        required: false
-      target_price:
-        description: 'Target price for alerts'
-        required: false
-      alert_enabled:
-        description: 'Enable price alert (true/false)'
-        required: false
-        default: 'true'
+  issues:
+    types: [opened]
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   add-product:
     runs-on: ubuntu-latest
+    if: startsWith(github.event.issue.title, '[Add Product]')
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           ref: claude/product-price-tracker-FwFd5
 
-      - name: Add product to products.json
+      - name: Parse issue and add product
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
+            const body = context.payload.issue.body;
+
+            // Extract JSON block from issue body
+            const jsonMatch = body.match(/```json\n([\s\S]*?)\n```/);
+            if (!jsonMatch) {
+              core.setFailed('No JSON block found in issue body');
+              return;
+            }
+
+            const product = JSON.parse(jsonMatch[1]);
+
+            // Validate required fields
+            if (!product.name || !product.urls || product.urls.length === 0) {
+              core.setFailed('Product must have name and at least one URL');
+              return;
+            }
+
+            // Ensure required fields
+            if (!product.id) product.id = Math.random().toString(36).substring(2, 10);
+            if (!product.added_date) product.added_date = new Date().toISOString().split('T')[0];
+            if (product.active === undefined) product.active = true;
+
+            // Add to products.json
             const path = 'data/products.json';
             const data = JSON.parse(fs.readFileSync(path, 'utf-8'));
-
-            const id = Math.random().toString(36).substring(2, 10);
-            const product = {
-              id,
-              name: '${{ github.event.inputs.name }}',
-              urls: JSON.parse('${{ github.event.inputs.urls_json }}'),
-              added_date: new Date().toISOString().split('T')[0],
-              active: true,
-            };
-
-            const category = '${{ github.event.inputs.category }}';
-            if (category) product.category = category;
-
-            const targetPrice = '${{ github.event.inputs.target_price }}';
-            if (targetPrice) product.target_price = parseFloat(targetPrice);
-
-            product.alert_enabled = '${{ github.event.inputs.alert_enabled }}' !== 'false';
-
             data.products.push(product);
             fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
 
-            // Also update docs copy
+            // Copy to docs
             fs.mkdirSync('docs/data', { recursive: true });
             fs.copyFileSync(path, 'docs/data/products.json');
 
-            console.log(`Added product: ${product.name} (${id})`);
+            core.exportVariable('PRODUCT_NAME', product.name);
+            core.exportVariable('PRODUCT_ID', product.id);
+            console.log(`Added product: ${product.name} (${product.id})`);
 
       - name: Commit and push
         run: |
           git config user.name "Price Tracker Bot"
           git config user.email "bot@pricetracker.local"
           git add data/products.json docs/data/products.json
-          git diff --staged --quiet || git commit -m "Add tracked product: ${{ github.event.inputs.name }}"
+          git diff --staged --quiet || git commit -m "Add tracked product: ${PRODUCT_NAME}"
           git push origin claude/product-price-tracker-FwFd5
+
+      - name: Close issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Product **${process.env.PRODUCT_NAME}** has been added (ID: \`${process.env.PRODUCT_ID}\`).\n\nPrices will be populated on the next scrape run.`,
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+            });

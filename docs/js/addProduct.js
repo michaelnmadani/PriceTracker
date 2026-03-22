@@ -1,6 +1,6 @@
 /**
  * addProduct.js — Add product modal with password protection.
- * Triggers a GitHub Actions workflow to commit new products.
+ * Opens a pre-filled GitHub issue that triggers a workflow to commit the product.
  */
 
 const ADD_MAX_URLS = 5;
@@ -88,7 +88,11 @@ function updateAddRemoveButtons() {
   });
 }
 
-async function handleAddSubmit() {
+function generateId() {
+  return Math.random().toString(36).substring(2, 10);
+}
+
+function handleAddSubmit() {
   const name = document.getElementById('product-name').value.trim();
   const category = document.getElementById('product-category').value;
   const targetPrice = document.getElementById('target-price').value;
@@ -106,59 +110,34 @@ async function handleAddSubmit() {
 
   if (!name || urls.length === 0) return;
 
-  const token = document.getElementById('github-token-input').value.trim();
-  if (!token) {
-    alert('Please enter your GitHub token.');
-    return;
-  }
+  const product = {
+    id: generateId(),
+    name,
+    urls,
+    added_date: new Date().toISOString().split('T')[0],
+    active: true,
+  };
 
-  // Show saving state
-  const submitBtn = document.querySelector('#add-product-form .btn-primary');
-  const originalText = submitBtn.textContent;
-  submitBtn.textContent = 'Adding...';
-  submitBtn.disabled = true;
+  if (category) product.category = category;
+  if (targetPrice) product.target_price = parseFloat(targetPrice);
+  product.alert_enabled = alertEnabled;
 
-  try {
-    await triggerAddProductWorkflow(token, {
-      name,
-      urls_json: JSON.stringify(urls),
-      category: category || '',
-      target_price: targetPrice || '',
-      alert_enabled: alertEnabled ? 'true' : 'false',
-    });
+  // Build GitHub issue URL with pre-filled title and body
+  const title = encodeURIComponent(`[Add Product] ${name}`);
+  const body = encodeURIComponent(
+    `## New Product Request\n\n` +
+    `\`\`\`json\n${JSON.stringify(product, null, 2)}\n\`\`\`\n`
+  );
+  const issueUrl = `https://github.com/${REPO_OWNER}/${REPO_NAME}/issues/new?title=${title}&body=${body}`;
 
-    // Show success
-    document.getElementById('add-product-form').classList.add('hidden');
-    document.getElementById('add-product-output').classList.remove('hidden');
-    document.getElementById('product-json-output').textContent =
-      `"${name}" has been added!\n\nThe GitHub Action is now committing it to the repo. The product will appear on the site after the Pages deploy completes (~30 seconds).\n\nPrices will be populated on the next scrape run.`;
-  } catch (err) {
-    alert('Failed to add product: ' + err.message);
-  } finally {
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-  }
-}
+  // Open the issue in a new tab
+  window.open(issueUrl, '_blank');
 
-async function triggerAddProductWorkflow(token, inputs) {
-  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/add-product.yml/dispatches`;
-  const resp = await fetch(url, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      ref: 'claude/product-price-tracker-FwFd5',
-      inputs,
-    }),
-  });
-
-  if (!resp.ok) {
-    const text = await resp.text();
-    throw new Error(`GitHub API error ${resp.status}: ${text}`);
-  }
+  // Show success message
+  document.getElementById('add-product-form').classList.add('hidden');
+  document.getElementById('add-product-output').classList.remove('hidden');
+  document.getElementById('product-json-output').textContent =
+    `A GitHub issue has been opened for "${name}".\n\nSubmit the issue and the product will be automatically added to the site within ~30 seconds.\n\nPrices will be populated on the next scrape run.`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
