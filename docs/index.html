@@ -16,6 +16,7 @@
       <h1>Price Tracker</h1>
       <p id="last-updated" class="subtitle">Loading...</p>
     </div>
+    <button id="add-product-btn" class="btn btn-primary">+ Add Product</button>
   </header>
 
   <main>
@@ -92,11 +93,90 @@
   </div>
 
 
+  <!-- Add Product Modal -->
+  <div id="add-product-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add Product</h2>
+        <button class="modal-close" data-close-modal="add-product-modal">&times;</button>
+      </div>
+
+      <!-- Password Gate -->
+      <div id="add-password-form">
+        <div class="form-group">
+          <label for="add-password-input">Password</label>
+          <input type="password" id="add-password-input" placeholder="Enter password">
+        </div>
+        <p id="add-password-error" class="hidden" style="color:var(--danger);font-size:0.85rem;margin-bottom:0.75rem;">Incorrect password.</p>
+        <div class="form-actions">
+          <button type="button" id="add-password-submit" class="btn btn-primary">Unlock</button>
+          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Add Product Form -->
+      <form id="add-product-form" class="hidden">
+        <div class="form-group">
+          <label for="product-name">Product Name *</label>
+          <input type="text" id="product-name" required placeholder="e.g., Sony WH-1000XM5">
+        </div>
+
+        <div class="form-group">
+          <label>Product URLs (up to 5)</label>
+          <div id="url-fields"></div>
+          <button type="button" id="add-url-btn" class="btn btn-sm btn-secondary">+ Add Another URL</button>
+        </div>
+
+        <div class="form-group">
+          <label for="product-category">Category</label>
+          <select id="product-category">
+            <option value="">None</option>
+            <option value="electronics">Electronics</option>
+            <option value="headphones">Headphones</option>
+            <option value="computers">Computers</option>
+            <option value="home">Home</option>
+            <option value="gaming">Gaming</option>
+            <option value="appliances">Appliances</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="target-price">Target Price ($)</label>
+          <input type="number" id="target-price" step="0.01" min="0" placeholder="Alert when price drops to this">
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="alert-enabled" checked>
+            Enable price alert
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Generate JSON</button>
+          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
+        </div>
+      </form>
+
+      <!-- JSON Output -->
+      <div id="add-product-output" class="hidden">
+        <p style="margin-bottom:0.5rem;">Copy this JSON and add it to <code>data/products.json</code>:</p>
+        <pre id="product-json-output"></pre>
+        <div class="form-actions">
+          <button id="copy-json-btn" class="btn btn-primary">Copy JSON</button>
+          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer></footer>
 
   <script src="js/app.js"></script>
   <script src="js/table.js"></script>
   <script src="js/chart.js"></script>
+  <script src="js/addProduct.js"></script>
   <script src="js/alerts.js"></script>
 </body>
 </html>
