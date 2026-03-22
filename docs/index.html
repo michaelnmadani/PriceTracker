@@ -16,7 +16,6 @@
       <h1>Price Tracker</h1>
       <p id="last-updated" class="subtitle">Loading...</p>
     </div>
-    <button id="add-product-btn" class="btn btn-primary">+ Add Product</button>
   </header>
 
   <main>
@@ -92,171 +91,12 @@
     </div>
   </div>
 
-  <!-- Add Product Modal -->
-  <div id="add-product-modal" class="modal hidden">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Add Product</h2>
-        <button class="modal-close" data-close-modal="add-product-modal">&times;</button>
-      </div>
-      <form id="add-product-form">
-        <div class="form-group">
-          <label for="product-name">Product Name *</label>
-          <input type="text" id="product-name" required placeholder="e.g., Sony WH-1000XM5">
-        </div>
-
-        <div class="form-group">
-          <label>Product URLs (up to 5)</label>
-          <div id="url-fields">
-            <div class="url-field-row">
-              <input type="url" placeholder="https://www.example.com/product" required class="url-input">
-              <input type="text" placeholder="Retailer name" required class="label-input">
-              <button type="button" class="btn btn-icon btn-remove-url" title="Remove" style="visibility: hidden;">&times;</button>
-            </div>
-          </div>
-          <button type="button" id="add-url-btn" class="btn btn-sm btn-secondary">+ Add Another URL</button>
-        </div>
-
-        <div class="form-group">
-          <label for="product-category">Category</label>
-          <select id="product-category">
-            <option value="">None</option>
-            <option value="electronics">Electronics</option>
-            <option value="headphones">Headphones</option>
-            <option value="computers">Computers</option>
-            <option value="home">Home</option>
-            <option value="gaming">Gaming</option>
-            <option value="appliances">Appliances</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="target-price">Target Price ($)</label>
-          <input type="number" id="target-price" step="0.01" min="0" placeholder="Alert when price drops to this">
-        </div>
-
-        <div class="form-group checkbox-group">
-          <label>
-            <input type="checkbox" id="alert-enabled" checked>
-            Enable price alert
-          </label>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Add Product</button>
-          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
-        </div>
-      </form>
-
-      <!-- Saving indicator -->
-      <div id="add-product-saving" class="hidden">
-        <p class="saving-message">Saving product...</p>
-      </div>
-
-      <!-- Success message after auto-save -->
-      <div id="add-product-success" class="hidden">
-        <h3>Product Saved!</h3>
-        <p>The product has been added and will appear after the page reloads.</p>
-        <div class="form-actions">
-          <button id="reload-page-btn" class="btn btn-primary">Reload Page</button>
-          <button class="btn btn-secondary" data-close-modal="add-product-modal">Close</button>
-        </div>
-      </div>
-
-      <!-- Fallback output section (shown if auto-save fails) -->
-      <div id="add-product-output" class="hidden">
-        <h3>Auto-save failed</h3>
-        <p>Copy the JSON below and add it to your <code>data/products.json</code> file:</p>
-        <pre id="product-json-output"></pre>
-        <div class="form-actions">
-          <button id="copy-json-btn" class="btn btn-primary">Copy JSON</button>
-          <a id="github-edit-link" class="btn btn-secondary" target="_blank" rel="noopener">Edit on GitHub</a>
-          <button id="download-json-btn" class="btn btn-secondary">Download products.json</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Edit Product Modal -->
-  <div id="edit-product-modal" class="modal hidden">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Edit Product</h2>
-        <button class="modal-close" data-close-modal="edit-product-modal">&times;</button>
-      </div>
-      <form id="edit-product-form">
-        <div class="form-group">
-          <label for="edit-product-name">Product Name *</label>
-          <input type="text" id="edit-product-name" required placeholder="e.g., Sony WH-1000XM5">
-        </div>
-
-        <div class="form-group">
-          <label>Product URLs (up to 5)</label>
-          <div id="edit-url-fields"></div>
-          <button type="button" id="edit-add-url-btn" class="btn btn-sm btn-secondary">+ Add Another URL</button>
-        </div>
-
-        <div class="form-group">
-          <label for="edit-product-category">Category</label>
-          <select id="edit-product-category">
-            <option value="">None</option>
-            <option value="electronics">Electronics</option>
-            <option value="headphones">Headphones</option>
-            <option value="computers">Computers</option>
-            <option value="home">Home</option>
-            <option value="gaming">Gaming</option>
-            <option value="appliances">Appliances</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="edit-target-price">Target Price ($)</label>
-          <input type="number" id="edit-target-price" step="0.01" min="0" placeholder="Alert when price drops to this">
-        </div>
-
-        <div class="form-group checkbox-group">
-          <label>
-            <input type="checkbox" id="edit-alert-enabled" checked>
-            Enable price alert
-          </label>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Save Changes</button>
-          <button type="button" id="edit-delete-btn" class="btn btn-danger">Delete Product</button>
-          <button type="button" class="btn btn-secondary" data-close-modal="edit-product-modal">Cancel</button>
-        </div>
-      </form>
-
-      <!-- Saving indicator -->
-      <div id="edit-product-saving" class="hidden">
-        <p class="saving-message">Saving changes...</p>
-      </div>
-
-      <!-- Delete confirmation -->
-      <div id="edit-delete-confirm" class="hidden">
-        <div class="delete-confirm-content">
-          <p>Are you sure you want to delete <strong id="edit-delete-product-name"></strong>?</p>
-          <p class="delete-warning">This will permanently remove the product and cannot be undone.</p>
-          <div class="form-actions">
-            <button type="button" id="edit-delete-confirm-btn" class="btn btn-danger">Yes, Delete</button>
-            <button type="button" id="edit-delete-cancel-btn" class="btn btn-secondary">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <footer></footer>
 
-  <script src="js/githubApi.js"></script>
   <script src="js/app.js"></script>
   <script src="js/table.js"></script>
   <script src="js/chart.js"></script>
-  <script src="js/addProduct.js"></script>
-  <script src="js/editProduct.js"></script>
   <script src="js/alerts.js"></script>
 </body>
 </html>
