@@ -2,6 +2,7 @@
  * githubApi.js — Direct GitHub API integration for product CRUD operations.
  * Commits changes to data/products.json and docs/data/products.json
  * directly from the browser using a GitHub Personal Access Token.
+ * The token is entered via a password prompt and stored in localStorage.
  */
 
 const GH_REPO_OWNER = 'michaelnmadani';
@@ -13,19 +14,92 @@ function getGitHubToken() {
   return localStorage.getItem(GH_TOKEN_KEY);
 }
 
-function checkTokenParam() {
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('token');
-  if (token) {
-    localStorage.setItem(GH_TOKEN_KEY, token);
-    const clean = window.location.pathname + window.location.hash;
-    window.history.replaceState({}, '', clean);
+/**
+ * Shows a password-style modal prompting for the GitHub token.
+ * Returns a promise that resolves with the token or rejects if cancelled.
+ */
+function promptForToken() {
+  return new Promise((resolve, reject) => {
+    // If modal already exists, remove it
+    const existing = document.getElementById('gh-token-modal');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'gh-token-modal';
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <div class="modal-content" style="max-width: 420px;">
+        <div class="modal-header">
+          <h2>Enter Password</h2>
+          <button class="modal-close" id="gh-token-close">&times;</button>
+        </div>
+        <form id="gh-token-form">
+          <div class="form-group">
+            <label for="gh-token-input">GitHub Personal Access Token</label>
+            <input type="password" id="gh-token-input" required
+              placeholder="ghp_xxxxxxxxxxxx"
+              autocomplete="off"
+              style="width: 100%; font-family: monospace;">
+            <small style="color: var(--text-muted); margin-top: 0.25rem; display: block;">
+              Create one at GitHub &rarr; Settings &rarr; Developer settings &rarr; Personal access tokens (with <strong>repo</strong> scope). Saved locally in your browser.
+            </small>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-secondary" id="gh-token-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const input = document.getElementById('gh-token-input');
+    input.focus();
+
+    const cleanup = () => modal.remove();
+
+    document.getElementById('gh-token-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const token = input.value.trim();
+      if (token) {
+        localStorage.setItem(GH_TOKEN_KEY, token);
+        cleanup();
+        resolve(token);
+      }
+    });
+
+    document.getElementById('gh-token-cancel').addEventListener('click', () => {
+      cleanup();
+      reject(new Error('Authentication cancelled'));
+    });
+
+    document.getElementById('gh-token-close').addEventListener('click', () => {
+      cleanup();
+      reject(new Error('Authentication cancelled'));
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        cleanup();
+        reject(new Error('Authentication cancelled'));
+      }
+    });
+  });
+}
+
+/**
+ * Gets the token, prompting if not yet stored.
+ */
+async function ensureGitHubToken() {
+  let token = getGitHubToken();
+  if (!token) {
+    token = await promptForToken();
   }
+  return token;
 }
 
 async function ghApiFetch(path, options = {}) {
-  const token = getGitHubToken();
-  if (!token) throw new Error('GitHub token not configured. Visit with ?token=YOUR_GITHUB_PAT to set it up.');
+  const token = await ensureGitHubToken();
 
   const url = `https://api.github.com/repos/${GH_REPO_OWNER}/${GH_REPO_NAME}/${path}`;
   const resp = await fetch(url, {
@@ -37,6 +111,12 @@ async function ghApiFetch(path, options = {}) {
       ...(options.headers || {}),
     },
   });
+
+  if (resp.status === 401) {
+    // Token is invalid — clear it so they'll be prompted again
+    localStorage.removeItem(GH_TOKEN_KEY);
+    throw new Error('Invalid token. Please try again.');
+  }
 
   if (!resp.ok) {
     const text = await resp.text();
@@ -115,7 +195,6 @@ async function githubUpdateProduct(productData) {
     target_price: productData.target_price != null ? productData.target_price : undefined,
     alert_enabled: productData.alert_enabled,
   };
-  // Clean undefined fields
   Object.keys(updated).forEach(k => { if (updated[k] === undefined) delete updated[k]; });
 
   products[index] = updated;

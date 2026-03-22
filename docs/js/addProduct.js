@@ -8,18 +8,13 @@
 const MAX_URLS = 5;
 const AUTH_KEY = 'pt_device_authorized';
 
-// Check for authorization via URL parameter (e.g. ?auth=SECRET&token=ghp_xxx)
+// Check for authorization via URL parameter (e.g. ?auth=SECRET)
 // The secret is set once and stored in localStorage permanently
 function checkDeviceAuth() {
   const params = new URLSearchParams(window.location.search);
   const authParam = params.get('auth');
   if (authParam) {
     localStorage.setItem(AUTH_KEY, authParam);
-  }
-  // Also check for GitHub token parameter
-  checkTokenParam();
-  // Clean the URL so secrets aren't visible
-  if (authParam || params.get('token')) {
     const clean = window.location.pathname + window.location.hash;
     window.history.replaceState({}, '', clean);
   }
