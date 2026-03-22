@@ -101,14 +101,13 @@
         <button class="modal-close" data-close-modal="add-product-modal">&times;</button>
       </div>
 
-      <!-- Token Gate -->
+      <!-- Password Gate -->
       <div id="add-password-form">
         <div class="form-group">
-          <label for="add-password-input">GitHub Personal Access Token</label>
-          <input type="password" id="add-password-input" placeholder="ghp_...">
-          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Requires <code>repo</code> scope to commit product data.</p>
+          <label for="add-password-input">Password</label>
+          <input type="password" id="add-password-input" placeholder="Enter password">
         </div>
-        <p id="add-password-error" class="hidden" style="color:var(--danger);font-size:0.85rem;margin-bottom:0.75rem;">Invalid token — could not access repository.</p>
+        <p id="add-password-error" class="hidden" style="color:var(--danger);font-size:0.85rem;margin-bottom:0.75rem;">Incorrect password.</p>
         <div class="form-actions">
           <button type="button" id="add-password-submit" class="btn btn-primary">Unlock</button>
           <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
@@ -152,6 +151,12 @@
             <input type="checkbox" id="alert-enabled" checked>
             Enable price alert
           </label>
+        </div>
+
+        <div class="form-group">
+          <label for="github-token-input">GitHub Token</label>
+          <input type="password" id="github-token-input" required placeholder="ghp_...">
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Personal access token with <code>repo</code> scope.</p>
         </div>
 
         <div class="form-actions">

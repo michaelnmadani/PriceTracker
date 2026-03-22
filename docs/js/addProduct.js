@@ -1,19 +1,20 @@
 /**
- * addProduct.js — Add product modal with GitHub PAT authentication.
+ * addProduct.js — Add product modal with password protection.
  * Commits new products directly to the repo via the GitHub API.
  */
 
 const ADD_MAX_URLS = 5;
+const ADD_PASSWORD = '12345';
 const REPO_OWNER = 'michaelnmadani';
 const REPO_NAME = 'PriceTracker';
 const REPO_BRANCH = 'claude/product-price-tracker-FwFd5';
 
-let githubToken = null;
+let isAuthenticated = false;
 
 function showAddProductModal() {
   const modal = document.getElementById('add-product-modal');
 
-  if (!githubToken) {
+  if (!isAuthenticated) {
     document.getElementById('add-password-form').classList.remove('hidden');
     document.getElementById('add-product-form').classList.add('hidden');
     document.getElementById('add-product-output').classList.add('hidden');
@@ -28,25 +29,12 @@ function showAddProductModal() {
   modal.classList.remove('hidden');
 }
 
-async function handlePasswordSubmit() {
+function handlePasswordSubmit() {
   const input = document.getElementById('add-password-input');
-  const token = input.value.trim();
-  if (!token) return;
-
-  // Validate the token by checking repo access
-  try {
-    const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`, {
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' },
-    });
-    if (resp.ok) {
-      githubToken = token;
-      showAddForm();
-    } else {
-      document.getElementById('add-password-error').classList.remove('hidden');
-      input.value = '';
-      input.focus();
-    }
-  } catch {
+  if (input.value === ADD_PASSWORD) {
+    isAuthenticated = true;
+    showAddForm();
+  } else {
     document.getElementById('add-password-error').classList.remove('hidden');
     input.value = '';
     input.focus();
@@ -135,6 +123,12 @@ async function handleAddSubmit() {
   if (targetPrice) product.target_price = parseFloat(targetPrice);
   product.alert_enabled = alertEnabled;
 
+  const token = document.getElementById('github-token-input').value.trim();
+  if (!token) {
+    alert('Please enter a GitHub token.');
+    return;
+  }
+
   // Show saving state
   const submitBtn = document.querySelector('#add-product-form .btn-primary');
   const originalText = submitBtn.textContent;
@@ -142,7 +136,7 @@ async function handleAddSubmit() {
   submitBtn.disabled = true;
 
   try {
-    await commitProductToRepo(product);
+    await commitProductToRepo(product, token);
 
     // Show success
     document.getElementById('add-product-form').classList.add('hidden');
@@ -157,21 +151,21 @@ async function handleAddSubmit() {
   }
 }
 
-async function githubGetFile(path) {
+async function githubGetFile(token, path) {
   const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${REPO_BRANCH}`;
   const resp = await fetch(url, {
-    headers: { Authorization: `Bearer ${githubToken}`, Accept: 'application/vnd.github.v3+json' },
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' },
   });
   if (!resp.ok) throw new Error(`Failed to read ${path}: ${resp.status}`);
   return resp.json();
 }
 
-async function githubUpdateFile(path, contentBase64, sha, message) {
+async function githubUpdateFile(token, path, contentBase64, sha, message) {
   const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
   const resp = await fetch(url, {
     method: 'PUT',
     headers: {
-      Authorization: `Bearer ${githubToken}`,
+      Authorization: `Bearer ${token}`,
       Accept: 'application/vnd.github.v3+json',
       'Content-Type': 'application/json',
     },
@@ -181,9 +175,9 @@ async function githubUpdateFile(path, contentBase64, sha, message) {
   return resp.json();
 }
 
-async function commitProductToRepo(product) {
+async function commitProductToRepo(product, token) {
   // Read current products.json
-  const fileData = await githubGetFile('data/products.json');
+  const fileData = await githubGetFile(token, 'data/products.json');
   const currentContent = JSON.parse(atob(fileData.content));
   const products = currentContent.products || [];
   products.push(product);
@@ -191,13 +185,13 @@ async function commitProductToRepo(product) {
   const encoded = btoa(unescape(encodeURIComponent(updatedJson)));
 
   // Commit data/products.json
-  await githubUpdateFile('data/products.json', encoded, fileData.sha,
+  await githubUpdateFile(token, 'data/products.json', encoded, fileData.sha,
     `Add tracked product: ${product.name}`);
 
   // Also update docs/data/products.json for the frontend
   try {
-    const docsFileData = await githubGetFile('docs/data/products.json');
-    await githubUpdateFile('docs/data/products.json', encoded, docsFileData.sha,
+    const docsFileData = await githubGetFile(token, 'docs/data/products.json');
+    await githubUpdateFile(token, 'docs/data/products.json', encoded, docsFileData.sha,
       `Sync docs/data/products.json: add ${product.name}`);
   } catch {
     // If it doesn't exist, create it (sha omitted = create)
@@ -205,7 +199,7 @@ async function commitProductToRepo(product) {
     await fetch(url, {
       method: 'PUT',
       headers: {
-        Authorization: `Bearer ${githubToken}`,
+        Authorization: `Bearer ${token}`,
         Accept: 'application/vnd.github.v3+json',
         'Content-Type': 'application/json',
       },
