@@ -101,13 +101,14 @@
         <button class="modal-close" data-close-modal="add-product-modal">&times;</button>
       </div>
 
-      <!-- Password Gate -->
+      <!-- Token Gate -->
       <div id="add-password-form">
         <div class="form-group">
-          <label for="add-password-input">Password</label>
-          <input type="password" id="add-password-input" placeholder="Enter password">
+          <label for="add-password-input">GitHub Personal Access Token</label>
+          <input type="password" id="add-password-input" placeholder="ghp_...">
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Requires <code>repo</code> scope to commit product data.</p>
         </div>
-        <p id="add-password-error" class="hidden" style="color:var(--danger);font-size:0.85rem;margin-bottom:0.75rem;">Incorrect password.</p>
+        <p id="add-password-error" class="hidden" style="color:var(--danger);font-size:0.85rem;margin-bottom:0.75rem;">Invalid token — could not access repository.</p>
         <div class="form-actions">
           <button type="button" id="add-password-submit" class="btn btn-primary">Unlock</button>
           <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
@@ -154,18 +155,16 @@
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Generate JSON</button>
+          <button type="submit" class="btn btn-primary">Add Product</button>
           <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
         </div>
       </form>
 
-      <!-- JSON Output -->
+      <!-- Success Output -->
       <div id="add-product-output" class="hidden">
-        <p style="margin-bottom:0.5rem;">Copy this JSON and add it to <code>data/products.json</code>:</p>
-        <pre id="product-json-output"></pre>
+        <pre id="product-json-output" style="white-space:pre-wrap;"></pre>
         <div class="form-actions">
-          <button id="copy-json-btn" class="btn btn-primary">Copy JSON</button>
-          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Close</button>
+          <button type="button" class="btn btn-primary" data-close-modal="add-product-modal">Done</button>
         </div>
       </div>
     </div>

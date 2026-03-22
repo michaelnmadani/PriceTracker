@@ -1,18 +1,19 @@
 /**
- * addProduct.js — Add product modal with password protection.
- * Generates product JSON for manual addition to products.json.
+ * addProduct.js — Add product modal with GitHub PAT authentication.
+ * Commits new products directly to the repo via the GitHub API.
  */
 
 const ADD_MAX_URLS = 5;
-const ADD_PASSWORD = '12345';
+const REPO_OWNER = 'michaelnmadani';
+const REPO_NAME = 'PriceTracker';
+const REPO_BRANCH = 'claude/product-price-tracker-FwFd5';
 
-let isAuthenticated = false;
+let githubToken = null;
 
 function showAddProductModal() {
   const modal = document.getElementById('add-product-modal');
 
-  if (!isAuthenticated) {
-    // Show password prompt
+  if (!githubToken) {
     document.getElementById('add-password-form').classList.remove('hidden');
     document.getElementById('add-product-form').classList.add('hidden');
     document.getElementById('add-product-output').classList.add('hidden');
@@ -27,12 +28,25 @@ function showAddProductModal() {
   modal.classList.remove('hidden');
 }
 
-function handlePasswordSubmit() {
+async function handlePasswordSubmit() {
   const input = document.getElementById('add-password-input');
-  if (input.value === ADD_PASSWORD) {
-    isAuthenticated = true;
-    showAddForm();
-  } else {
+  const token = input.value.trim();
+  if (!token) return;
+
+  // Validate the token by checking repo access
+  try {
+    const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' },
+    });
+    if (resp.ok) {
+      githubToken = token;
+      showAddForm();
+    } else {
+      document.getElementById('add-password-error').classList.remove('hidden');
+      input.value = '';
+      input.focus();
+    }
+  } catch {
     document.getElementById('add-password-error').classList.remove('hidden');
     input.value = '';
     input.focus();
@@ -91,7 +105,7 @@ function generateId() {
   return Math.random().toString(36).substring(2, 10);
 }
 
-function handleAddSubmit() {
+async function handleAddSubmit() {
   const name = document.getElementById('product-name').value.trim();
   const category = document.getElementById('product-category').value;
   const targetPrice = document.getElementById('target-price').value;
@@ -121,19 +135,87 @@ function handleAddSubmit() {
   if (targetPrice) product.target_price = parseFloat(targetPrice);
   product.alert_enabled = alertEnabled;
 
-  // Show the JSON output
-  document.getElementById('add-product-form').classList.add('hidden');
-  document.getElementById('add-product-output').classList.remove('hidden');
-  document.getElementById('product-json-output').textContent = JSON.stringify(product, null, 2);
+  // Show saving state
+  const submitBtn = document.querySelector('#add-product-form .btn-primary');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Saving...';
+  submitBtn.disabled = true;
+
+  try {
+    await commitProductToRepo(product);
+
+    // Show success
+    document.getElementById('add-product-form').classList.add('hidden');
+    document.getElementById('add-product-output').classList.remove('hidden');
+    document.getElementById('product-json-output').textContent =
+      `"${product.name}" has been added and will appear on the site shortly.\n\nPrices will be populated on the next scrape run.`;
+  } catch (err) {
+    alert('Failed to add product: ' + err.message);
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
 }
 
-function copyProductJson() {
-  const text = document.getElementById('product-json-output').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('copy-json-btn');
-    btn.textContent = 'Copied!';
-    setTimeout(() => { btn.textContent = 'Copy JSON'; }, 2000);
+async function githubGetFile(path) {
+  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${REPO_BRANCH}`;
+  const resp = await fetch(url, {
+    headers: { Authorization: `Bearer ${githubToken}`, Accept: 'application/vnd.github.v3+json' },
   });
+  if (!resp.ok) throw new Error(`Failed to read ${path}: ${resp.status}`);
+  return resp.json();
+}
+
+async function githubUpdateFile(path, contentBase64, sha, message) {
+  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${githubToken}`,
+      Accept: 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message, content: contentBase64, sha, branch: REPO_BRANCH }),
+  });
+  if (!resp.ok) throw new Error(`Failed to update ${path}: ${resp.status}`);
+  return resp.json();
+}
+
+async function commitProductToRepo(product) {
+  // Read current products.json
+  const fileData = await githubGetFile('data/products.json');
+  const currentContent = JSON.parse(atob(fileData.content));
+  const products = currentContent.products || [];
+  products.push(product);
+  const updatedJson = JSON.stringify({ products }, null, 2) + '\n';
+  const encoded = btoa(unescape(encodeURIComponent(updatedJson)));
+
+  // Commit data/products.json
+  await githubUpdateFile('data/products.json', encoded, fileData.sha,
+    `Add tracked product: ${product.name}`);
+
+  // Also update docs/data/products.json for the frontend
+  try {
+    const docsFileData = await githubGetFile('docs/data/products.json');
+    await githubUpdateFile('docs/data/products.json', encoded, docsFileData.sha,
+      `Sync docs/data/products.json: add ${product.name}`);
+  } catch {
+    // If it doesn't exist, create it (sha omitted = create)
+    const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/docs/data/products.json`;
+    await fetch(url, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${githubToken}`,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: `Create docs/data/products.json: add ${product.name}`,
+        content: encoded,
+        branch: REPO_BRANCH,
+      }),
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -169,7 +251,4 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('add-url-btn').disabled = true;
     }
   });
-
-  // Copy JSON button
-  document.getElementById('copy-json-btn').addEventListener('click', copyProductJson);
 });
