@@ -44,6 +44,21 @@
       "category": "electronics",
       "target_price": 100,
       "alert_enabled": true
+    },
+    {
+      "id": "nr93nxf1",
+      "name": "Wash & Cure 3",
+      "urls": [
+        {
+          "url": "https://www.anycubic.au/products/wash-cure-3?variant=49965303660838",
+          "label": "Anycubic"
+        }
+      ],
+      "added_date": "2026-03-22",
+      "active": true,
+      "category": "electronics",
+      "target_price": 100,
+      "alert_enabled": true
     }
   ]
 }
