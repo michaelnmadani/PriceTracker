@@ -3,11 +3,6 @@
  * initializes table, charts, and alerts.
  */
 
-// API base URL — use Vercel for API calls regardless of hosting
-const API_BASE = window.location.hostname.includes('github.io')
-  ? 'https://price-tracker-iota-nine.vercel.app'
-  : '';
-
 // Global app state
 const App = {
   products: [],

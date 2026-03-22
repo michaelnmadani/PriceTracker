@@ -128,39 +128,21 @@ async function handleEditSubmit() {
   };
 
   try {
-    const resp = await fetch(API_BASE + '/api/update-product', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    let result;
-    const contentType = resp.headers.get('content-type') || '';
-    if (contentType.includes('application/json')) {
-      result = await resp.json();
-    } else {
-      const text = await resp.text();
-      result = { error: `HTTP ${resp.status}: ${text.substring(0, 200)}` };
-    }
+    const updated = await githubUpdateProduct(payload);
 
     saving.classList.add('hidden');
 
-    if (resp.ok && result.success) {
-      // Update client-side state
-      const index = App.products.findIndex(p => p.id === editingProductId);
-      if (index !== -1) {
-        App.products[index] = result.product;
-      }
-      mergeData();
-      populateCategories();
-      updateSummary();
-      renderTable(getFilteredData());
-
-      document.getElementById('edit-product-modal').classList.add('hidden');
-    } else {
-      alert('Failed to save: ' + (result.error || 'Unknown error'));
-      form.classList.remove('hidden');
+    // Update client-side state
+    const index = App.products.findIndex(p => p.id === editingProductId);
+    if (index !== -1) {
+      App.products[index] = updated;
     }
+    mergeData();
+    populateCategories();
+    updateSummary();
+    renderTable(getFilteredData());
+
+    document.getElementById('edit-product-modal').classList.add('hidden');
   } catch (err) {
     console.error('Failed to update product:', err);
     saving.classList.add('hidden');
@@ -194,36 +176,18 @@ async function handleDeleteProduct() {
   saving.querySelector('.saving-message').textContent = 'Deleting product...';
 
   try {
-    const resp = await fetch(API_BASE + '/api/delete-product', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: editingProductId }),
-    });
-
-    let result;
-    const contentType = resp.headers.get('content-type') || '';
-    if (contentType.includes('application/json')) {
-      result = await resp.json();
-    } else {
-      const text = await resp.text();
-      result = { error: `HTTP ${resp.status}: ${text.substring(0, 200)}` };
-    }
+    await githubDeleteProduct(editingProductId);
 
     saving.classList.add('hidden');
 
-    if (resp.ok && result.success) {
-      // Remove from client-side state
-      App.products = App.products.filter(p => p.id !== editingProductId);
-      mergeData();
-      populateCategories();
-      updateSummary();
-      renderTable(getFilteredData());
+    // Remove from client-side state
+    App.products = App.products.filter(p => p.id !== editingProductId);
+    mergeData();
+    populateCategories();
+    updateSummary();
+    renderTable(getFilteredData());
 
-      document.getElementById('edit-product-modal').classList.add('hidden');
-    } else {
-      alert('Failed to delete: ' + (result.error || 'Unknown error'));
-      deleteConfirm.classList.remove('hidden');
-    }
+    document.getElementById('edit-product-modal').classList.add('hidden');
   } catch (err) {
     console.error('Failed to delete product:', err);
     saving.classList.add('hidden');

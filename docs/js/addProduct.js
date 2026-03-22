@@ -8,14 +8,18 @@
 const MAX_URLS = 5;
 const AUTH_KEY = 'pt_device_authorized';
 
-// Check for authorization via URL parameter (e.g. ?auth=SECRET)
+// Check for authorization via URL parameter (e.g. ?auth=SECRET&token=ghp_xxx)
 // The secret is set once and stored in localStorage permanently
 function checkDeviceAuth() {
   const params = new URLSearchParams(window.location.search);
   const authParam = params.get('auth');
   if (authParam) {
     localStorage.setItem(AUTH_KEY, authParam);
-    // Clean the URL so the secret isn't visible
+  }
+  // Also check for GitHub token parameter
+  checkTokenParam();
+  // Clean the URL so secrets aren't visible
+  if (authParam || params.get('token')) {
     const clean = window.location.pathname + window.location.hash;
     window.history.replaceState({}, '', clean);
   }
@@ -179,41 +183,21 @@ async function handleSubmit() {
   };
 
   try {
-    const resp = await fetch(API_BASE + '/api/add-product', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    let result;
-    const contentType = resp.headers.get('content-type') || '';
-    if (contentType.includes('application/json')) {
-      result = await resp.json();
-    } else {
-      const text = await resp.text();
-      result = { error: `HTTP ${resp.status}: ${text.substring(0, 200)}` };
-    }
+    const product = await githubAddProduct(payload);
 
     saving.classList.add('hidden');
 
-    if (resp.ok && result.success) {
-      // Inject the new product into client-side state and re-render immediately
-      App.products.push(result.product);
-      mergeData();
-      populateCategories();
-      updateSummary();
-      renderTable(getFilteredData());
+    // Inject the new product into client-side state and re-render immediately
+    App.products.push(product);
+    mergeData();
+    populateCategories();
+    updateSummary();
+    renderTable(getFilteredData());
 
-      // Close the modal
-      document.getElementById('add-product-modal').classList.add('hidden');
-    } else {
-      // API returned an error — fall back to manual mode
-      const errMsg = result.error || `HTTP ${resp.status}`;
-      console.error('API error:', resp.status, result);
-      showFallbackOutput(name, urls, category, targetPrice, alertEnabled, errMsg);
-    }
+    // Close the modal
+    document.getElementById('add-product-modal').classList.add('hidden');
   } catch (err) {
-    // Network error — fall back to manual mode
+    // GitHub API error — fall back to manual mode
     console.error('Failed to save product:', err);
     saving.classList.add('hidden');
     showFallbackOutput(name, urls, category, targetPrice, alertEnabled, err.message);
