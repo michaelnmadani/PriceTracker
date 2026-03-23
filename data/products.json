@@ -44,6 +44,21 @@
       "category": "electronics",
       "target_price": 100,
       "alert_enabled": true
+    },
+    {
+      "id": "a5claot9",
+      "name": "Washing Fluid Mint",
+      "urls": [
+        {
+          "url": "https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-resinaway-resin-3d-print-cleaner-icy-mint-scent",
+          "label": "3d Cast"
+        }
+      ],
+      "added_date": "2026-03-23",
+      "active": true,
+      "category": "home",
+      "target_price": 40,
+      "alert_enabled": true
     }
   ]
 }
