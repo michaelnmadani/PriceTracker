@@ -59,6 +59,21 @@
       "category": "home",
       "target_price": 40,
       "alert_enabled": true
+    },
+    {
+      "id": "20uo8813",
+      "name": "Rinse Away Cleaner",
+      "urls": [
+        {
+          "url": "https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-rinseoff",
+          "label": "3d Cast"
+        }
+      ],
+      "added_date": "2026-03-23",
+      "active": true,
+      "category": "home",
+      "target_price": 50,
+      "alert_enabled": true
     }
   ]
 }
