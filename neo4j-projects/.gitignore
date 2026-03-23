@@ -1,0 +1,6 @@
+node_modules/
+.next/
+.env.local
+data-pipeline/data/
+__pycache__/
+*.pyc
