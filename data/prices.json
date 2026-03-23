@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23T01:41:47.462568+00:00",
+  "last_updated": "2026-03-22T03:46:14.733626+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,11 +10,6 @@
           "all_time_low": 899.0,
           "all_time_low_date": "2026-03-21",
           "history": [
-            {
-              "date": "2026-03-23",
-              "price": null,
-              "available": false
-            },
             {
               "date": "2026-03-22",
               "price": 899.0,
@@ -44,11 +39,6 @@
           "all_time_low_date": "2026-03-21",
           "history": [
             {
-              "date": "2026-03-23",
-              "price": null,
-              "available": false
-            },
-            {
               "date": "2026-03-22",
               "price": 599.0,
               "available": true
@@ -66,80 +56,6 @@
       "overall_all_time_low": 599.0,
       "overall_all_time_low_date": "2026-03-21",
       "overall_all_time_low_source": "Elegoo"
-    },
-    "nr93nxf1": {
-      "urls": {
-        "https://www.anycubic.au/products/wash-cure-3?variant=49965303660838": {
-          "label": "Anycubic",
-          "current_price": null,
-          "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
-          "history": [
-            {
-              "date": "2026-03-23",
-              "price": null,
-              "available": false
-            },
-            {
-              "date": "2026-03-22",
-              "price": null,
-              "available": false
-            }
-          ]
-        }
-      },
-      "best_current_price": null,
-      "best_current_source": null,
-      "overall_all_time_low": null,
-      "overall_all_time_low_date": null,
-      "overall_all_time_low_source": null
-    },
-    "a5claot9": {
-      "urls": {
-        "https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-resinaway-resin-3d-print-cleaner-icy-mint-scent": {
-          "label": "3d Cast",
-          "current_price": null,
-          "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
-          "history": [
-            {
-              "date": "2026-03-23",
-              "price": null,
-              "available": false
-            }
-          ]
-        }
-      },
-      "best_current_price": null,
-      "best_current_source": null,
-      "overall_all_time_low": null,
-      "overall_all_time_low_date": null,
-      "overall_all_time_low_source": null
-    },
-    "20uo8813": {
-      "urls": {
-        "https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-rinseoff": {
-          "label": "3d Cast",
-          "current_price": null,
-          "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
-          "history": [
-            {
-              "date": "2026-03-23",
-              "price": null,
-              "available": false
-            }
-          ]
-        }
-      },
-      "best_current_price": null,
-      "best_current_source": null,
-      "overall_all_time_low": null,
-      "overall_all_time_low_date": null,
-      "overall_all_time_low_source": null
     }
   }
 }

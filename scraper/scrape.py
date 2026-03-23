@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scraper.fetchers import GenericFetcher
+from scraper.fetchers.shopify import ShopifyFetcher
 from scraper.utils import random_delay
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
@@ -57,6 +58,7 @@ def run_scraper(product_id: str | None = None):
 
     entries = prices_data.get("entries", {})
     fetcher = GenericFetcher()
+    shopify_fetcher = ShopifyFetcher()
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     now_iso = datetime.now(timezone.utc).isoformat()
 
@@ -103,7 +105,20 @@ def run_scraper(product_id: str | None = None):
                 continue
 
             print(f"  Fetching: {label} ({url})")
-            result = fetcher.fetch(url)
+
+            # Try Shopify JSON API first (more reliable), then fall back to generic
+            result = None
+            if ShopifyFetcher.is_shopify_url(url):
+                print("    Trying Shopify JSON API...")
+                result = shopify_fetcher.fetch(url)
+                if result["price"] is not None:
+                    print("    Shopify JSON API succeeded.")
+                else:
+                    print(f"    Shopify JSON API failed: {result.get('error')}. Falling back to generic.")
+                    result = None
+
+            if result is None:
+                result = fetcher.fetch(url)
 
             # Initialize URL entry if needed
             if url not in url_entries:
