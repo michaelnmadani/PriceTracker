@@ -96,9 +96,9 @@ class ShopifyFetcher:
         parsed = urlparse(url)
         path = parsed.path.rstrip("/")
 
-        match = re.match(r"(/(?:[\w-]+/)?products/[\w-]+)", path)
+        match = re.search(r"/products/([\w-]+)$", path)
         if not match:
             return None
 
-        json_path = match.group(1) + ".json"
+        json_path = "/products/" + match.group(1) + ".json"
         return f"{parsed.scheme}://{parsed.netloc}{json_path}"
