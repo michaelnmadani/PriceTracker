@@ -1,15 +1,20 @@
 {
-  "last_updated": "2026-04-27T21:42:37.154183+00:00",
+  "last_updated": "2026-04-28T21:46:43.866061+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
         "https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 899.0,
+          "current_price": 849.0,
           "current_availability": true,
-          "all_time_low": 899.0,
-          "all_time_low_date": "2026-03-21",
+          "all_time_low": 849.0,
+          "all_time_low_date": "2026-04-28",
           "history": [
+            {
+              "date": "2026-04-28",
+              "price": 849.0,
+              "available": true
+            },
             {
               "date": "2026-04-27",
               "price": 899.0,
@@ -203,21 +208,26 @@
           ]
         }
       },
-      "best_current_price": 899.0,
+      "best_current_price": 849.0,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 899.0,
-      "overall_all_time_low_date": "2026-03-21",
+      "overall_all_time_low": 849.0,
+      "overall_all_time_low_date": "2026-04-28",
       "overall_all_time_low_source": "Elegoo"
     },
     "k2wj0tq1": {
       "urls": {
         "https://au.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 599.0,
+          "current_price": 549.0,
           "current_availability": true,
-          "all_time_low": 599.0,
-          "all_time_low_date": "2026-03-21",
+          "all_time_low": 549.0,
+          "all_time_low_date": "2026-04-28",
           "history": [
+            {
+              "date": "2026-04-28",
+              "price": 549.0,
+              "available": true
+            },
             {
               "date": "2026-04-27",
               "price": 599.0,
@@ -411,10 +421,10 @@
           ]
         }
       },
-      "best_current_price": 599.0,
+      "best_current_price": 549.0,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 599.0,
-      "overall_all_time_low_date": "2026-03-21",
+      "overall_all_time_low": 549.0,
+      "overall_all_time_low_date": "2026-04-28",
       "overall_all_time_low_source": "Elegoo"
     },
     "nr93nxf1": {
@@ -426,6 +436,11 @@
           "all_time_low": 129.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-04-28",
+              "price": 149.0,
+              "available": true
+            },
             {
               "date": "2026-04-27",
               "price": 149.0,
@@ -625,6 +640,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-04-28",
+              "price": 45.0,
+              "available": true
+            },
+            {
               "date": "2026-04-27",
               "price": 45.0,
               "available": true
@@ -822,6 +842,11 @@
           "all_time_low": 66.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-04-28",
+              "price": 66.0,
+              "available": true
+            },
             {
               "date": "2026-04-27",
               "price": 66.0,
