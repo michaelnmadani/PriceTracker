@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T22:01:02.202588+00:00",
+  "last_updated": "2026-06-30T22:05:15.717443+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 849.0,
           "all_time_low_date": "2026-04-28",
           "history": [
+            {
+              "date": "2026-06-30",
+              "price": 849.0,
+              "available": true
+            },
             {
               "date": "2026-06-29",
               "price": 849.0,
@@ -534,6 +539,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-06-30",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-06-29",
               "price": 549.0,
               "available": true
@@ -1057,6 +1067,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-06-30",
+              "price": 149.0,
+              "available": true
+            },
+            {
               "date": "2026-06-29",
               "price": 149.0,
               "available": true
@@ -1570,6 +1585,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-06-30",
+              "price": 45.0,
+              "available": true
+            },
+            {
               "date": "2026-06-29",
               "price": 45.0,
               "available": true
@@ -2082,6 +2102,11 @@
           "all_time_low": 66.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-06-30",
+              "price": 66.0,
+              "available": true
+            },
             {
               "date": "2026-06-29",
               "price": 66.0,
