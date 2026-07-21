@@ -1,15 +1,20 @@
 {
-  "last_updated": "2026-07-20T21:52:59.856817+00:00",
+  "last_updated": "2026-07-21T21:49:33.365851+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
         "https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 849.0,
+          "current_price": 799.0,
           "current_availability": true,
-          "all_time_low": 849.0,
-          "all_time_low_date": "2026-04-28",
+          "all_time_low": 799.0,
+          "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-07-21",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-07-20",
               "price": null,
@@ -623,10 +628,10 @@
           ]
         }
       },
-      "best_current_price": 849.0,
+      "best_current_price": 799.0,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 849.0,
-      "overall_all_time_low_date": "2026-04-28",
+      "overall_all_time_low": 799.0,
+      "overall_all_time_low_date": "2026-07-21",
       "overall_all_time_low_source": "Elegoo"
     },
     "k2wj0tq1": {
@@ -638,6 +643,11 @@
           "all_time_low": 549.0,
           "all_time_low_date": "2026-04-28",
           "history": [
+            {
+              "date": "2026-07-21",
+              "price": 549.0,
+              "available": true
+            },
             {
               "date": "2026-07-20",
               "price": null,
@@ -1267,6 +1277,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-07-21",
+              "price": 149.0,
+              "available": true
+            },
+            {
               "date": "2026-07-20",
               "price": 149.0,
               "available": true
@@ -1885,6 +1900,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-07-21",
+              "price": 45.0,
+              "available": true
+            },
+            {
               "date": "2026-07-20",
               "price": 45.0,
               "available": true
@@ -2502,6 +2522,11 @@
           "all_time_low": 66.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-07-21",
+              "price": 66.0,
+              "available": true
+            },
             {
               "date": "2026-07-20",
               "price": 66.0,
