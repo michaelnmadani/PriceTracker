@@ -74,6 +74,21 @@
       "category": "home",
       "target_price": 50,
       "alert_enabled": true
+    },
+    {
+      "id": "w3c930e1",
+      "name": "Elegoo Wash & Cure Station 3.0",
+      "urls": [
+        {
+          "url": "https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers",
+          "label": "Elegoo"
+        }
+      ],
+      "added_date": "2026-09-07",
+      "active": true,
+      "category": "electronics",
+      "target_price": 200,
+      "alert_enabled": true
     }
   ]
 }
