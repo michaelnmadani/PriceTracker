@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T22:28:20.810325+00:00",
+  "last_updated": "2026-09-07T05:53:45.879891+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-09-07",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-09-06",
               "price": 799.0,
@@ -864,6 +869,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-09-07",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-09-06",
               "price": 549.0,
               "available": true
@@ -1717,6 +1727,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-07",
+              "price": 129.0,
+              "available": true
+            },
+            {
               "date": "2026-09-06",
               "price": 129.0,
               "available": true
@@ -2559,6 +2574,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-09-07",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-09-06",
               "price": 45.0,
@@ -3403,6 +3423,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-07",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-09-06",
               "price": 66.0,
               "available": true
@@ -4235,6 +4260,29 @@
       "overall_all_time_low": 66.0,
       "overall_all_time_low_date": "2026-03-23",
       "overall_all_time_low_source": "3d Cast"
+    },
+    "w3c930e1": {
+      "urls": {
+        "https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers": {
+          "label": "Elegoo",
+          "current_price": 299.0,
+          "current_availability": true,
+          "all_time_low": 299.0,
+          "all_time_low_date": "2026-09-07",
+          "history": [
+            {
+              "date": "2026-09-07",
+              "price": 299.0,
+              "available": true
+            }
+          ]
+        }
+      },
+      "best_current_price": 299.0,
+      "best_current_source": "Elegoo",
+      "overall_all_time_low": 299.0,
+      "overall_all_time_low_date": "2026-09-07",
+      "overall_all_time_low_source": "Elegoo"
     }
   }
 }
