@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-13T22:41:07.082358+00:00",
+  "last_updated": "2026-09-14T04:53:13.490375+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-09-14",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-09-13",
               "price": 799.0,
@@ -899,6 +904,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-09-14",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-09-13",
               "price": 549.0,
               "available": true
@@ -1787,6 +1797,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-14",
+              "price": 129.0,
+              "available": true
+            },
+            {
               "date": "2026-09-13",
               "price": 129.0,
               "available": true
@@ -2664,6 +2679,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-09-14",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-09-13",
               "price": 45.0,
@@ -3543,6 +3563,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-14",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-09-13",
               "price": 66.0,
               "available": true
@@ -4421,6 +4446,11 @@
           "all_time_low_date": "2026-09-07",
           "history": [
             {
+              "date": "2026-09-14",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-09-13",
               "price": 299.0,
               "available": true
@@ -4463,6 +4493,57 @@
       "overall_all_time_low": 299.0,
       "overall_all_time_low_date": "2026-09-07",
       "overall_all_time_low_source": "Elegoo"
+    },
+    "rmpp2026": {
+      "urls": {
+        "https://remarkable.com/products/remarkable-paper/pure": {
+          "label": "reMarkable",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-09-14",
+              "price": null,
+              "available": false
+            }
+          ]
+        },
+        "https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker": {
+          "label": "JB Hi-Fi",
+          "current_price": 649.0,
+          "current_availability": true,
+          "all_time_low": 649.0,
+          "all_time_low_date": "2026-09-14",
+          "history": [
+            {
+              "date": "2026-09-14",
+              "price": 649.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.amazon.com.au/reMarkable-Paper-Pure-with-Marker/dp/B0GVKBLJK2": {
+          "label": "Amazon AU",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-09-14",
+              "price": null,
+              "available": false
+            }
+          ]
+        }
+      },
+      "best_current_price": 649.0,
+      "best_current_source": "JB Hi-Fi",
+      "overall_all_time_low": 649.0,
+      "overall_all_time_low_date": "2026-09-14",
+      "overall_all_time_low_source": "JB Hi-Fi"
     }
   }
 }
