@@ -4526,25 +4526,6 @@
     },
     "rmpp2026": {
       "urls": {
-        "https://remarkable.com/products/remarkable-paper/pure": {
-          "label": "reMarkable",
-          "current_price": null,
-          "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
-          "history": [
-            {
-              "date": "2026-09-15",
-              "price": null,
-              "available": false
-            },
-            {
-              "date": "2026-09-14",
-              "price": null,
-              "available": false
-            }
-          ]
-        },
         "https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker": {
           "label": "JB Hi-Fi",
           "current_price": 649.0,
@@ -4561,25 +4542,6 @@
               "date": "2026-09-14",
               "price": 649.0,
               "available": true
-            }
-          ]
-        },
-        "https://www.amazon.com.au/reMarkable-Paper-Pure-with-Marker/dp/B0GVKBLJK2": {
-          "label": "Amazon AU",
-          "current_price": null,
-          "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
-          "history": [
-            {
-              "date": "2026-09-15",
-              "price": null,
-              "available": false
-            },
-            {
-              "date": "2026-09-14",
-              "price": null,
-              "available": false
             }
           ]
         }

@@ -95,16 +95,8 @@
       "name": "reMarkable Paper Pure",
       "urls": [
         {
-          "url": "https://remarkable.com/products/remarkable-paper/pure",
-          "label": "reMarkable"
-        },
-        {
           "url": "https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker",
           "label": "JB Hi-Fi"
-        },
-        {
-          "url": "https://www.amazon.com.au/reMarkable-Paper-Pure-with-Marker/dp/B0GVKBLJK2",
-          "label": "Amazon AU"
         }
       ],
       "added_date": "2026-09-14",
