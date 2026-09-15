@@ -96,7 +96,7 @@ class ShopifyFetcher:
         parsed = urlparse(url)
         path = parsed.path.rstrip("/")
 
-        match = re.search(r"/products/([\w-]+)$", path)
+        match = re.search(r"/products/([\w-]+)", path)
         if not match:
             return None
 
