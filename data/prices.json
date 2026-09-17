@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-16T23:17:48.364796+00:00",
+  "last_updated": "2026-09-17T23:08:48.223950+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-09-17",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-09-16",
               "price": 799.0,
@@ -914,6 +919,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-09-17",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-09-16",
               "price": 549.0,
               "available": true
@@ -1817,6 +1827,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-17",
+              "price": 129.0,
+              "available": true
+            },
+            {
               "date": "2026-09-16",
               "price": 129.0,
               "available": true
@@ -2709,6 +2724,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-09-17",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-09-16",
               "price": 45.0,
@@ -3603,6 +3623,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-17",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-09-16",
               "price": 66.0,
               "available": true
@@ -4496,6 +4521,11 @@
           "all_time_low_date": "2026-09-07",
           "history": [
             {
+              "date": "2026-09-17",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-09-16",
               "price": 299.0,
               "available": true
@@ -4563,6 +4593,11 @@
           "all_time_low": 649.0,
           "all_time_low_date": "2026-09-14",
           "history": [
+            {
+              "date": "2026-09-17",
+              "price": 649.0,
+              "available": true
+            },
             {
               "date": "2026-09-16",
               "price": 649.0,
