@@ -412,6 +412,16 @@ main {
   cursor: pointer;
 }
 
+.fetch-status {
+  font-size: 0.85rem;
+  min-height: 1.2em;
+  margin-bottom: 0.75rem;
+}
+.fetch-status.loading { color: var(--text-muted); }
+.fetch-status.success { color: var(--success, #22863a); }
+.fetch-status.error   { color: var(--danger); }
+.fetch-status.warn    { color: var(--warning, #b08800); }
+
 .url-field-row {
   display: flex;
   gap: 0.5rem;

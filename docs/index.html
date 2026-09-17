@@ -114,6 +114,20 @@
         </div>
       </div>
 
+      <!-- URL Entry Step -->
+      <div id="add-url-step" class="hidden">
+        <div class="form-group">
+          <label for="first-url-input">Paste a product URL to get started</label>
+          <input type="url" id="first-url-input" placeholder="https://www.jbhifi.com.au/products/...">
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.4rem;">Works automatically for JB Hi-Fi, Elegoo, Anycubic and other Shopify stores. Other sites will need the name filled in manually.</p>
+        </div>
+        <p id="url-fetch-status" class="fetch-status"></p>
+        <div class="form-actions">
+          <button type="button" id="fetch-url-btn" class="btn btn-primary">Fetch Details</button>
+          <button type="button" class="btn btn-secondary" data-close-modal="add-product-modal">Cancel</button>
+        </div>
+      </div>
+
       <!-- Add Product Form -->
       <form id="add-product-form" class="hidden">
         <div class="form-group">
