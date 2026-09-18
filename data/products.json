@@ -104,6 +104,21 @@
       "category": "electronics",
       "target_price": 500,
       "alert_enabled": true
+    },
+    {
+      "id": "ck8emsg2",
+      "name": "reMarkable Paper Pure with Marker Plus and Sleeve Folio Polymerweave (Mist Green)",
+      "urls": [
+        {
+          "url": "https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker-plus-and-sleeve-folio-polymerweave-mist-green",
+          "label": "JB Hi-Fi"
+        }
+      ],
+      "added_date": "2026-09-18",
+      "active": true,
+      "category": "electronics",
+      "target_price": 654,
+      "alert_enabled": true
     }
   ]
 }
