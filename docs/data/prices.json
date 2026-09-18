@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17T23:08:48.223950+00:00",
+  "last_updated": "2026-09-18T01:34:25.768177+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-09-18",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-09-17",
               "price": 799.0,
@@ -919,6 +924,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-09-18",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-09-17",
               "price": 549.0,
               "available": true
@@ -1827,6 +1837,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-18",
+              "price": 129.0,
+              "available": true
+            },
+            {
               "date": "2026-09-17",
               "price": 129.0,
               "available": true
@@ -2724,6 +2739,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-09-18",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-09-17",
               "price": 45.0,
@@ -3623,6 +3643,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-18",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-09-17",
               "price": 66.0,
               "available": true
@@ -4521,6 +4546,11 @@
           "all_time_low_date": "2026-09-07",
           "history": [
             {
+              "date": "2026-09-18",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-09-17",
               "price": 299.0,
               "available": true
@@ -4594,6 +4624,11 @@
           "all_time_low_date": "2026-09-14",
           "history": [
             {
+              "date": "2026-09-18",
+              "price": 649.0,
+              "available": true
+            },
+            {
               "date": "2026-09-17",
               "price": 649.0,
               "available": true
@@ -4620,6 +4655,29 @@
       "best_current_source": "JB Hi-Fi",
       "overall_all_time_low": 649.0,
       "overall_all_time_low_date": "2026-09-14",
+      "overall_all_time_low_source": "JB Hi-Fi"
+    },
+    "ck8emsg2": {
+      "urls": {
+        "https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker-plus-and-sleeve-folio-polymerweave-mist-green": {
+          "label": "JB Hi-Fi",
+          "current_price": 769.0,
+          "current_availability": true,
+          "all_time_low": 769.0,
+          "all_time_low_date": "2026-09-18",
+          "history": [
+            {
+              "date": "2026-09-18",
+              "price": 769.0,
+              "available": true
+            }
+          ]
+        }
+      },
+      "best_current_price": 769.0,
+      "best_current_source": "JB Hi-Fi",
+      "overall_all_time_low": 769.0,
+      "overall_all_time_low_date": "2026-09-18",
       "overall_all_time_low_source": "JB Hi-Fi"
     }
   }
