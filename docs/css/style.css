@@ -247,6 +247,25 @@ main {
   opacity: 0.6;
 }
 
+/* Name column wraps long text */
+#product-table .name-cell {
+  white-space: normal;
+  word-break: break-word;
+  min-width: 180px;
+  max-width: 260px;
+}
+
+/* Sparkline column */
+.sparkline-cell {
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
+.sparkline-svg {
+  display: block;
+  vertical-align: middle;
+}
+
 /* Expandable sub-rows */
 .sub-row td {
   padding-left: 2.5rem;

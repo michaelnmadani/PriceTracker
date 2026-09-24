@@ -38,7 +38,7 @@ function createProductRow(product) {
     : '';
 
   tr.innerHTML = `
-    <td>${expandBtn}<strong>${escapeHtml(product.name)}</strong>
+    <td class="name-cell">${expandBtn}<strong>${escapeHtml(product.name)}</strong>
       ${product.category ? `<br><small style="color:var(--text-muted)">${escapeHtml(product.category)}</small>` : ''}
       ${product.best_source ? `<br><small style="color:var(--text-muted)">${escapeHtml(product.best_source)}</small>` : ''}
     </td>
@@ -67,8 +67,9 @@ function createProductRow(product) {
           : '—')
       }
     </td>
+    <td class="sparkline-cell">${buildSparkline(product)}</td>
     <td>
-      <button class="btn btn-sm btn-secondary view-chart-btn" data-product-id="${product.id}">Chart</button>
+      <button class="btn btn-sm btn-secondary view-chart-btn" data-product-id="${product.id}">Detail</button>
     </td>
   `;
 
@@ -132,13 +133,67 @@ function createSubRows(product) {
         ${urlData.all_time_low_date ? `<br><small>${urlData.all_time_low_date}</small>` : ''}
       </td>
       <td>${formatChange(change)}</td>
-      <td colspan="2"></td>
+      <td colspan="3"></td>
     `;
 
     rows.push(tr);
   }
 
   return rows;
+}
+
+function buildSparkline(product) {
+  // Collect history from best-source URL, fall back to any URL with history
+  let history = [];
+  const urlEntries = product.url_entries || {};
+
+  for (const urlData of Object.values(urlEntries)) {
+    if (urlData.label === product.best_source && urlData.history?.length > 0) {
+      history = urlData.history;
+      break;
+    }
+  }
+  if (!history.length) {
+    for (const urlData of Object.values(urlEntries)) {
+      if (urlData.history?.length > 0) { history = urlData.history; break; }
+    }
+  }
+
+  // Filter to last 90 days with valid prices, then sort oldest→newest
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 90);
+  const cutoffStr = cutoff.toISOString().split('T')[0];
+  const points = history
+    .filter(h => h.price != null && h.date >= cutoffStr)
+    .slice()
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  if (points.length < 2) {
+    return '<span style="color:var(--text-muted);font-size:0.75rem">—</span>';
+  }
+
+  const W = 160, H = 42, PAD = 3;
+  const prices = points.map(p => p.price);
+  const minP = Math.min(...prices);
+  const maxP = Math.max(...prices);
+  const range = maxP - minP || 1;
+
+  const toX = i => PAD + (i / (points.length - 1)) * (W - PAD * 2);
+  const toY = p => H - PAD - ((p - minP) / range) * (H - PAD * 2 - 2);
+
+  const coords = points.map((p, i) => `${toX(i).toFixed(1)},${toY(p.price).toFixed(1)}`);
+  const line = coords.join(' ');
+  const area = `${toX(0).toFixed(1)},${H} ${line} ${toX(points.length - 1).toFixed(1)},${H}`;
+
+  // Highlight last point
+  const lastX = toX(points.length - 1);
+  const lastY = toY(points[points.length - 1].price);
+
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" class="sparkline-svg">
+    <polygon points="${area}" fill="#3b82f6" fill-opacity="0.12"/>
+    <polyline points="${line}" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="2.5" fill="#3b82f6"/>
+  </svg>`;
 }
 
 function escapeHtml(str) {
