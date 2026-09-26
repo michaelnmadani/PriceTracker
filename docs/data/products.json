@@ -119,6 +119,25 @@
       "category": "electronics",
       "target_price": 654,
       "alert_enabled": true
+    },
+    {
+      "id": "lgwg2026",
+      "name": "LEGO Wallace & Gromit (21371)",
+      "urls": [
+        {
+          "url": "https://www.lego.com/en-au/product/wallace-gromit-21371",
+          "label": "LEGO Official"
+        },
+        {
+          "url": "https://lego.bricksmegastore.com/products/lego-ideas-wallace-gromit",
+          "label": "Bricks Megastore"
+        }
+      ],
+      "added_date": "2026-09-26",
+      "active": true,
+      "category": "other",
+      "target_price": 130,
+      "alert_enabled": true
     }
   ]
 }
