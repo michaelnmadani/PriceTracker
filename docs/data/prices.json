@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-25T23:39:02.424617+00:00",
+  "last_updated": "2026-09-26T22:51:26.100891+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-09-26",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-09-25",
               "price": 799.0,
@@ -959,6 +964,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-09-26",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-09-25",
               "price": 549.0,
               "available": true
@@ -1907,6 +1917,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-26",
+              "price": 129.0,
+              "available": true
+            },
+            {
               "date": "2026-09-25",
               "price": 129.0,
               "available": true
@@ -2844,6 +2859,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-09-26",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-09-25",
               "price": 45.0,
@@ -3783,6 +3803,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-09-26",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-09-25",
               "price": 66.0,
               "available": true
@@ -4721,6 +4746,11 @@
           "all_time_low_date": "2026-09-07",
           "history": [
             {
+              "date": "2026-09-26",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-09-25",
               "price": 299.0,
               "available": true
@@ -4834,6 +4864,11 @@
           "all_time_low_date": "2026-09-14",
           "history": [
             {
+              "date": "2026-09-26",
+              "price": 649.0,
+              "available": true
+            },
+            {
               "date": "2026-09-25",
               "price": 649.0,
               "available": true
@@ -4912,6 +4947,11 @@
           "all_time_low_date": "2026-09-18",
           "history": [
             {
+              "date": "2026-09-26",
+              "price": 769.0,
+              "available": true
+            },
+            {
               "date": "2026-09-25",
               "price": 769.0,
               "available": true
@@ -4959,6 +4999,43 @@
       "overall_all_time_low": 769.0,
       "overall_all_time_low_date": "2026-09-18",
       "overall_all_time_low_source": "JB Hi-Fi"
+    },
+    "lgwg2026": {
+      "urls": {
+        "https://www.lego.com/en-au/product/wallace-gromit-21371": {
+          "label": "LEGO Official",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-09-26",
+              "price": null,
+              "available": false
+            }
+          ]
+        },
+        "https://lego.bricksmegastore.com/products/lego-ideas-wallace-gromit": {
+          "label": "Bricks Megastore",
+          "current_price": 149.99,
+          "current_availability": true,
+          "all_time_low": 149.99,
+          "all_time_low_date": "2026-09-26",
+          "history": [
+            {
+              "date": "2026-09-26",
+              "price": 149.99,
+              "available": true
+            }
+          ]
+        }
+      },
+      "best_current_price": 149.99,
+      "best_current_source": "Bricks Megastore",
+      "overall_all_time_low": 149.99,
+      "overall_all_time_low_date": "2026-09-26",
+      "overall_all_time_low_source": "Bricks Megastore"
     }
   }
 }
