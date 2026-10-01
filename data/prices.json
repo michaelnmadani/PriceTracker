@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-29T23:59:02.503682+00:00",
+  "last_updated": "2026-10-01T00:12:36.283679+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-10-01",
+              "price": 799.0,
+              "available": true
+            },
             {
               "date": "2026-09-29",
               "price": 799.0,
@@ -974,6 +979,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-10-01",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-09-29",
               "price": 549.0,
               "available": true
@@ -1931,11 +1941,16 @@
       "urls": {
         "https://www.anycubic.au/products/wash-cure-3?variant=49965303660838": {
           "label": "Anycubic",
-          "current_price": 129.0,
+          "current_price": 149.0,
           "current_availability": true,
           "all_time_low": 129.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-10-01",
+              "price": 149.0,
+              "available": true
+            },
             {
               "date": "2026-09-29",
               "price": 129.0,
@@ -2874,7 +2889,7 @@
           ]
         }
       },
-      "best_current_price": 129.0,
+      "best_current_price": 149.0,
       "best_current_source": "Anycubic",
       "overall_all_time_low": 129.0,
       "overall_all_time_low_date": "2026-03-23",
@@ -2889,6 +2904,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-10-01",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-09-29",
               "price": 45.0,
@@ -3843,6 +3863,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-01",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-09-29",
               "price": 66.0,
               "available": true
@@ -4790,11 +4815,16 @@
       "urls": {
         "https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers": {
           "label": "Elegoo",
-          "current_price": 299.0,
+          "current_price": 269.0,
           "current_availability": true,
-          "all_time_low": 299.0,
-          "all_time_low_date": "2026-09-07",
+          "all_time_low": 269.0,
+          "all_time_low_date": "2026-10-01",
           "history": [
+            {
+              "date": "2026-10-01",
+              "price": 269.0,
+              "available": true
+            },
             {
               "date": "2026-09-29",
               "price": 299.0,
@@ -4908,10 +4938,10 @@
           ]
         }
       },
-      "best_current_price": 299.0,
+      "best_current_price": 269.0,
       "best_current_source": "Elegoo",
-      "overall_all_time_low": 299.0,
-      "overall_all_time_low_date": "2026-09-07",
+      "overall_all_time_low": 269.0,
+      "overall_all_time_low_date": "2026-10-01",
       "overall_all_time_low_source": "Elegoo"
     },
     "rmpp2026": {
@@ -4923,6 +4953,11 @@
           "all_time_low": 649.0,
           "all_time_low_date": "2026-09-14",
           "history": [
+            {
+              "date": "2026-10-01",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-09-29",
               "price": 649.0,
@@ -5017,6 +5052,11 @@
           "all_time_low_date": "2026-09-18",
           "history": [
             {
+              "date": "2026-10-01",
+              "price": 769.0,
+              "available": true
+            },
+            {
               "date": "2026-09-29",
               "price": 769.0,
               "available": true
@@ -5090,6 +5130,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-01",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-09-29",
               "price": null,
               "available": false
@@ -5113,6 +5158,11 @@
           "all_time_low": 149.99,
           "all_time_low_date": "2026-09-26",
           "history": [
+            {
+              "date": "2026-10-01",
+              "price": 149.99,
+              "available": true
+            },
             {
               "date": "2026-09-29",
               "price": 149.99,
