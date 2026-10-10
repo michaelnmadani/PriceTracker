@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10T00:21:35.322178+00:00",
+  "last_updated": "2026-10-10T23:55:20.380983+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -12,8 +12,8 @@
           "history": [
             {
               "date": "2026-10-10",
-              "price": null,
-              "available": false
+              "price": 799.0,
+              "available": true
             },
             {
               "date": "2026-10-09",
@@ -1020,8 +1020,8 @@
           "history": [
             {
               "date": "2026-10-10",
-              "price": null,
-              "available": false
+              "price": 549.0,
+              "available": true
             },
             {
               "date": "2026-10-09",
@@ -3026,8 +3026,8 @@
           "history": [
             {
               "date": "2026-10-10",
-              "price": null,
-              "available": false
+              "price": 45.0,
+              "available": true
             },
             {
               "date": "2026-10-09",
@@ -4024,8 +4024,8 @@
           "history": [
             {
               "date": "2026-10-10",
-              "price": null,
-              "available": false
+              "price": 66.0,
+              "available": true
             },
             {
               "date": "2026-10-09",
@@ -5333,8 +5333,8 @@
           "history": [
             {
               "date": "2026-10-10",
-              "price": null,
-              "available": false
+              "price": 769.0,
+              "available": true
             },
             {
               "date": "2026-10-09",
