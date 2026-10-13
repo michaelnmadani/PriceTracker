@@ -1,15 +1,20 @@
 {
-  "last_updated": "2026-10-12T00:02:11.180730+00:00",
+  "last_updated": "2026-10-13T02:16:20.663826+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
         "https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer": {
           "label": "Elegoo",
-          "current_price": 799.0,
+          "current_price": 849.0,
           "current_availability": true,
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-10-13",
+              "price": 849.0,
+              "available": true
+            },
             {
               "date": "2026-10-12",
               "price": null,
@@ -1008,7 +1013,7 @@
           ]
         }
       },
-      "best_current_price": 799.0,
+      "best_current_price": 849.0,
       "best_current_source": "Elegoo",
       "overall_all_time_low": 799.0,
       "overall_all_time_low_date": "2026-07-21",
@@ -1023,6 +1028,11 @@
           "all_time_low": 549.0,
           "all_time_low_date": "2026-04-28",
           "history": [
+            {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-12",
               "price": 549.0,
@@ -2037,6 +2047,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-12",
               "price": null,
               "available": false
@@ -3039,6 +3054,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-12",
               "price": 45.0,
@@ -4043,6 +4063,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-13",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-10-12",
               "price": null,
               "available": false
@@ -5040,11 +5065,16 @@
       "urls": {
         "https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers": {
           "label": "Elegoo",
-          "current_price": 299.0,
+          "current_price": 269.0,
           "current_availability": true,
           "all_time_low": 269.0,
           "all_time_low_date": "2026-10-01",
           "history": [
+            {
+              "date": "2026-10-13",
+              "price": 269.0,
+              "available": true
+            },
             {
               "date": "2026-10-12",
               "price": null,
@@ -5208,7 +5238,7 @@
           ]
         }
       },
-      "best_current_price": 299.0,
+      "best_current_price": 269.0,
       "best_current_source": "Elegoo",
       "overall_all_time_low": 269.0,
       "overall_all_time_low_date": "2026-10-01",
@@ -5223,6 +5253,11 @@
           "all_time_low": 649.0,
           "all_time_low_date": "2026-09-14",
           "history": [
+            {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-12",
               "price": null,
@@ -5367,6 +5402,11 @@
           "all_time_low_date": "2026-09-18",
           "history": [
             {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-12",
               "price": null,
               "available": false
@@ -5490,6 +5530,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-12",
               "price": null,
               "available": false
@@ -5563,6 +5608,11 @@
           "all_time_low": 149.99,
           "all_time_low_date": "2026-09-26",
           "history": [
+            {
+              "date": "2026-10-13",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-12",
               "price": 149.99,
