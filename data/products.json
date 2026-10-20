@@ -138,6 +138,21 @@
       "category": "other",
       "target_price": 130,
       "alert_enabled": true
+    },
+    {
+      "id": "orkstrmc",
+      "name": "Ork Stormcrows STL (Wargame Exclusive)",
+      "urls": [
+        {
+          "url": "https://www.myminifactory.com/object/3d-print-ork-stormcrows-394410",
+          "label": "MyMiniFactory"
+        }
+      ],
+      "added_date": "2026-10-20",
+      "active": true,
+      "category": "other",
+      "target_price": 10,
+      "alert_enabled": true
     }
   ]
 }
