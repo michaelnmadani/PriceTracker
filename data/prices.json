@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-19T23:58:42.964882+00:00",
+  "last_updated": "2026-10-20T11:08:46.638054+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-10-20",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-19",
               "price": 849.0,
@@ -1059,6 +1064,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-10-20",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-10-19",
               "price": 549.0,
               "available": true
@@ -2107,6 +2117,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-20",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-19",
               "price": null,
               "available": false
@@ -3144,6 +3159,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-10-20",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-19",
               "price": 45.0,
@@ -4183,6 +4203,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-20",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-10-19",
               "price": null,
               "available": false
@@ -5215,11 +5240,16 @@
       "urls": {
         "https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers": {
           "label": "Elegoo",
-          "current_price": 269.0,
+          "current_price": 299.0,
           "current_availability": true,
           "all_time_low": 269.0,
           "all_time_low_date": "2026-10-01",
           "history": [
+            {
+              "date": "2026-10-20",
+              "price": 299.0,
+              "available": true
+            },
             {
               "date": "2026-10-19",
               "price": 269.0,
@@ -5418,7 +5448,7 @@
           ]
         }
       },
-      "best_current_price": 269.0,
+      "best_current_price": 299.0,
       "best_current_source": "Elegoo",
       "overall_all_time_low": 269.0,
       "overall_all_time_low_date": "2026-10-01",
@@ -5433,6 +5463,11 @@
           "all_time_low": 649.0,
           "all_time_low_date": "2026-09-14",
           "history": [
+            {
+              "date": "2026-10-20",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-10-19",
               "price": null,
@@ -5612,6 +5647,11 @@
           "all_time_low_date": "2026-09-18",
           "history": [
             {
+              "date": "2026-10-20",
+              "price": 769.0,
+              "available": true
+            },
+            {
               "date": "2026-10-19",
               "price": null,
               "available": false
@@ -5770,6 +5810,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-20",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-19",
               "price": null,
               "available": false
@@ -5879,6 +5924,11 @@
           "all_time_low_date": "2026-09-26",
           "history": [
             {
+              "date": "2026-10-20",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-19",
               "price": 149.99,
               "available": true
@@ -5986,6 +6036,29 @@
       "overall_all_time_low": 149.99,
       "overall_all_time_low_date": "2026-09-26",
       "overall_all_time_low_source": "Bricks Megastore"
+    },
+    "orkstrmc": {
+      "urls": {
+        "https://www.myminifactory.com/object/3d-print-ork-stormcrows-394410": {
+          "label": "MyMiniFactory",
+          "current_price": 19.99,
+          "current_availability": true,
+          "all_time_low": 19.99,
+          "all_time_low_date": "2026-10-20",
+          "history": [
+            {
+              "date": "2026-10-20",
+              "price": 19.99,
+              "available": true
+            }
+          ]
+        }
+      },
+      "best_current_price": 19.99,
+      "best_current_source": "MyMiniFactory",
+      "overall_all_time_low": 19.99,
+      "overall_all_time_low_date": "2026-10-20",
+      "overall_all_time_low_source": "MyMiniFactory"
     }
   }
 }
