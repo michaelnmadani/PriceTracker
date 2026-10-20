@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-20T11:17:51.364767+00:00",
+  "last_updated": "2026-10-20T11:22:26.483378+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -2118,8 +2118,8 @@
           "history": [
             {
               "date": "2026-10-20",
-              "price": null,
-              "available": false
+              "price": 149.0,
+              "available": true
             },
             {
               "date": "2026-10-19",
@@ -6055,24 +6055,24 @@
         },
         "https://cults3d.com/en/3d-model/game/ork-stormcrow-nobba": {
           "label": "Cults3D",
-          "current_price": null,
+          "current_price": 9.0,
           "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
+          "all_time_low": 9.0,
+          "all_time_low_date": "2026-10-20",
           "history": [
             {
               "date": "2026-10-20",
-              "price": null,
-              "available": false
+              "price": 9.0,
+              "available": true
             }
           ]
         }
       },
-      "best_current_price": 10.99,
-      "best_current_source": "MyMiniFactory",
-      "overall_all_time_low": 10.99,
+      "best_current_price": 9.0,
+      "best_current_source": "Cults3D",
+      "overall_all_time_low": 9.0,
       "overall_all_time_low_date": "2026-10-20",
-      "overall_all_time_low_source": "MyMiniFactory"
+      "overall_all_time_low_source": "Cults3D"
     }
   }
 }
