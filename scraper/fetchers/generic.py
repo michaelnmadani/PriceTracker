@@ -71,7 +71,9 @@ class GenericFetcher(BaseFetcher):
             item_type = data.get("@type", "")
             if isinstance(item_type, list):
                 item_type = " ".join(item_type)
-            if "Product" in str(item_type):
+            # Product is the usual type; digital goods (e.g. Cults3D STLs) use
+            # MediaObject/CreativeWork with an "offers" block instead.
+            if "Product" in str(item_type) or "offers" in data:
                 products.append(data)
 
             # Check @graph
