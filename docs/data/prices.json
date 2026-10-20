@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-20T11:08:46.638054+00:00",
+  "last_updated": "2026-10-20T11:14:54.180890+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -12,8 +12,8 @@
           "history": [
             {
               "date": "2026-10-20",
-              "price": null,
-              "available": false
+              "price": 849.0,
+              "available": true
             },
             {
               "date": "2026-10-19",
@@ -3161,8 +3161,8 @@
           "history": [
             {
               "date": "2026-10-20",
-              "price": null,
-              "available": false
+              "price": 45.0,
+              "available": true
             },
             {
               "date": "2026-10-19",
@@ -6036,6 +6036,29 @@
       "overall_all_time_low": 149.99,
       "overall_all_time_low_date": "2026-09-26",
       "overall_all_time_low_source": "Bricks Megastore"
+    },
+    "orknobba": {
+      "urls": {
+        "https://www.myminifactory.com/object/3d-print-ork-stormcrow-nobba-405623": {
+          "label": "MyMiniFactory",
+          "current_price": 10.99,
+          "current_availability": true,
+          "all_time_low": 10.99,
+          "all_time_low_date": "2026-10-20",
+          "history": [
+            {
+              "date": "2026-10-20",
+              "price": 10.99,
+              "available": true
+            }
+          ]
+        }
+      },
+      "best_current_price": 10.99,
+      "best_current_source": "MyMiniFactory",
+      "overall_all_time_low": 10.99,
+      "overall_all_time_low_date": "2026-10-20",
+      "overall_all_time_low_source": "MyMiniFactory"
     }
   }
 }
