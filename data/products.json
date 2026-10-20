@@ -140,11 +140,11 @@
       "alert_enabled": true
     },
     {
-      "id": "orkstrmc",
-      "name": "Ork Stormcrows STL (Wargame Exclusive)",
+      "id": "orknobba",
+      "name": "Ork Stormcrow Nobba STL (Wargame Exclusive)",
       "urls": [
         {
-          "url": "https://www.myminifactory.com/object/3d-print-ork-stormcrows-394410",
+          "url": "https://www.myminifactory.com/object/3d-print-ork-stormcrow-nobba-405623",
           "label": "MyMiniFactory"
         }
       ],

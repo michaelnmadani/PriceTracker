@@ -6036,29 +6036,6 @@
       "overall_all_time_low": 149.99,
       "overall_all_time_low_date": "2026-09-26",
       "overall_all_time_low_source": "Bricks Megastore"
-    },
-    "orkstrmc": {
-      "urls": {
-        "https://www.myminifactory.com/object/3d-print-ork-stormcrows-394410": {
-          "label": "MyMiniFactory",
-          "current_price": 19.99,
-          "current_availability": true,
-          "all_time_low": 19.99,
-          "all_time_low_date": "2026-10-20",
-          "history": [
-            {
-              "date": "2026-10-20",
-              "price": 19.99,
-              "available": true
-            }
-          ]
-        }
-      },
-      "best_current_price": 19.99,
-      "best_current_source": "MyMiniFactory",
-      "overall_all_time_low": 19.99,
-      "overall_all_time_low_date": "2026-10-20",
-      "overall_all_time_low_source": "MyMiniFactory"
     }
   }
 }
