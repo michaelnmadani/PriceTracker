@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-22T00:06:32.935839+00:00",
+  "last_updated": "2026-10-22T00:14:47.226400+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -6192,8 +6192,8 @@
           "history": [
             {
               "date": "2026-10-22",
-              "price": null,
-              "available": false
+              "price": 9.0,
+              "available": true
             },
             {
               "date": "2026-10-21",
@@ -6205,11 +6205,7 @@
               "price": 9.0,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-10-22",
-            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://cults3d.com/en/3d-model/game/ork-stormcrow-nobba)"
-          }
+          ]
         }
       },
       "best_current_price": 9.0,
