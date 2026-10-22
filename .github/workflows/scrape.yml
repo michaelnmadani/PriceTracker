@@ -27,6 +27,9 @@ jobs:
 
       - name: Run scraper
         run: python scraper/scrape.py
+        env:
+          CULTS3D_USERNAME: ${{ secrets.CULTS3D_USERNAME }}
+          CULTS3D_API_KEY: ${{ secrets.CULTS3D_API_KEY }}
 
       - name: Copy data for frontend
         run: |
