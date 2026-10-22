@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-22T00:03:33.335093+00:00",
+  "last_updated": "2026-10-22T00:06:32.935839+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -1075,8 +1075,8 @@
           "history": [
             {
               "date": "2026-10-22",
-              "price": null,
-              "available": false
+              "price": 549.0,
+              "available": true
             },
             {
               "date": "2026-10-21",
@@ -3171,7 +3171,11 @@
               "price": 129.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-10-22",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.anycubic.au/products/wash-cure-3?variant=49965303660838)"
+          }
         }
       },
       "best_current_price": 149.0,
@@ -4224,7 +4228,11 @@
               "price": 45.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-10-22",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-resinaway-resin-3d-print-cleaner-icy-mint-scent)"
+          }
         }
       },
       "best_current_price": 45.0,
@@ -5277,7 +5285,11 @@
               "price": 66.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-10-22",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-rinseoff)"
+          }
         }
       },
       "best_current_price": 66.0,
@@ -5290,14 +5302,14 @@
       "urls": {
         "https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers": {
           "label": "Elegoo",
-          "current_price": 299.0,
+          "current_price": 269.0,
           "current_availability": true,
           "all_time_low": 269.0,
           "all_time_low_date": "2026-10-01",
           "history": [
             {
               "date": "2026-10-22",
-              "price": 299.0,
+              "price": 269.0,
               "available": true
             },
             {
@@ -5508,7 +5520,7 @@
           ]
         }
       },
-      "best_current_price": 299.0,
+      "best_current_price": 269.0,
       "best_current_source": "Elegoo",
       "overall_all_time_low": 269.0,
       "overall_all_time_low_date": "2026-10-01",
@@ -5698,7 +5710,11 @@
               "price": 649.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-10-22",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker)"
+          }
         }
       },
       "best_current_price": 649.0,
@@ -6004,7 +6020,11 @@
               "price": null,
               "available": false
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-10-22",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/wallace-gromit-21371)"
+          }
         },
         "https://lego.bricksmegastore.com/products/lego-ideas-wallace-gromit": {
           "label": "Bricks Megastore",
@@ -6015,8 +6035,8 @@
           "history": [
             {
               "date": "2026-10-22",
-              "price": null,
-              "available": false
+              "price": 149.99,
+              "available": true
             },
             {
               "date": "2026-10-21",
@@ -6185,7 +6205,11 @@
               "price": 9.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-10-22",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://cults3d.com/en/3d-model/game/ork-stormcrow-nobba)"
+          }
         }
       },
       "best_current_price": 9.0,
