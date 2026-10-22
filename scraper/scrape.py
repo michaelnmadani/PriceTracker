@@ -155,11 +155,13 @@ def run_scraper(product_id: str | None = None):
 
                 url_entry["history"] = prune_history(history)
 
+                url_entry.pop("last_error", None)
                 print(f"    Price: ${price:.2f} | Available: {available}")
                 success_count += 1
             else:
                 error = result.get("error", "Unknown error")
                 print(f"    FAILED: {error}")
+                url_entry["last_error"] = {"date": today, "error": error}
 
                 # Add a failed entry to history
                 history = url_entry.get("history", [])

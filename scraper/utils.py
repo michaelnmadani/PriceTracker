@@ -19,6 +19,7 @@ def fetch_page(url: str, max_retries: int = 3, timeout: int = 15) -> requests.Re
     Returns the Response object on success, or None on failure.
     """
     scraper = _create_scraper()
+    fetch_page.last_error = None
 
     for attempt in range(max_retries):
         try:
@@ -31,6 +32,7 @@ def fetch_page(url: str, max_retries: int = 3, timeout: int = 15) -> requests.Re
             return response
         except (requests.RequestException, Exception) as e:
             print(f"  Attempt {attempt + 1}/{max_retries} failed for {url}: {e}")
+            fetch_page.last_error = f"{type(e).__name__}: {e}"[:300]
 
     return None
 

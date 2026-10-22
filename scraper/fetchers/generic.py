@@ -19,7 +19,7 @@ class GenericFetcher(BaseFetcher):
 
         response = fetch_page(url)
         if response is None:
-            result["error"] = "Failed to fetch page after retries"
+            result["error"] = f"Failed to fetch page after retries ({getattr(fetch_page, 'last_error', None)})"
             result["available"] = False
             return result
 
