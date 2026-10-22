@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 21 * * *'  # 8:00 AM AEST (UTC+11) / 7:00 AM AEST (UTC+10)
   workflow_dispatch:       # Allow manual triggering from GitHub UI
+    inputs:
+      product_id:
+        description: 'Only scrape this product ID (leave blank for all)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -26,10 +31,11 @@ jobs:
         run: pip install -r scraper/requirements.txt
 
       - name: Run scraper
-        run: python scraper/scrape.py
+        run: python scraper/scrape.py ${PRODUCT_ID:+--product-id "$PRODUCT_ID"}
         env:
           CULTS3D_USERNAME: ${{ secrets.CULTS3D_USERNAME }}
           CULTS3D_API_KEY: ${{ secrets.CULTS3D_API_KEY }}
+          PRODUCT_ID: ${{ inputs.product_id }}
 
       - name: Copy data for frontend
         run: |
