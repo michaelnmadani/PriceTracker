@@ -157,6 +157,56 @@
       "category": "other",
       "target_price": 5,
       "alert_enabled": true
+    },
+    {
+      "id": "ywmbphy1",
+      "name": "Yoshi and the Mysterious Book (Physical)",
+      "urls": [
+        {
+          "url": "https://www.jbhifi.com.au/products/nintendo-switch-2-yoshi-and-the-mysterious-book",
+          "label": "JB Hi-Fi"
+        },
+        {
+          "url": "https://www.bigw.com.au/product/yoshi-and-the-mysterious-book-nintendo-switch-2/p/6074745",
+          "label": "Big W"
+        },
+        {
+          "url": "https://www.officeworks.com.au/shop/officeworks/p/yoshi-and-the-mysterious-book-nintendo-switch-2-nsyoshibk",
+          "label": "Officeworks"
+        },
+        {
+          "url": "https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/",
+          "label": "Kmart"
+        },
+        {
+          "url": "https://www.target.com.au/p/yoshi-and-the-mysterious-book-nintendo-switch-2/72942093",
+          "label": "Target"
+        },
+        {
+          "url": "https://www.ebgames.com.au/product/nintendo-switch-2/330022-yoshi-and-the-mysterious-book",
+          "label": "EB Games"
+        }
+      ],
+      "added_date": "2026-10-23",
+      "active": true,
+      "category": "gaming",
+      "target_price": 79,
+      "alert_enabled": true
+    },
+    {
+      "id": "ywmbdig1",
+      "name": "Yoshi and the Mysterious Book (Digital)",
+      "urls": [
+        {
+          "url": "https://ec.nintendo.com/AU/en/titles/70010000119860",
+          "label": "Nintendo eShop AU"
+        }
+      ],
+      "added_date": "2026-10-23",
+      "active": true,
+      "category": "gaming",
+      "target_price": 75,
+      "alert_enabled": true
     }
   ]
 }
