@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-22T23:41:39.437028+00:00",
+  "last_updated": "2026-10-23T02:14:36.003505+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-10-23",
+              "price": 849.0,
+              "available": true
+            },
             {
               "date": "2026-10-22",
               "price": 849.0,
@@ -1074,6 +1079,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-10-22",
               "price": 549.0,
               "available": true
@@ -2137,6 +2147,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": 149.0,
+              "available": true
+            },
+            {
               "date": "2026-10-22",
               "price": 149.0,
               "available": true
@@ -3189,6 +3204,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-10-23",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-10-22",
               "price": 45.0,
@@ -4243,6 +4263,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-10-22",
               "price": 66.0,
               "available": true
@@ -5296,6 +5321,11 @@
           "all_time_low_date": "2026-10-01",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-10-22",
               "price": 299.0,
               "available": true
@@ -5524,6 +5554,11 @@
           "all_time_low_date": "2026-09-14",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-22",
               "price": null,
               "available": false
@@ -5700,7 +5735,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-10-22",
+            "date": "2026-10-23",
             "error": "Could not extract price from page"
           }
         }
@@ -5720,6 +5755,11 @@
           "all_time_low": 769.0,
           "all_time_low_date": "2026-09-18",
           "history": [
+            {
+              "date": "2026-10-23",
+              "price": 769.0,
+              "available": true
+            },
             {
               "date": "2026-10-22",
               "price": 769.0,
@@ -5894,6 +5934,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-23",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-22",
               "price": null,
               "available": false
@@ -6010,7 +6055,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-10-22",
+            "date": "2026-10-23",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/wallace-gromit-21371)"
           }
         },
@@ -6021,6 +6066,11 @@
           "all_time_low": 149.99,
           "all_time_low_date": "2026-09-26",
           "history": [
+            {
+              "date": "2026-10-23",
+              "price": 149.99,
+              "available": true
+            },
             {
               "date": "2026-10-22",
               "price": 149.99,
@@ -6155,6 +6205,11 @@
           "all_time_low_date": "2026-10-20",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": 10.99,
+              "available": true
+            },
+            {
               "date": "2026-10-22",
               "price": 10.99,
               "available": true
@@ -6179,6 +6234,11 @@
           "all_time_low_date": "2026-10-20",
           "history": [
             {
+              "date": "2026-10-23",
+              "price": 9.0,
+              "available": true
+            },
+            {
               "date": "2026-10-22",
               "price": 9.0,
               "available": true
@@ -6201,6 +6261,134 @@
       "overall_all_time_low": 9.0,
       "overall_all_time_low_date": "2026-10-20",
       "overall_all_time_low_source": "Cults3D"
+    },
+    "ywmbphy1": {
+      "urls": {
+        "https://www.jbhifi.com.au/products/nintendo-switch-2-yoshi-and-the-mysterious-book": {
+          "label": "JB Hi-Fi",
+          "current_price": 99.0,
+          "current_availability": true,
+          "all_time_low": 99.0,
+          "all_time_low_date": "2026-10-23",
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": 99.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.bigw.com.au/product/yoshi-and-the-mysterious-book-nintendo-switch-2/p/6074745": {
+          "label": "Big W",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-10-23",
+            "error": "Failed to fetch page after retries (ReadTimeout: HTTPSConnectionPool(host='www.bigw.com.au', port=443): Read timed out. (read timeout=15))"
+          }
+        },
+        "https://www.officeworks.com.au/shop/officeworks/p/yoshi-and-the-mysterious-book-nintendo-switch-2-nsyoshibk": {
+          "label": "Officeworks",
+          "current_price": 69.0,
+          "current_availability": true,
+          "all_time_low": 69.0,
+          "all_time_low_date": "2026-10-23",
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": 69.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/": {
+          "label": "Kmart",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-10-23",
+            "error": "Could not extract price from page"
+          }
+        },
+        "https://www.target.com.au/p/yoshi-and-the-mysterious-book-nintendo-switch-2/72942093": {
+          "label": "Target",
+          "current_price": 89.0,
+          "current_availability": true,
+          "all_time_low": 89.0,
+          "all_time_low_date": "2026-10-23",
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": 89.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.ebgames.com.au/product/nintendo-switch-2/330022-yoshi-and-the-mysterious-book": {
+          "label": "EB Games",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-10-23",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/330022-yoshi-and-the-mysterious-book)"
+          }
+        }
+      },
+      "best_current_price": 69.0,
+      "best_current_source": "Officeworks",
+      "overall_all_time_low": 69.0,
+      "overall_all_time_low_date": "2026-10-23",
+      "overall_all_time_low_source": "Officeworks"
+    },
+    "ywmbdig1": {
+      "urls": {
+        "https://ec.nintendo.com/AU/en/titles/70010000119860": {
+          "label": "Nintendo eShop AU",
+          "current_price": 94.95,
+          "current_availability": true,
+          "all_time_low": 94.95,
+          "all_time_low_date": "2026-10-23",
+          "history": [
+            {
+              "date": "2026-10-23",
+              "price": 94.95,
+              "available": true
+            }
+          ]
+        }
+      },
+      "best_current_price": 94.95,
+      "best_current_source": "Nintendo eShop AU",
+      "overall_all_time_low": 94.95,
+      "overall_all_time_low_date": "2026-10-23",
+      "overall_all_time_low_source": "Nintendo eShop AU"
     }
   }
 }
