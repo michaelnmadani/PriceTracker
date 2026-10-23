@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-23T02:14:36.003505+00:00",
+  "last_updated": "2026-10-23T23:35:16.852749+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -6325,7 +6325,7 @@
           ],
           "last_error": {
             "date": "2026-10-23",
-            "error": "Could not extract price from page"
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/)"
           }
         },
         "https://www.target.com.au/p/yoshi-and-the-mysterious-book-nintendo-switch-2/72942093": {
