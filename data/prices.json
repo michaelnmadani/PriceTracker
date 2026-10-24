@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-23T23:35:16.852749+00:00",
+  "last_updated": "2026-10-24T22:45:40.221813+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 849.0,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 849.0,
@@ -1079,6 +1084,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-10-23",
               "price": 549.0,
               "available": true
@@ -2147,6 +2157,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": 149.0,
+              "available": true
+            },
+            {
               "date": "2026-10-23",
               "price": 149.0,
               "available": true
@@ -3204,6 +3219,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 45.0,
@@ -4263,6 +4283,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-10-23",
               "price": 66.0,
               "available": true
@@ -5321,6 +5346,11 @@
           "all_time_low_date": "2026-10-01",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-10-23",
               "price": 299.0,
               "available": true
@@ -5554,6 +5584,11 @@
           "all_time_low_date": "2026-09-14",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-23",
               "price": null,
               "available": false
@@ -5735,7 +5770,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-10-23",
+            "date": "2026-10-24",
             "error": "Could not extract price from page"
           }
         }
@@ -5755,6 +5790,11 @@
           "all_time_low": 769.0,
           "all_time_low_date": "2026-09-18",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 769.0,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 769.0,
@@ -5934,6 +5974,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-23",
               "price": null,
               "available": false
@@ -6055,7 +6100,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-10-23",
+            "date": "2026-10-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/wallace-gromit-21371)"
           }
         },
@@ -6066,6 +6111,11 @@
           "all_time_low": 149.99,
           "all_time_low_date": "2026-09-26",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 149.99,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 149.99,
@@ -6205,6 +6255,11 @@
           "all_time_low_date": "2026-10-20",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": 10.99,
+              "available": true
+            },
+            {
               "date": "2026-10-23",
               "price": 10.99,
               "available": true
@@ -6233,6 +6288,11 @@
           "all_time_low": 9.0,
           "all_time_low_date": "2026-10-20",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 9.0,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 9.0,
@@ -6272,6 +6332,11 @@
           "all_time_low_date": "2026-10-23",
           "history": [
             {
+              "date": "2026-10-24",
+              "price": 99.0,
+              "available": true
+            },
+            {
               "date": "2026-10-23",
               "price": 99.0,
               "available": true
@@ -6286,13 +6351,18 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-23",
               "price": null,
               "available": false
             }
           ],
           "last_error": {
-            "date": "2026-10-23",
+            "date": "2026-10-24",
             "error": "Failed to fetch page after retries (ReadTimeout: HTTPSConnectionPool(host='www.bigw.com.au', port=443): Read timed out. (read timeout=15))"
           }
         },
@@ -6303,6 +6373,11 @@
           "all_time_low": 69.0,
           "all_time_low_date": "2026-10-23",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 69.0,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 69.0,
@@ -6318,13 +6393,18 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-23",
               "price": null,
               "available": false
             }
           ],
           "last_error": {
-            "date": "2026-10-23",
+            "date": "2026-10-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/)"
           }
         },
@@ -6335,6 +6415,11 @@
           "all_time_low": 89.0,
           "all_time_low_date": "2026-10-23",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 89.0,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 89.0,
@@ -6350,13 +6435,18 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-10-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-10-23",
               "price": null,
               "available": false
             }
           ],
           "last_error": {
-            "date": "2026-10-23",
+            "date": "2026-10-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/330022-yoshi-and-the-mysterious-book)"
           }
         }
@@ -6376,6 +6466,11 @@
           "all_time_low": 94.95,
           "all_time_low_date": "2026-10-23",
           "history": [
+            {
+              "date": "2026-10-24",
+              "price": 94.95,
+              "available": true
+            },
             {
               "date": "2026-10-23",
               "price": 94.95,
