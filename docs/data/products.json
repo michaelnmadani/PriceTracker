@@ -207,6 +207,87 @@
       "category": "gaming",
       "target_price": 75,
       "alert_enabled": true
+    },
+    {
+      "id": "ns2procbk",
+      "name": "Nintendo Switch 2 Pro Controller (Black)",
+      "urls": [
+        {
+          "url": "https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller",
+          "label": "JB Hi-Fi"
+        },
+        {
+          "url": "https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller",
+          "label": "EB Games"
+        },
+        {
+          "url": "https://www.officeworks.com.au/shop/officeworks/p/nintendo-switch-2-pro-controller-black-ns2procont",
+          "label": "Officeworks"
+        },
+        {
+          "url": "https://www.harveynorman.com.au/nintendo-switch-2-pro-controller.html",
+          "label": "Harvey Norman"
+        },
+        {
+          "url": "https://www.thegoodguys.com.au/nintendo-switch-2-pro-controller-170195",
+          "label": "The Good Guys"
+        },
+        {
+          "url": "https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791",
+          "label": "Kmart"
+        }
+      ],
+      "added_date": "2026-10-29",
+      "active": true,
+      "category": "gaming",
+      "target_price": 99,
+      "alert_enabled": true
+    },
+    {
+      "id": "ns2prozel",
+      "name": "Nintendo Switch 2 Pro Controller - Zelda 40th Anniversary",
+      "urls": [
+        {
+          "url": "https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition",
+          "label": "JB Hi-Fi"
+        },
+        {
+          "url": "https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition",
+          "label": "EB Games"
+        },
+        {
+          "url": "https://www.officeworks.com.au/shop/officeworks/p/nintendo-switch-2-pro-controller-zelda-40th-anniv-edition-ns2ctrlzel",
+          "label": "Officeworks"
+        },
+        {
+          "url": "https://www.cityofgames.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition",
+          "label": "City of Games"
+        }
+      ],
+      "added_date": "2026-10-29",
+      "active": true,
+      "category": "gaming",
+      "target_price": 99,
+      "alert_enabled": true
+    },
+    {
+      "id": "ns2prore",
+      "name": "Nintendo Switch 2 Pro Controller - Resident Evil Requiem Edition",
+      "urls": [
+        {
+          "url": "https://www.ebgames.com.au/product/nintendo-switch-2/336729-nintendo-switch-2-pro-controller-resident-evil-requiem-edition",
+          "label": "EB Games"
+        },
+        {
+          "url": "https://store.nintendo.com.au/nintendo-switch-2-pro-controller-resident-evil-requiem-edition.html",
+          "label": "Nintendo Store AU"
+        }
+      ],
+      "added_date": "2026-10-29",
+      "active": true,
+      "category": "gaming",
+      "target_price": 99,
+      "alert_enabled": true
     }
   ]
 }
