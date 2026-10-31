@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-31T00:10:36.869834+00:00",
+  "last_updated": "2026-10-31T23:48:41.434846+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -6796,14 +6796,14 @@
         },
         "https://www.officeworks.com.au/shop/officeworks/p/yoshi-and-the-mysterious-book-nintendo-switch-2-nsyoshibk": {
           "label": "Officeworks",
-          "current_price": 69.0,
+          "current_price": 89.0,
           "current_availability": true,
           "all_time_low": 69.0,
           "all_time_low_date": "2026-10-23",
           "history": [
             {
               "date": "2026-10-31",
-              "price": 69.0,
+              "price": 89.0,
               "available": true
             },
             {
@@ -6893,7 +6893,7 @@
           ],
           "last_error": {
             "date": "2026-10-31",
-            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/)"
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/)"
           }
         },
         "https://www.target.com.au/p/yoshi-and-the-mysterious-book-nintendo-switch-2/72942093": {
@@ -6999,8 +6999,8 @@
           }
         }
       },
-      "best_current_price": 69.0,
-      "best_current_source": "Officeworks",
+      "best_current_price": 84.0,
+      "best_current_source": "Target",
       "overall_all_time_low": 69.0,
       "overall_all_time_low_date": "2026-10-23",
       "overall_all_time_low_source": "Officeworks"
