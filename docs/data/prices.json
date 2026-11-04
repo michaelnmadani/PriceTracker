@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-03T02:41:09.090796+00:00",
+  "last_updated": "2026-11-04T00:56:30.938355+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10,6 +10,11 @@
           "all_time_low": 799.0,
           "all_time_low_date": "2026-07-21",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 849.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 849.0,
@@ -1124,6 +1129,11 @@
           "all_time_low_date": "2026-04-28",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": 549.0,
+              "available": true
+            },
+            {
               "date": "2026-11-03",
               "price": 549.0,
               "available": true
@@ -2237,6 +2247,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": 129.0,
+              "available": true
+            },
+            {
               "date": "2026-11-03",
               "price": 129.0,
               "available": true
@@ -3339,6 +3354,11 @@
           "all_time_low": 45.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 45.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 45.0,
@@ -4443,6 +4463,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": 66.0,
+              "available": true
+            },
+            {
               "date": "2026-11-03",
               "price": 66.0,
               "available": true
@@ -5546,6 +5571,11 @@
           "all_time_low_date": "2026-10-01",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-11-03",
               "price": 299.0,
               "available": true
@@ -5824,6 +5854,11 @@
           "all_time_low_date": "2026-09-14",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -6050,7 +6085,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Could not extract price from page"
           }
         }
@@ -6070,6 +6105,11 @@
           "all_time_low": 769.0,
           "all_time_low_date": "2026-09-18",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 769.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 769.0,
@@ -6294,6 +6334,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -6460,7 +6505,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/wallace-gromit-21371)"
           }
         },
@@ -6472,6 +6517,11 @@
           "all_time_low_date": "2026-09-26",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -6638,7 +6688,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://lego.bricksmegastore.com/products/lego-ideas-wallace-gromit)"
           }
         }
@@ -6659,6 +6709,11 @@
           "all_time_low_date": "2026-10-20",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -6725,7 +6780,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.myminifactory.com/object/3d-print-ork-stormcrow-nobba-405623)"
           }
         },
@@ -6736,6 +6791,11 @@
           "all_time_low": 9.0,
           "all_time_low_date": "2026-10-20",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 9.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 9.0,
@@ -6820,6 +6880,11 @@
           "all_time_low_date": "2026-10-23",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": 99.0,
+              "available": true
+            },
+            {
               "date": "2026-11-03",
               "price": 99.0,
               "available": true
@@ -6879,6 +6944,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -6930,7 +7000,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (ReadTimeout: HTTPSConnectionPool(host='www.bigw.com.au', port=443): Read timed out. (read timeout=15))"
           }
         },
@@ -6941,6 +7011,11 @@
           "all_time_low": 69.0,
           "all_time_low_date": "2026-10-23",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 84.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 84.0,
@@ -7001,6 +7076,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7052,7 +7132,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/yoshi-and-the-mysterious-book-switch-2-55402187/)"
           }
         },
@@ -7063,6 +7143,11 @@
           "all_time_low": 84.0,
           "all_time_low_date": "2026-10-27",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 84.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 84.0,
@@ -7123,6 +7208,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7174,7 +7264,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/330022-yoshi-and-the-mysterious-book)"
           }
         }
@@ -7194,6 +7284,11 @@
           "all_time_low": 94.95,
           "all_time_low_date": "2026-10-23",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 94.95,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 94.95,
@@ -7263,6 +7358,11 @@
           "all_time_low_date": "2026-10-30",
           "history": [
             {
+              "date": "2026-11-04",
+              "price": 119.0,
+              "available": true
+            },
+            {
               "date": "2026-11-03",
               "price": 119.0,
               "available": true
@@ -7292,6 +7392,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7313,7 +7418,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller)"
           }
         },
@@ -7324,6 +7429,11 @@
           "all_time_low": 99.0,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 99.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 99.0,
@@ -7354,6 +7464,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7375,7 +7490,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Could not extract price from page"
           }
         },
@@ -7386,6 +7501,11 @@
           "all_time_low": 119.0,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 119.0,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 119.0,
@@ -7416,6 +7536,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7437,7 +7562,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791)"
           }
         }
@@ -7458,6 +7583,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7479,8 +7609,8 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
-            "error": "Could not extract price from page"
+            "date": "2026-11-04",
+            "error": "Failed to fetch page after retries (HTTPError: 404 Client Error: Not Found for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
         "https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition": {
@@ -7491,6 +7621,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7512,7 +7647,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
@@ -7524,6 +7659,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7545,7 +7685,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 404 Client Error: Not Found for url: https://www.officeworks.com.au/shop/officeworks/p/nintendo-switch-2-pro-controller-zelda-40th-anniv-edition-ns2ctrlzel)"
           }
         },
@@ -7556,6 +7696,11 @@
           "all_time_low": 129.95,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-04",
+              "price": 129.95,
+              "available": true
+            },
             {
               "date": "2026-11-03",
               "price": 129.95,
@@ -7595,6 +7740,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7616,7 +7766,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/336729-nintendo-switch-2-pro-controller-resident-evil-requiem-edition)"
           }
         },
@@ -7628,6 +7778,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-04",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-03",
               "price": null,
               "available": false
@@ -7649,7 +7804,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-03",
+            "date": "2026-11-04",
             "error": "Could not extract price from page"
           }
         }
