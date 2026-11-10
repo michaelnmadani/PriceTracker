@@ -288,6 +288,37 @@
       "category": "gaming",
       "target_price": 99,
       "alert_enabled": true
+    },
+    {
+      "id": "lgap60470",
+      "name": "LEGO City Explorers Arctic Polar Express Train (60470)",
+      "urls": [
+        {
+          "url": "https://www.lego.com/en-au/product/60470",
+          "label": "LEGO Official"
+        },
+        {
+          "url": "https://lego.bricksmegastore.com/products/lego-city-explorers-arctic-polar-express-train",
+          "label": "Bricks Megastore"
+        },
+        {
+          "url": "https://www.target.com.au/p/lego-city-explorers-arctic-polar-express-train-6-47/71499598",
+          "label": "Target"
+        },
+        {
+          "url": "https://www.kmart.com.au/product/lego-city-explorers-arctic-polar-express-train-60470-89164716/",
+          "label": "Kmart"
+        },
+        {
+          "url": "https://www.theiconic.com.au/60470-explorers-arctic-polar-express-train-2679756.html",
+          "label": "The Iconic"
+        }
+      ],
+      "added_date": "2026-11-10",
+      "active": true,
+      "category": "other",
+      "target_price": 200,
+      "alert_enabled": true
     }
   ]
 }
