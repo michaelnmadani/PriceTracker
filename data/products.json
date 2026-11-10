@@ -45,7 +45,8 @@
       "active": true,
       "category": "electronics",
       "target_price": 100,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "a5claot9",
