@@ -211,7 +211,8 @@
       "active": true,
       "category": "gaming",
       "target_price": 75,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "ns2procbk",
