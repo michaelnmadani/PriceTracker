@@ -137,7 +137,8 @@
       "active": true,
       "category": "other",
       "target_price": 130,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "orknobba",
