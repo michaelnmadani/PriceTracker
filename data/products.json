@@ -28,7 +28,8 @@
       "active": true,
       "category": "electronics",
       "target_price": 500,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "nr93nxf1",
