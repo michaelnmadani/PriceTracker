@@ -49,4 +49,5 @@ jobs:
           git config user.email "bot@pricetracker.local"
           git add data/prices.json docs/data/
           git diff --staged --quiet || git commit -m "Update prices $(date -u +%Y-%m-%d)"
+          git pull --rebase origin claude/product-price-tracker-FwFd5
           git push origin claude/product-price-tracker-FwFd5
