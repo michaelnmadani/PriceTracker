@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-10T02:59:52.644117+00:00",
+  "last_updated": "2026-11-10T22:56:02.090102+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -12,8 +12,8 @@
           "history": [
             {
               "date": "2026-11-10",
-              "price": null,
-              "available": false
+              "price": 849.0,
+              "available": true
             },
             {
               "date": "2026-11-09",
@@ -1140,11 +1140,7 @@
               "price": 899.0,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-10",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://au.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer)"
-          }
+          ]
         }
       },
       "best_current_price": 849.0,
@@ -3434,7 +3430,11 @@
               "price": 129.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-11-10",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.anycubic.au/products/wash-cure-3?variant=49965303660838)"
+          }
         }
       },
       "best_current_price": 129.0,
@@ -5738,8 +5738,8 @@
           "history": [
             {
               "date": "2026-11-10",
-              "price": null,
-              "available": false
+              "price": 269.0,
+              "available": true
             },
             {
               "date": "2026-11-09",
@@ -6031,11 +6031,7 @@
               "price": 299.0,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-10",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers)"
-          }
+          ]
         }
       },
       "best_current_price": 269.0,
@@ -6316,7 +6312,7 @@
           ],
           "last_error": {
             "date": "2026-11-10",
-            "error": "Could not extract price from page"
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker)"
           }
         }
       },
@@ -8337,7 +8333,7 @@
           ],
           "last_error": {
             "date": "2026-11-10",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791)"
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791)"
           }
         }
       },
@@ -8414,7 +8410,7 @@
           ],
           "last_error": {
             "date": "2026-11-10",
-            "error": "Could not extract price from page"
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
         "https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition": {
@@ -8555,15 +8551,15 @@
         },
         "https://www.cityofgames.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition": {
           "label": "City of Games",
-          "current_price": 129.95,
+          "current_price": 139.95,
           "current_availability": true,
           "all_time_low": 129.95,
           "all_time_low_date": "2026-10-30",
           "history": [
             {
               "date": "2026-11-10",
-              "price": null,
-              "available": false
+              "price": 139.95,
+              "available": true
             },
             {
               "date": "2026-11-09",
@@ -8615,14 +8611,10 @@
               "price": 129.95,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-10",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.cityofgames.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
-          }
+          ]
         }
       },
-      "best_current_price": 129.95,
+      "best_current_price": 139.95,
       "best_current_source": "City of Games",
       "overall_all_time_low": 129.95,
       "overall_all_time_low_date": "2026-10-30",
@@ -8772,6 +8764,101 @@
       "overall_all_time_low": null,
       "overall_all_time_low_date": null,
       "overall_all_time_low_source": null
+    },
+    "lgap60470": {
+      "urls": {
+        "https://www.lego.com/en-au/product/60470": {
+          "label": "LEGO Official",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-10",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-10",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/60470)"
+          }
+        },
+        "https://lego.bricksmegastore.com/products/lego-city-explorers-arctic-polar-express-train": {
+          "label": "Bricks Megastore",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-10",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-10",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://lego.bricksmegastore.com/products/lego-city-explorers-arctic-polar-express-train)"
+          }
+        },
+        "https://www.target.com.au/p/lego-city-explorers-arctic-polar-express-train-6-47/71499598": {
+          "label": "Target",
+          "current_price": 259.0,
+          "current_availability": true,
+          "all_time_low": 259.0,
+          "all_time_low_date": "2026-11-10",
+          "history": [
+            {
+              "date": "2026-11-10",
+              "price": 259.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.kmart.com.au/product/lego-city-explorers-arctic-polar-express-train-60470-89164716/": {
+          "label": "Kmart",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-10",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-10",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/lego-city-explorers-arctic-polar-express-train-60470-89164716/)"
+          }
+        },
+        "https://www.theiconic.com.au/60470-explorers-arctic-polar-express-train-2679756.html": {
+          "label": "The Iconic",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-10",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-10",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.theiconic.com.au/60470-explorers-arctic-polar-express-train-2679756.html)"
+          }
+        }
+      },
+      "best_current_price": 259.0,
+      "best_current_source": "Target",
+      "overall_all_time_low": 259.0,
+      "overall_all_time_low_date": "2026-11-10",
+      "overall_all_time_low_source": "Target"
     }
   }
 }
