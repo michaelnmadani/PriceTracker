@@ -158,7 +158,8 @@
       "active": true,
       "category": "other",
       "target_price": 5,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "ywmbphy1",
