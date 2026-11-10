@@ -289,7 +289,8 @@
       "active": true,
       "category": "gaming",
       "target_price": 99,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "lgap60470",
