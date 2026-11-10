@@ -13,7 +13,8 @@
       "active": true,
       "category": "electronics",
       "target_price": 700,
-      "alert_enabled": true
+      "alert_enabled": true,
+      "archived": true
     },
     {
       "id": "k2wj0tq1",
