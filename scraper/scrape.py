@@ -78,6 +78,10 @@ def run_scraper(product_id: str | None = None):
             print(f"Skipping inactive product: {name}")
             continue
 
+        if product.get("archived", False):
+            print(f"Skipping archived product: {name}")
+            continue
+
         urls = product.get("urls", [])
         if not urls:
             print(f"Skipping product with no URLs: {name}")

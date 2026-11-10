@@ -10,6 +10,9 @@ function renderTable(data) {
   if (data.length === 0) {
     tableContainer.classList.add('hidden');
     emptyState.classList.remove('hidden');
+    emptyState.innerHTML = App.currentTab === 'archived'
+      ? 'No archived products. Click <strong>Archive</strong> on a product to move it here.'
+      : 'No products tracked yet. Click <strong>"+ Add Product"</strong> to get started.';
     return;
   }
 
@@ -68,8 +71,12 @@ function createProductRow(product) {
       }
     </td>
     <td class="sparkline-cell">${buildSparkline(product)}</td>
-    <td>
+    <td class="actions-cell">
       <button class="btn btn-sm btn-secondary view-chart-btn" data-product-id="${product.id}">Detail</button>
+      ${product.is_archived
+        ? `<button class="btn btn-sm btn-unarchive unarchive-btn" data-product-id="${escapeHtml(product.id)}" data-product-name="${escapeHtml(product.name)}">Unarchive</button>`
+        : `<button class="btn btn-sm btn-archive archive-btn" data-product-id="${escapeHtml(product.id)}" data-product-name="${escapeHtml(product.name)}">Archive</button>`
+      }
     </td>
   `;
 
@@ -99,6 +106,16 @@ function createProductRow(product) {
   tr.querySelector('.view-chart-btn').addEventListener('click', () => {
     showPriceChart(product);
   });
+
+  // Archive / Unarchive button
+  const archiveBtn = tr.querySelector('.archive-btn');
+  const unarchiveBtn = tr.querySelector('.unarchive-btn');
+  if (archiveBtn) {
+    archiveBtn.addEventListener('click', () => openArchiveIssue(product.id, product.name, true));
+  }
+  if (unarchiveBtn) {
+    unarchiveBtn.addEventListener('click', () => openArchiveIssue(product.id, product.name, false));
+  }
 
   return tr;
 }
@@ -194,6 +211,14 @@ function buildSparkline(product) {
     <polyline points="${line}" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
     <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="2.5" fill="#3b82f6"/>
   </svg>`;
+}
+
+function openArchiveIssue(productId, productName, archive) {
+  const action = archive ? 'Archive' : 'Unarchive';
+  const title = encodeURIComponent(`[${action} Product] ${productId}`);
+  const body = encodeURIComponent(`${action} product: ${productName}`);
+  const url = `https://github.com/michaelnmadani/PriceTracker/issues/new?title=${title}&body=${body}`;
+  window.open(url, '_blank', 'noopener');
 }
 
 function escapeHtml(str) {

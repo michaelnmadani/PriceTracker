@@ -12,6 +12,7 @@ const App = {
   sortDirection: 'asc',
   searchQuery: '',
   categoryFilter: '',
+  currentTab: 'active',
 };
 
 async function loadData() {
@@ -55,6 +56,7 @@ function mergeData() {
   App.mergedData = App.products
     .filter(p => p.active !== false)
     .map(product => {
+      const isArchived = product.archived === true;
       const priceEntry = App.prices[product.id] || {};
       const urlEntries = priceEntry.urls || {};
 
@@ -104,13 +106,22 @@ function mergeData() {
         at_target: atTarget,
         at_all_time_low: atAllTimeLow,
         url_entries: urlEntries,
+        is_archived: isArchived,
       };
     });
 }
 
+function getActiveData() {
+  return App.mergedData.filter(p => !p.is_archived);
+}
+
+function getArchivedData() {
+  return App.mergedData.filter(p => p.is_archived);
+}
+
 function populateCategories() {
   const categories = new Set();
-  App.mergedData.forEach(p => {
+  getActiveData().forEach(p => {
     if (p.category) categories.add(p.category);
   });
 
@@ -127,15 +138,22 @@ function populateCategories() {
 }
 
 function updateSummary() {
-  const data = App.mergedData;
+  const data = getActiveData();
+  const archivedData = getArchivedData();
   document.getElementById('total-products').textContent = data.length;
   document.getElementById('at-all-time-low').textContent = data.filter(p => p.at_all_time_low).length;
   document.getElementById('active-alerts').textContent = data.filter(p => p.at_target && p.alert_enabled).length;
   document.getElementById('unavailable-count').textContent = data.filter(p => !p.available && p.best_price != null).length;
+
+  // Update tab counts
+  const activeTab = document.getElementById('tab-active');
+  const archivedTab = document.getElementById('tab-archived');
+  if (activeTab) activeTab.textContent = `Active (${data.length})`;
+  if (archivedTab) archivedTab.textContent = `Archived (${archivedData.length})`;
 }
 
 function getFilteredData() {
-  let data = App.mergedData;
+  let data = App.currentTab === 'archived' ? getArchivedData() : getActiveData();
 
   if (App.searchQuery) {
     const q = App.searchQuery.toLowerCase();
@@ -213,6 +231,16 @@ document.addEventListener('DOMContentLoaded', () => {
         App.sortDirection = 'asc';
       }
       updateSortIcons();
+      renderTable(getFilteredData());
+    });
+  });
+
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      App.currentTab = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
       renderTable(getFilteredData());
     });
   });

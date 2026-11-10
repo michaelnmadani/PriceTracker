@@ -188,6 +188,40 @@ main {
   max-width: 300px;
 }
 
+/* Tabs */
+.tab-bar {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.tab-btn {
+  padding: 0.4rem 1.1rem;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab-btn:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.tab-btn.active {
+  background: var(--bg-card);
+  color: var(--text);
+  border-color: var(--border);
+  position: relative;
+  z-index: 1;
+  margin-bottom: -1px;
+}
+
 /* Table */
 .table-wrapper {
   overflow-x: auto;
@@ -264,6 +298,35 @@ main {
 .sparkline-svg {
   display: block;
   vertical-align: middle;
+}
+
+/* Archive / Unarchive buttons */
+.btn-archive {
+  background: none;
+  color: var(--text-muted);
+  border-color: var(--border);
+  margin-left: 0.25rem;
+}
+
+.btn-archive:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: #fff0f0;
+}
+
+.btn-unarchive {
+  background: none;
+  color: var(--success);
+  border-color: #c3e6cb;
+  margin-left: 0.25rem;
+}
+
+.btn-unarchive:hover {
+  background: #d1e7dd;
+}
+
+.actions-cell {
+  white-space: nowrap;
 }
 
 /* Expandable sub-rows */
