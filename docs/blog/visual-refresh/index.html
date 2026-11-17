@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Tracker visual refresh: before &amp; after</title>
+  <style>
+    :root {
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: #f5f6f8;
+      line-height: 1.6;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+    .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 2.5rem; max-width: 62ch; }
+    section { margin-bottom: 3.5rem; }
+    h2 { font-size: 1.3rem; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
+    h2 .num { color: var(--accent); margin-right: 0.35rem; }
+    section > p { margin: 0 0 0.75rem; color: #334155; max-width: 68ch; }
+    ul.changes { margin: 0 0 1rem; padding-left: 1.2rem; color: #334155; }
+    ul.changes li { margin: 0.15rem 0; }
+
+    /* ---- Before / after slider (copy this block + the script below into your blog) ---- */
+    .ba-slider {
+      --pos: 50%;
+      position: relative;
+      margin: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      background: #fff;
+      user-select: none;
+      touch-action: pan-y;
+    }
+    .ba-slider.is-narrow { max-width: 390px; margin: 0 auto; }
+    .ba-slider img { display: block; width: 100%; height: auto; pointer-events: none; }
+    .ba-slider .ba-after {
+      position: absolute;
+      inset: 0;
+      clip-path: inset(0 0 0 var(--pos));
+    }
+    .ba-slider .ba-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--pos);
+      width: 2px;
+      margin-left: -1px;
+      background: #fff;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
+      pointer-events: none;
+    }
+    .ba-slider .ba-handle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 6 3 12 9 18'/%3E%3Cpolyline points='15 6 21 12 15 18'/%3E%3C/svg%3E") no-repeat center;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.25);
+    }
+    .ba-slider .ba-label {
+      position: absolute;
+      top: 12px;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(15, 23, 42, 0.72);
+      pointer-events: none;
+    }
+    .ba-slider .ba-label-before { left: 12px; }
+    .ba-slider .ba-label-after { right: 12px; background: rgba(37, 99, 235, 0.9); }
+    .ba-slider input[type="range"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: ew-resize;
+    }
+    .ba-slider:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+    /* ---- end slider ---- */
+
+    footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Price Tracker: a visual refresh</h1>
+    <p class="lede">I tidied up the look of my free Australian price tracker without changing how it works. Drag each slider to compare the old version (left) with the new one (right).</p>
+
+    <section>
+      <h2>The whole page</h2>
+      <p>All the changes together, at the same screen size.</p>
+      <figure class="ba-slider">
+        <img src="img/00-overall-before.webp" alt="Price tracker before the refresh" width="2560" height="1800">
+        <img class="ba-after" src="img/00-overall-after.webp" alt="Price tracker after the refresh" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the whole page before and after">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">1</span>Header and summary cards</h2>
+      <p>Every number used to be the same blue, so "0 alerts" looked as important as "5 at all-time low".</p>
+      <ul class="changes">
+        <li>The header now lines up with the content below it, and has a small logo.</li>
+        <li>Each card has its own colour: green for all-time lows, amber for alerts, red for unavailable.</li>
+        <li>Cards showing zero are greyed out, so the ones that need attention stand out.</li>
+        <li>A short line under each number explains what it counts.</li>
+      </ul>
+      <figure class="ba-slider">
+        <img src="img/01-header-cards-before.webp" alt="Header and summary cards before" width="2560" height="1800">
+        <img class="ba-after" src="img/01-header-cards-after.webp" alt="Header and summary cards after" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the header and summary cards">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>One toolbar</h2>
+      <p>The search box, category filter and Active/Archived tabs were on two separate rows. Now they share one.</p>
+      <ul class="changes">
+        <li>The Active/Archived tabs are now a toggle switch on the left.</li>
+        <li>Search and category sit on the right, and the search box has a magnifying-glass icon.</li>
+        <li>Input boxes get a blue outline when you click into them.</li>
+      </ul>
+      <figure class="ba-slider">
+        <img src="img/02-toolbar-tabs-before.webp" alt="Toolbar before" width="2560" height="1800">
+        <img class="ba-after" src="img/02-toolbar-tabs-after.webp" alt="Toolbar after" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the toolbar">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>Shorter, clearer product rows</h2>
+      <p>Each row was three lines tall, and the Change column said "$0.00" on almost every product. Now all 8 products fit on one screen.</p>
+      <ul class="changes">
+        <li>The category is a small tag, with the number of stores next to it.</li>
+        <li>The cheapest store now sits under the price ("at Officeworks") instead of under the name.</li>
+        <li>The Change column shows a dash when nothing changed, and ▲/▼ in red or green when something did.</li>
+        <li>The Target column also says how far away you are, e.g. "$10.00 to go".</li>
+        <li>Dates read "30 Oct 2026" instead of "2026-10-30".</li>
+      </ul>
+      <figure class="ba-slider">
+        <img src="img/03-product-rows-before.webp" alt="Product rows before" width="2560" height="1800">
+        <img class="ba-after" src="img/03-product-rows-after.webp" alt="Product rows after" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the product rows">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span>Sparklines that show direction</h2>
+      <p>Every 90-day mini chart was blue, so you couldn't tell a price rise from a price drop at a glance.</p>
+      <ul class="changes">
+        <li>The line is green if the price went down over 90 days, red if it went up, and grey if it didn't change.</li>
+        <li>The % change is shown next to each chart.</li>
+        <li>A dashed amber line marks your target price when it falls inside the chart.</li>
+        <li>Products whose price never changed show a plain centred line.</li>
+      </ul>
+      <figure class="ba-slider">
+        <img src="img/04-sparklines-before.webp" alt="Sparklines before" width="2560" height="1800">
+        <img class="ba-after" src="img/04-sparklines-after.webp" alt="Sparklines after" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the sparklines">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span>Retailer breakdown</h2>
+      <p>When you expanded a product, stores where the scraper hadn't found a price still said "In Stock". That was wrong.</p>
+      <ul class="changes">
+        <li>Stores are sorted cheapest first, and the best one gets a green "Best" tag and a green edge.</li>
+        <li>Stores with no price now say "No price found" in grey.</li>
+        <li>Store links look like the rest of the page and have a ↗ to show they open the store's site.</li>
+      </ul>
+      <figure class="ba-slider">
+        <img src="img/05-retailers-before.webp" alt="Retailer breakdown before" width="2560" height="1800">
+        <img class="ba-after" src="img/05-retailers-after.webp" alt="Retailer breakdown after" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the retailer breakdown">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span>Price history chart</h2>
+      <p>The detail chart had a dot on every day, tilted date labels, and prices to the cent on the side.</p>
+      <ul class="changes">
+        <li>Three boxes at the top show the best price, all-time low and target.</li>
+        <li>A clean line with no dots; a dot only appears when you hover over a day.</li>
+        <li>Dates read "19 Oct", prices on the side are whole dollars, and the background grid is lighter.</li>
+        <li>The target line's label now includes the amount, e.g. "Target $200.00".</li>
+      </ul>
+      <figure class="ba-slider">
+        <img src="img/06-chart-before.webp" alt="Price history chart before" width="2560" height="1800">
+        <img class="ba-after" src="img/06-chart-after.webp" alt="Price history chart after" width="2560" height="1800">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the price history chart">
+      </figure>
+    </section>
+
+    <section>
+      <h2><span class="num">7</span>Cards on mobile</h2>
+      <p>On a phone, the table was cut off after three columns. Now each product is its own card.</p>
+      <ul class="changes">
+        <li>Each card shows the price, stock, all-time low, target, the 90-day sparkline and full-width buttons.</li>
+        <li>The store breakdown expands as small cards under the product.</li>
+        <li>The header stays on one line.</li>
+      </ul>
+      <figure class="ba-slider is-narrow">
+        <img src="img/07-mobile-before.webp" alt="Mobile layout before" width="780" height="1688">
+        <img class="ba-after" src="img/07-mobile-after.webp" alt="Mobile layout after" width="780" height="1688">
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the mobile layout">
+      </figure>
+    </section>
+
+    <footer>
+      All screenshots are from the live tracker on 17 Nov 2026, with the same data before and after.
+    </footer>
+  </main>
+
+  <script>
+    document.querySelectorAll('.ba-slider').forEach(slider => {
+      const range = slider.querySelector('input[type="range"]');
+      const update = () => slider.style.setProperty('--pos', range.value + '%');
+      range.addEventListener('input', update);
+      update();
+    });
+  </script>
+</body>
+</html>

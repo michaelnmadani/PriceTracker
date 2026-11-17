@@ -8,23 +8,48 @@ let currentProduct = null;
 let currentRange = 30;
 
 const CHART_COLORS = [
-  '#0d6efd', '#198754', '#dc3545', '#ffc107', '#6f42c1',
-  '#0dcaf0', '#fd7e14', '#20c997', '#d63384', '#6610f2',
+  '#2563eb', '#16a34a', '#db2777', '#7c3aed', '#ea580c',
+  '#0891b2', '#ca8a04', '#475569', '#dc2626', '#4f46e5',
 ];
+
+function shortDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' });
+}
 
 function showPriceChart(product) {
   currentProduct = product;
   currentRange = 30;
 
-  document.getElementById('chart-title').textContent = `Price History: ${product.name}`;
+  document.getElementById('chart-title').textContent = product.name;
+  renderChartStats(product);
 
-  // Update active range button
-  document.querySelectorAll('.chart-controls .btn').forEach(btn => {
+  document.querySelectorAll('.chart-controls .tab-btn').forEach(btn => {
     btn.classList.toggle('active', parseInt(btn.dataset.range) === currentRange);
   });
 
   renderChart();
   document.getElementById('chart-modal').classList.remove('hidden');
+}
+
+function renderChartStats(product) {
+  const stat = (label, value, sub, cls = '') => `
+    <div class="chart-stat ${cls}">
+      <span class="chart-stat-label">${label}</span>
+      <span class="chart-stat-value">${value}</span>
+      ${sub ? `<span class="chart-stat-sub">${sub}</span>` : ''}
+    </div>`;
+
+  let targetSub = '';
+  if (product.target_price != null && product.best_price != null) {
+    targetSub = product.at_target ? 'Reached' : `$${(product.best_price - product.target_price).toFixed(2)} to go`;
+  }
+
+  document.getElementById('chart-stats').innerHTML = [
+    stat('Best price', formatPrice(product.best_price), product.best_source ? `at ${escapeHtml(product.best_source)}` : ''),
+    stat('All-time low', formatPrice(product.all_time_low), formatDate(product.all_time_low_date), 'stat-low'),
+    stat('Target', formatPrice(product.target_price), targetSub, 'stat-target'),
+  ].join('');
 }
 
 function renderChart() {
@@ -36,11 +61,6 @@ function renderChart() {
     priceChart.destroy();
   }
 
-  const urlEntries = currentProduct.url_entries || {};
-  const datasets = [];
-  let colorIndex = 0;
-
-  // Calculate date cutoff
   let cutoffDate = null;
   if (currentRange > 0) {
     const cutoff = new Date();
@@ -48,83 +68,79 @@ function renderChart() {
     cutoffDate = cutoff.toISOString().split('T')[0];
   }
 
-  for (const [url, urlData] of Object.entries(urlEntries)) {
-    const history = urlData.history || [];
-    const color = CHART_COLORS[colorIndex % CHART_COLORS.length];
+  const withData = Object.entries(currentProduct.url_entries || {})
+    .filter(([, d]) => (d.history || []).some(h => h.price != null));
+  const single = withData.length === 1;
+  const datasets = [];
 
-    // Filter by date range and reverse to chronological order
-    let filtered = [...history].reverse();
+  withData.forEach(([url, urlData], i) => {
+    const color = CHART_COLORS[i % CHART_COLORS.length];
+
+    let filtered = [...(urlData.history || [])].reverse();
     if (cutoffDate) {
       filtered = filtered.filter(h => h.date >= cutoffDate);
     }
 
     const dataPoints = filtered
       .filter(h => h.price != null)
-      .map(h => ({
-        x: h.date,
-        y: h.price,
-      }));
+      .map(h => ({ x: h.date, y: h.price }));
 
-    // Mark unavailable points
     const unavailablePoints = filtered
       .filter(h => h.price != null && !h.available)
-      .map(h => ({
-        x: h.date,
-        y: h.price,
-      }));
+      .map(h => ({ x: h.date, y: h.price }));
 
     datasets.push({
       label: urlData.label || url,
       data: dataPoints,
       borderColor: color,
-      backgroundColor: color + '20',
+      backgroundColor: single ? color + '14' : color,
       borderWidth: 2,
-      pointRadius: dataPoints.length > 60 ? 0 : 3,
-      pointHoverRadius: 5,
-      tension: 0.1,
-      fill: false,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      pointHoverBorderWidth: 2,
+      pointHoverBackgroundColor: '#fff',
+      tension: 0,
+      fill: single ? 'start' : false,
     });
 
-    // Add unavailable markers as a separate dataset
     if (unavailablePoints.length > 0) {
       datasets.push({
-        label: `${urlData.label || url} (Unavailable)`,
+        label: `${urlData.label || url} (unavailable)`,
         data: unavailablePoints,
-        borderColor: 'transparent',
-        backgroundColor: '#dc3545',
-        pointRadius: 6,
+        borderColor: '#dc2626',
+        backgroundColor: '#dc2626',
+        pointRadius: 5,
         pointStyle: 'crossRot',
         showLine: false,
       });
     }
+  });
 
-    colorIndex++;
-  }
-
-  // Add target price line if set
   if (currentProduct.target_price != null) {
-    // Find the date range from all datasets
     let allDates = [];
-    datasets.forEach(ds => {
-      ds.data.forEach(d => allDates.push(d.x));
-    });
+    datasets.forEach(ds => ds.data.forEach(d => allDates.push(d.x)));
     allDates = [...new Set(allDates)].sort();
 
     if (allDates.length > 0) {
       datasets.push({
-        label: 'Target Price',
+        label: `Target ${formatPrice(currentProduct.target_price)}`,
         data: [
           { x: allDates[0], y: currentProduct.target_price },
           { x: allDates[allDates.length - 1], y: currentProduct.target_price },
         ],
-        borderColor: '#ffc107',
-        borderDash: [8, 4],
-        borderWidth: 2,
+        borderColor: '#f59e0b',
+        backgroundColor: '#f59e0b',
+        borderDash: [6, 4],
+        borderWidth: 1.5,
         pointRadius: 0,
+        pointHoverRadius: 0,
         fill: false,
       });
     }
   }
+
+  Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+  Chart.defaults.color = '#64748b';
 
   priceChart = new Chart(ctx, {
     type: 'line',
@@ -132,41 +148,47 @@ function renderChart() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      interaction: {
-        mode: 'index',
-        intersect: false,
-      },
+      interaction: { mode: 'index', intersect: false },
       scales: {
         x: {
           type: 'category',
-          title: { display: true, text: 'Date' },
+          grid: { display: false },
+          border: { color: '#e2e8f0' },
           ticks: {
-            maxTicksLimit: 12,
-            maxRotation: 45,
+            maxTicksLimit: 8,
+            maxRotation: 0,
+            callback: function (value) { return shortDate(this.getLabelForValue(value)); },
           },
         },
         y: {
-          title: { display: true, text: 'Price ($)' },
+          grace: '5%',
+          grid: { color: '#f1f5f9' },
+          border: { display: false },
           ticks: {
-            callback: (value) => '$' + value.toFixed(2),
+            maxTicksLimit: 6,
+            callback: (value) => '$' + Math.round(value).toLocaleString('en-AU'),
           },
         },
       },
       plugins: {
         tooltip: {
+          backgroundColor: '#0f172a',
+          padding: 10,
+          cornerRadius: 8,
+          boxPadding: 4,
+          usePointStyle: true,
           callbacks: {
-            label: (ctx) => {
-              const label = ctx.dataset.label || '';
-              const value = ctx.parsed.y;
-              return `${label}: $${value.toFixed(2)}`;
-            },
+            title: (items) => items.length ? formatDate(items[0].label) : '',
+            label: (ctx) => `${ctx.dataset.label}: $${ctx.parsed.y.toFixed(2)}`,
           },
         },
         legend: {
           position: 'bottom',
           labels: {
             usePointStyle: true,
-            padding: 15,
+            pointStyle: 'line',
+            boxWidth: 18,
+            padding: 16,
           },
         },
       },
@@ -174,12 +196,11 @@ function renderChart() {
   });
 }
 
-// Event listeners for range buttons
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.chart-controls .btn').forEach(btn => {
+  document.querySelectorAll('.chart-controls .tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       currentRange = parseInt(btn.dataset.range);
-      document.querySelectorAll('.chart-controls .btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.chart-controls .tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       renderChart();
     });

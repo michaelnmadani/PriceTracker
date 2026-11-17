@@ -144,6 +144,9 @@ function updateSummary() {
   document.getElementById('at-all-time-low').textContent = data.filter(p => p.at_all_time_low).length;
   document.getElementById('active-alerts').textContent = data.filter(p => p.at_target && p.alert_enabled).length;
   document.getElementById('unavailable-count').textContent = data.filter(p => !p.available && p.best_price != null).length;
+  document.querySelectorAll('.summary-cards .card').forEach(card => {
+    card.classList.toggle('is-zero', card.querySelector('.card-value').textContent === '0');
+  });
 
   // Update tab counts
   const activeTab = document.getElementById('tab-active');
@@ -198,10 +201,26 @@ function formatPrice(price) {
 }
 
 function formatChange(change) {
-  if (change == null) return '<span class="price-same">—</span>';
-  if (change > 0) return `<span class="price-up">+$${change.toFixed(2)}</span>`;
-  if (change < 0) return `<span class="price-down">-$${Math.abs(change).toFixed(2)}</span>`;
-  return '<span class="price-same">$0.00</span>';
+  if (change == null || Math.abs(change) < 0.005) return '<span class="price-same">—</span>';
+  if (change > 0) return `<span class="change-pill price-up">▲ $${change.toFixed(2)}</span>`;
+  return `<span class="change-pill price-down">▼ $${Math.abs(change).toFixed(2)}</span>`;
+}
+
+function formatDate(isoDate) {
+  if (!isoDate) return '';
+  const d = new Date(isoDate + 'T00:00:00');
+  return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function formatTarget(product) {
+  if (product.target_price == null) return '<span class="price-same">—</span>';
+  const target = formatPrice(product.target_price);
+  if (product.at_target && product.alert_enabled) {
+    return `<span class="badge badge-alert">At target</span><div class="cell-sub">${target}</div>`;
+  }
+  if (product.best_price == null) return `<div>${target}</div>`;
+  const gap = product.best_price - product.target_price;
+  return `<div>${target}</div><div class="cell-sub">$${gap.toFixed(2)} to go</div>`;
 }
 
 // Event listeners
@@ -236,10 +255,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Tab switching
-  document.querySelectorAll('.tab-btn').forEach(btn => {
+  document.querySelectorAll('.toolbar .tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       App.currentTab = btn.dataset.tab;
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.toolbar .tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       renderTable(getFilteredData());
     });

@@ -12,47 +12,60 @@
   <div id="alert-banner" class="alert-banner hidden"></div>
 
   <header>
-    <div class="header-content">
-      <h1>Price Tracker</h1>
-      <p id="last-updated" class="subtitle">Loading...</p>
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="currentColor"/>
+          <polyline points="5,15 10,10 13,13 19,7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="15,7 19,7 19,11" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h1>Price Tracker</h1>
+          <p id="last-updated" class="subtitle">Loading...</p>
+        </div>
+      </div>
+      <button id="add-product-btn" class="btn btn-primary">+ Add Product</button>
     </div>
-    <button id="add-product-btn" class="btn btn-primary">+ Add Product</button>
   </header>
 
   <main>
     <!-- Summary Cards -->
     <section id="summary" class="summary-cards">
-      <div class="card">
+      <div class="card card-total">
+        <span class="card-label">Tracking</span>
         <span class="card-value" id="total-products">0</span>
-        <span class="card-label">Products</span>
+        <span class="card-hint">active products</span>
       </div>
-      <div class="card">
+      <div class="card card-atl">
+        <span class="card-label">All-time low</span>
         <span class="card-value" id="at-all-time-low">0</span>
-        <span class="card-label">At All-Time Low</span>
+        <span class="card-hint">at their lowest price</span>
       </div>
-      <div class="card">
+      <div class="card card-alert">
+        <span class="card-label">Price alerts</span>
         <span class="card-value" id="active-alerts">0</span>
-        <span class="card-label">Price Alerts</span>
+        <span class="card-hint">at or below target</span>
       </div>
-      <div class="card">
-        <span class="card-value" id="unavailable-count">0</span>
+      <div class="card card-unavail">
         <span class="card-label">Unavailable</span>
+        <span class="card-value" id="unavailable-count">0</span>
+        <span class="card-hint">out of stock everywhere</span>
       </div>
     </section>
 
-    <!-- Filters -->
-    <section class="filters">
-      <input type="text" id="search-input" placeholder="Search products..." class="search-input">
-      <select id="category-filter" class="filter-select">
-        <option value="">All Categories</option>
-      </select>
+    <!-- Toolbar: tabs + filters -->
+    <section class="toolbar">
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" data-tab="active" id="tab-active" role="tab">Active</button>
+        <button class="tab-btn" data-tab="archived" id="tab-archived" role="tab">Archived</button>
+      </div>
+      <div class="filters">
+        <input type="search" id="search-input" placeholder="Search products..." class="search-input">
+        <select id="category-filter" class="filter-select">
+          <option value="">All categories</option>
+        </select>
+      </div>
     </section>
-
-    <!-- Tabs -->
-    <div class="tab-bar">
-      <button class="tab-btn active" data-tab="active" id="tab-active">Active</button>
-      <button class="tab-btn" data-tab="archived" id="tab-archived">Archived</button>
-    </div>
 
     <!-- Product Table -->
     <section id="product-table-container">
@@ -65,9 +78,9 @@
               <th data-sort="availability">Availability <span class="sort-icon"></span></th>
               <th data-sort="all_time_low">All-Time Low <span class="sort-icon"></span></th>
               <th data-sort="price_change">Change <span class="sort-icon"></span></th>
-              <th data-sort="alert">Alert <span class="sort-icon"></span></th>
-              <th>90 Day Chart</th>
-              <th>Actions</th>
+              <th data-sort="alert">Target <span class="sort-icon"></span></th>
+              <th>Last 90 days</th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="product-tbody">
@@ -84,14 +97,18 @@
   <div id="chart-modal" class="modal hidden">
     <div class="modal-content modal-large">
       <div class="modal-header">
-        <h2 id="chart-title">Price History</h2>
+        <div>
+          <p class="modal-eyebrow">Price history</p>
+          <h2 id="chart-title">Price History</h2>
+        </div>
         <button class="modal-close" data-close-modal="chart-modal">&times;</button>
       </div>
-      <div class="chart-controls">
-        <button class="btn btn-sm active" data-range="30">30 Days</button>
-        <button class="btn btn-sm" data-range="90">90 Days</button>
-        <button class="btn btn-sm" data-range="365">1 Year</button>
-        <button class="btn btn-sm" data-range="0">All Time</button>
+      <div id="chart-stats" class="chart-stats"></div>
+      <div class="chart-controls tab-bar">
+        <button class="tab-btn active" data-range="30">30 days</button>
+        <button class="tab-btn" data-range="90">90 days</button>
+        <button class="tab-btn" data-range="365">1 year</button>
+        <button class="tab-btn" data-range="0">All time</button>
       </div>
       <div class="chart-container">
         <canvas id="price-chart"></canvas>
