@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-17T03:14:53.846774+00:00",
+  "last_updated": "2026-11-18T02:38:25.902699+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -3453,6 +3453,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-18",
+              "price": 45.0,
+              "available": true
+            },
+            {
               "date": "2026-11-17",
               "price": 45.0,
               "available": true
@@ -4625,6 +4630,11 @@
           "all_time_low": 66.0,
           "all_time_low_date": "2026-03-23",
           "history": [
+            {
+              "date": "2026-11-18",
+              "price": 66.0,
+              "available": true
+            },
             {
               "date": "2026-11-17",
               "price": 66.0,
@@ -5799,6 +5809,11 @@
           "all_time_low_date": "2026-10-01",
           "history": [
             {
+              "date": "2026-11-18",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-11-17",
               "price": 299.0,
               "available": true
@@ -6147,6 +6162,11 @@
           "all_time_low_date": "2026-09-14",
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -6443,7 +6463,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Could not extract price from page"
           }
         }
@@ -6463,6 +6483,11 @@
           "all_time_low": 769.0,
           "all_time_low_date": "2026-09-18",
           "history": [
+            {
+              "date": "2026-11-18",
+              "price": 769.0,
+              "available": true
+            },
             {
               "date": "2026-11-17",
               "price": 769.0,
@@ -8115,6 +8140,11 @@
           "all_time_low_date": "2026-10-30",
           "history": [
             {
+              "date": "2026-11-18",
+              "price": 119.0,
+              "available": true
+            },
+            {
               "date": "2026-11-17",
               "price": 119.0,
               "available": true
@@ -8214,6 +8244,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -8305,7 +8340,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller)"
           }
         },
@@ -8316,6 +8351,11 @@
           "all_time_low": 99.0,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-18",
+              "price": 109.0,
+              "available": true
+            },
             {
               "date": "2026-11-17",
               "price": 109.0,
@@ -8416,6 +8456,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -8507,7 +8552,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Could not extract price from page"
           }
         },
@@ -8518,6 +8563,11 @@
           "all_time_low": 119.0,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-18",
+              "price": 119.0,
+              "available": true
+            },
             {
               "date": "2026-11-17",
               "price": 119.0,
@@ -8618,6 +8668,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -8709,7 +8764,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791)"
           }
         }
@@ -8730,6 +8785,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -8821,7 +8881,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Could not extract price from page"
           }
         },
@@ -8833,6 +8893,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -8924,7 +8989,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
@@ -8936,6 +9001,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -9027,7 +9097,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 404 Client Error: Not Found for url: https://www.officeworks.com.au/shop/officeworks/p/nintendo-switch-2-pro-controller-zelda-40th-anniv-edition-ns2ctrlzel)"
           }
         },
@@ -9038,6 +9108,11 @@
           "all_time_low": 129.95,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-18",
+              "price": 139.95,
+              "available": true
+            },
             {
               "date": "2026-11-17",
               "price": 139.95,
@@ -9292,6 +9367,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -9333,7 +9413,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/60470)"
           }
         },
@@ -9345,6 +9425,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -9386,7 +9471,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://lego.bricksmegastore.com/products/lego-city-explorers-arctic-polar-express-train)"
           }
         },
@@ -9397,6 +9482,11 @@
           "all_time_low": 259.0,
           "all_time_low_date": "2026-11-10",
           "history": [
+            {
+              "date": "2026-11-18",
+              "price": 259.0,
+              "available": true
+            },
             {
               "date": "2026-11-17",
               "price": 259.0,
@@ -9447,6 +9537,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -9488,7 +9583,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/lego-city-explorers-arctic-polar-express-train-60470-89164716/)"
           }
         },
@@ -9500,6 +9595,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-18",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-17",
               "price": null,
               "available": false
@@ -9541,7 +9641,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-17",
+            "date": "2026-11-18",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.theiconic.com.au/60470-explorers-arctic-polar-express-train-2679756.html)"
           }
         }
