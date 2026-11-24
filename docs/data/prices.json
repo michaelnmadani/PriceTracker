@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-23T01:10:16.085719+00:00",
+  "last_updated": "2026-11-24T05:01:18.362470+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -3453,6 +3453,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-24",
+              "price": 45.0,
+              "available": true
+            },
+            {
               "date": "2026-11-23",
               "price": 45.0,
               "available": true
@@ -4656,6 +4661,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": 66.0,
               "available": true
@@ -5840,7 +5850,11 @@
               "price": 66.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-11-24",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-rinseoff)"
+          }
         }
       },
       "best_current_price": 66.0,
@@ -5858,6 +5872,11 @@
           "all_time_low": 269.0,
           "all_time_low_date": "2026-10-01",
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-23",
               "price": null,
@@ -6220,7 +6239,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers)"
           }
         }
@@ -6240,6 +6259,11 @@
           "all_time_low": 649.0,
           "all_time_low_date": "2026-09-14",
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-23",
               "price": null,
@@ -6567,7 +6591,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker)"
           }
         }
@@ -6587,6 +6611,11 @@
           "all_time_low": 769.0,
           "all_time_low_date": "2026-09-18",
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-23",
               "price": null,
@@ -6894,7 +6923,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker-plus-and-sleeve-folio-polymerweave-mist-green)"
           }
         }
@@ -8273,6 +8302,11 @@
           "all_time_low_date": "2026-10-30",
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": 119.0,
               "available": true
@@ -8392,7 +8426,11 @@
               "price": 119.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-11-24",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller)"
+          }
         },
         "https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller": {
           "label": "EB Games",
@@ -8401,6 +8439,11 @@
           "all_time_low": null,
           "all_time_low_date": null,
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-23",
               "price": null,
@@ -8523,7 +8566,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller)"
           }
         },
@@ -8534,6 +8577,11 @@
           "all_time_low": 94.0,
           "all_time_low_date": "2026-11-20",
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": 94.0,
+              "available": true
+            },
             {
               "date": "2026-11-23",
               "price": 94.0,
@@ -8664,6 +8712,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -8785,7 +8838,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Could not extract price from page"
           }
         },
@@ -8796,6 +8849,11 @@
           "all_time_low": 119.0,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": 119.0,
+              "available": true
+            },
             {
               "date": "2026-11-23",
               "price": 119.0,
@@ -8926,6 +8984,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9047,7 +9110,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791)"
           }
         }
@@ -9068,6 +9131,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9189,7 +9257,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
@@ -9201,6 +9269,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9322,7 +9395,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
@@ -9334,6 +9407,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9455,7 +9533,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 404 Client Error: Not Found for url: https://www.officeworks.com.au/shop/officeworks/p/nintendo-switch-2-pro-controller-zelda-40th-anniv-edition-ns2ctrlzel)"
           }
         },
@@ -9467,6 +9545,11 @@
           "all_time_low_date": "2026-10-30",
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9588,7 +9671,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.cityofgames.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         }
@@ -9754,6 +9837,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9825,7 +9913,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/60470)"
           }
         },
@@ -9837,6 +9925,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -9908,7 +10001,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://lego.bricksmegastore.com/products/lego-city-explorers-arctic-polar-express-train)"
           }
         },
@@ -9919,6 +10012,11 @@
           "all_time_low": 207.2,
           "all_time_low_date": "2026-11-23",
           "history": [
+            {
+              "date": "2026-11-24",
+              "price": 207.2,
+              "available": true
+            },
             {
               "date": "2026-11-23",
               "price": 207.2,
@@ -9999,6 +10097,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -10070,7 +10173,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/lego-city-explorers-arctic-polar-express-train-60470-89164716/)"
           }
         },
@@ -10082,6 +10185,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-24",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-23",
               "price": null,
               "available": false
@@ -10153,7 +10261,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-23",
+            "date": "2026-11-24",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.theiconic.com.au/60470-explorers-arctic-polar-express-train-2679756.html)"
           }
         }
