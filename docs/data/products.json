@@ -327,6 +327,61 @@
       "category": "other",
       "target_price": 200,
       "alert_enabled": true
+    },
+    {
+      "id": "tabA11pl",
+      "name": "Samsung Galaxy Tab A11+ Wi-Fi 128GB Grey (SM-X230)",
+      "urls": [
+        {
+          "url": "https://www.samsung.com/au/tablets/galaxy-tab-a/galaxy-tab-a11-plus-gray-128gb-sm-x230nzaaxsa/",
+          "label": "Samsung AU"
+        },
+        {
+          "url": "https://www.jbhifi.com.au/products/samsung-galaxy-tab-a11-11-wi-fi-128gb-grey",
+          "label": "JB Hi-Fi"
+        },
+        {
+          "url": "https://www.mwave.com.au/products/samsung-galaxy-tab-a11-tablet-128gb-wifi-grey-ac94905",
+          "label": "Mwave"
+        },
+        {
+          "url": "https://www.thegoodguys.com.au/samsung-galaxy-tab-a11-plus-wi-fi-6gb-128gb-grey-sm-x230nzaaxsa",
+          "label": "The Good Guys"
+        },
+        {
+          "url": "https://www.harveynorman.com.au/samsung-galaxy-tab-a11-plus-wifi-128gb-grey.html",
+          "label": "Harvey Norman"
+        },
+        {
+          "url": "https://www.binglee.com.au/products/samsung-tab-a11-wi-fi-6gb128gb-sm-x230nzaaxsa",
+          "label": "Bing Lee"
+        },
+        {
+          "url": "https://www.costco.com.au/c/Samsung-Galaxy-Tab-A11-Wi-Fi-128GB-Grey-SM-X230NZAAXSA/p/250395",
+          "label": "Costco"
+        },
+        {
+          "url": "https://www.appliancesonline.com.au/product/samsung-galaxy-tab-a11-plus-wifi-128gb-grey-11901350656/",
+          "label": "Appliances Online"
+        },
+        {
+          "url": "https://www.digitalcamerawarehouse.com.au/Samsung-Galaxy-Tab-A11-SM-X230-11-128GB-Storage-6GB-RAM-GREY-151726",
+          "label": "Digital Camera Warehouse"
+        },
+        {
+          "url": "https://www.bunnings.com.au/samsung-galaxy-tab-a11-wi-fi-6gb-128gb-11-grey_p1047164",
+          "label": "Bunnings"
+        },
+        {
+          "url": "https://www.woolworths.com.au/shop/productdetails/1126599271",
+          "label": "Woolworths"
+        }
+      ],
+      "added_date": "2026-11-26",
+      "active": true,
+      "category": "electronics",
+      "target_price": 249,
+      "alert_enabled": true
     }
   ]
 }
