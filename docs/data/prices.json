@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-26T21:16:49.209841+00:00",
+  "last_updated": "2026-11-26T21:18:42.378750+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -4672,8 +4672,8 @@
           "history": [
             {
               "date": "2026-11-26",
-              "price": null,
-              "available": false
+              "price": 66.0,
+              "available": true
             },
             {
               "date": "2026-11-25",
@@ -5870,11 +5870,7 @@
               "price": 66.0,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-26",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-rinseoff)"
-          }
+          ]
         }
       },
       "best_current_price": 66.0,
@@ -6632,7 +6628,7 @@
           ],
           "last_error": {
             "date": "2026-11-26",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker)"
+            "error": "Could not extract price from page"
           }
         }
       },
@@ -6653,8 +6649,8 @@
           "history": [
             {
               "date": "2026-11-26",
-              "price": null,
-              "available": false
+              "price": 769.0,
+              "available": true
             },
             {
               "date": "2026-11-25",
@@ -6971,11 +6967,7 @@
               "price": 769.0,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-26",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker-plus-and-sleeve-folio-polymerweave-mist-green)"
-          }
+          ]
         }
       },
       "best_current_price": 769.0,
@@ -8353,8 +8345,8 @@
           "history": [
             {
               "date": "2026-11-26",
-              "price": null,
-              "available": false
+              "price": 119.0,
+              "available": true
             },
             {
               "date": "2026-11-25",
@@ -8486,11 +8478,7 @@
               "price": 119.0,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-26",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller)"
-          }
+          ]
         },
         "https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller": {
           "label": "EB Games",
@@ -10490,21 +10478,17 @@
         },
         "https://www.jbhifi.com.au/products/samsung-galaxy-tab-a11-11-wi-fi-128gb-grey": {
           "label": "JB Hi-Fi",
-          "current_price": null,
+          "current_price": 299.0,
           "current_availability": true,
-          "all_time_low": null,
-          "all_time_low_date": null,
+          "all_time_low": 299.0,
+          "all_time_low_date": "2026-11-26",
           "history": [
             {
               "date": "2026-11-26",
-              "price": null,
-              "available": false
+              "price": 299.0,
+              "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-26",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/samsung-galaxy-tab-a11-11-wi-fi-128gb-grey)"
-          }
+          ]
         },
         "https://www.mwave.com.au/products/samsung-galaxy-tab-a11-tablet-128gb-wifi-grey-ac94905": {
           "label": "Mwave",
