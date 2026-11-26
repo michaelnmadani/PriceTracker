@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-26T03:14:38.229917+00:00",
+  "last_updated": "2026-11-26T21:16:49.209841+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -10471,6 +10471,193 @@
       "overall_all_time_low": 207.2,
       "overall_all_time_low_date": "2026-11-23",
       "overall_all_time_low_source": "Target"
+    },
+    "tabA11pl": {
+      "urls": {
+        "https://www.samsung.com/au/tablets/galaxy-tab-a/galaxy-tab-a11-plus-gray-128gb-sm-x230nzaaxsa/": {
+          "label": "Samsung AU",
+          "current_price": 299.0,
+          "current_availability": true,
+          "all_time_low": 299.0,
+          "all_time_low_date": "2026-11-26",
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": 299.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.jbhifi.com.au/products/samsung-galaxy-tab-a11-11-wi-fi-128gb-grey": {
+          "label": "JB Hi-Fi",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-26",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/samsung-galaxy-tab-a11-11-wi-fi-128gb-grey)"
+          }
+        },
+        "https://www.mwave.com.au/products/samsung-galaxy-tab-a11-tablet-128gb-wifi-grey-ac94905": {
+          "label": "Mwave",
+          "current_price": 279.0,
+          "current_availability": true,
+          "all_time_low": 279.0,
+          "all_time_low_date": "2026-11-26",
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": 279.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.thegoodguys.com.au/samsung-galaxy-tab-a11-plus-wi-fi-6gb-128gb-grey-sm-x230nzaaxsa": {
+          "label": "The Good Guys",
+          "current_price": 299.0,
+          "current_availability": true,
+          "all_time_low": 299.0,
+          "all_time_low_date": "2026-11-26",
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": 299.0,
+              "available": true
+            }
+          ]
+        },
+        "https://www.harveynorman.com.au/samsung-galaxy-tab-a11-plus-wifi-128gb-grey.html": {
+          "label": "Harvey Norman",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-26",
+            "error": "Could not extract price from page"
+          }
+        },
+        "https://www.binglee.com.au/products/samsung-tab-a11-wi-fi-6gb128gb-sm-x230nzaaxsa": {
+          "label": "Bing Lee",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-26",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.binglee.com.au/products/samsung-tab-a11-wi-fi-6gb128gb-sm-x230nzaaxsa)"
+          }
+        },
+        "https://www.costco.com.au/c/Samsung-Galaxy-Tab-A11-Wi-Fi-128GB-Grey-SM-X230NZAAXSA/p/250395": {
+          "label": "Costco",
+          "current_price": 289.99,
+          "current_availability": true,
+          "all_time_low": 289.99,
+          "all_time_low_date": "2026-11-26",
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": 289.99,
+              "available": true
+            }
+          ]
+        },
+        "https://www.appliancesonline.com.au/product/samsung-galaxy-tab-a11-plus-wifi-128gb-grey-11901350656/": {
+          "label": "Appliances Online",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-26",
+            "error": "Could not extract price from page"
+          }
+        },
+        "https://www.digitalcamerawarehouse.com.au/Samsung-Galaxy-Tab-A11-SM-X230-11-128GB-Storage-6GB-RAM-GREY-151726": {
+          "label": "Digital Camera Warehouse",
+          "current_price": 479.95,
+          "current_availability": true,
+          "all_time_low": 479.95,
+          "all_time_low_date": "2026-11-26",
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": 479.95,
+              "available": true
+            }
+          ]
+        },
+        "https://www.bunnings.com.au/samsung-galaxy-tab-a11-wi-fi-6gb-128gb-11-grey_p1047164": {
+          "label": "Bunnings",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-26",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.bunnings.com.au/samsung-galaxy-tab-a11-wi-fi-6gb-128gb-11-grey_p1047164)"
+          }
+        },
+        "https://www.woolworths.com.au/shop/productdetails/1126599271": {
+          "label": "Woolworths",
+          "current_price": null,
+          "current_availability": true,
+          "all_time_low": null,
+          "all_time_low_date": null,
+          "history": [
+            {
+              "date": "2026-11-26",
+              "price": null,
+              "available": false
+            }
+          ],
+          "last_error": {
+            "date": "2026-11-26",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.woolworths.com.au/shop/productdetails/1126599271)"
+          }
+        }
+      },
+      "best_current_price": 279.0,
+      "best_current_source": "Mwave",
+      "overall_all_time_low": 279.0,
+      "overall_all_time_low_date": "2026-11-26",
+      "overall_all_time_low_source": "Mwave"
     }
   }
 }
