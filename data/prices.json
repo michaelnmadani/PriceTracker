@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-27T03:18:32.640880+00:00",
+  "last_updated": "2026-11-28T02:58:36.437949+00:00",
   "entries": {
     "ad5kqspd": {
       "urls": {
@@ -3453,6 +3453,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -4659,7 +4664,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-resinaway-resin-3d-print-cleaner-icy-mint-scent)"
           }
         }
@@ -4680,6 +4685,11 @@
           "all_time_low_date": "2026-03-23",
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -5886,7 +5896,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://3dcaststore.com.au/collections/resin-3d-print-cleaning/products/monocure3d-rinseoff)"
           }
         }
@@ -5906,6 +5916,11 @@
           "all_time_low": 269.0,
           "all_time_low_date": "2026-10-01",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-27",
               "price": null,
@@ -6288,7 +6303,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://au.elegoo.com/collections/elegoo-mercury-washing-and-curing-station/products/elegoo-wash-and-cure-station-3-0-for-resin-3d-printers)"
           }
         }
@@ -6308,6 +6323,11 @@
           "all_time_low": 649.0,
           "all_time_low_date": "2026-09-14",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-27",
               "price": null,
@@ -6655,7 +6675,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker)"
           }
         }
@@ -6675,6 +6695,11 @@
           "all_time_low": 769.0,
           "all_time_low_date": "2026-09-18",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-27",
               "price": null,
@@ -7002,7 +7027,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/remarkable-paper-pure-with-marker-plus-and-sleeve-folio-polymerweave-mist-green)"
           }
         }
@@ -8381,6 +8406,11 @@
           "all_time_low_date": "2026-10-30",
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -8522,7 +8552,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller)"
           }
         },
@@ -8534,6 +8564,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -8675,7 +8710,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/325319-nintendo-switch-2-pro-controller)"
           }
         },
@@ -8686,6 +8721,11 @@
           "all_time_low": 94.0,
           "all_time_low_date": "2026-11-20",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 94.0,
+              "available": true
+            },
             {
               "date": "2026-11-27",
               "price": 94.0,
@@ -8836,6 +8876,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -8977,7 +9022,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Could not extract price from page"
           }
         },
@@ -8988,6 +9033,11 @@
           "all_time_low": 119.0,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 119.0,
+              "available": true
+            },
             {
               "date": "2026-11-27",
               "price": 119.0,
@@ -9138,6 +9188,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -9279,7 +9334,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/nintendo-switch-2-pro-controller-110011791)"
           }
         }
@@ -9300,6 +9355,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -9441,8 +9501,8 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
-            "error": "Could not extract price from page"
+            "date": "2026-11-28",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
         "https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition": {
@@ -9453,6 +9513,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -9594,7 +9659,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.ebgames.com.au/product/nintendo-switch-2/384138-nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
           }
         },
@@ -9606,6 +9671,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -9747,17 +9817,22 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 404 Client Error: Not Found for url: https://www.officeworks.com.au/shop/officeworks/p/nintendo-switch-2-pro-controller-zelda-40th-anniv-edition-ns2ctrlzel)"
           }
         },
         "https://www.cityofgames.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition": {
           "label": "City of Games",
           "current_price": 139.95,
-          "current_availability": true,
+          "current_availability": false,
           "all_time_low": 129.95,
           "all_time_low_date": "2026-10-30",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 139.95,
+              "available": false
+            },
             {
               "date": "2026-11-27",
               "price": null,
@@ -9898,11 +9973,7 @@
               "price": 129.95,
               "available": true
             }
-          ],
-          "last_error": {
-            "date": "2026-11-27",
-            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.cityofgames.com.au/products/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition)"
-          }
+          ]
         }
       },
       "best_current_price": 139.95,
@@ -10066,6 +10137,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10157,7 +10233,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.lego.com/en-au/product/60470)"
           }
         },
@@ -10169,6 +10245,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10260,7 +10341,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://lego.bricksmegastore.com/products/lego-city-explorers-arctic-polar-express-train)"
           }
         },
@@ -10271,6 +10352,11 @@
           "all_time_low": 207.2,
           "all_time_low_date": "2026-11-23",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 207.2,
+              "available": true
+            },
             {
               "date": "2026-11-27",
               "price": 207.2,
@@ -10371,6 +10457,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10462,7 +10553,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.kmart.com.au/product/lego-city-explorers-arctic-polar-express-train-60470-89164716/)"
           }
         },
@@ -10474,6 +10565,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10565,7 +10661,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.theiconic.com.au/60470-explorers-arctic-polar-express-train-2679756.html)"
           }
         }
@@ -10586,6 +10682,11 @@
           "all_time_low_date": "2026-11-26",
           "history": [
             {
+              "date": "2026-11-28",
+              "price": 299.0,
+              "available": true
+            },
+            {
               "date": "2026-11-27",
               "price": 299.0,
               "available": true
@@ -10605,6 +10706,11 @@
           "all_time_low_date": "2026-11-26",
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": 299.0,
               "available": true
@@ -10614,7 +10720,11 @@
               "price": 299.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-11-28",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.jbhifi.com.au/products/samsung-galaxy-tab-a11-11-wi-fi-128gb-grey)"
+          }
         },
         "https://www.mwave.com.au/products/samsung-galaxy-tab-a11-tablet-128gb-wifi-grey-ac94905": {
           "label": "Mwave",
@@ -10623,6 +10733,11 @@
           "all_time_low": 279.0,
           "all_time_low_date": "2026-11-26",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
             {
               "date": "2026-11-27",
               "price": 416.84,
@@ -10633,7 +10748,11 @@
               "price": 279.0,
               "available": true
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-11-28",
+            "error": "Failed to fetch page after retries (HTTPError: 429 Client Error: Too Many Requests for url: https://www.mwave.com.au/products/samsung-galaxy-tab-a11-tablet-128gb-wifi-grey-ac94905)"
+          }
         },
         "https://www.thegoodguys.com.au/samsung-galaxy-tab-a11-plus-wi-fi-6gb-128gb-grey-sm-x230nzaaxsa": {
           "label": "The Good Guys",
@@ -10642,6 +10761,11 @@
           "all_time_low": 299.0,
           "all_time_low_date": "2026-11-26",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 299.0,
+              "available": true
+            },
             {
               "date": "2026-11-27",
               "price": 299.0,
@@ -10662,6 +10786,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10673,7 +10802,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Could not extract price from page"
           }
         },
@@ -10685,6 +10814,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10696,17 +10830,22 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.binglee.com.au/products/samsung-tab-a11-wi-fi-6gb128gb-sm-x230nzaaxsa)"
           }
         },
         "https://www.costco.com.au/c/Samsung-Galaxy-Tab-A11-Wi-Fi-128GB-Grey-SM-X230NZAAXSA/p/250395": {
           "label": "Costco",
-          "current_price": 289.99,
-          "current_availability": true,
-          "all_time_low": 289.99,
-          "all_time_low_date": "2026-11-26",
+          "current_price": 269.99,
+          "current_availability": false,
+          "all_time_low": 269.99,
+          "all_time_low_date": "2026-11-28",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 269.99,
+              "available": false
+            },
             {
               "date": "2026-11-27",
               "price": 289.99,
@@ -10727,6 +10866,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10738,7 +10882,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Could not extract price from page"
           }
         },
@@ -10749,6 +10893,11 @@
           "all_time_low": 479.95,
           "all_time_low_date": "2026-11-26",
           "history": [
+            {
+              "date": "2026-11-28",
+              "price": 479.95,
+              "available": true
+            },
             {
               "date": "2026-11-27",
               "price": 479.95,
@@ -10769,6 +10918,11 @@
           "all_time_low_date": null,
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": null,
               "available": false
@@ -10780,7 +10934,7 @@
             }
           ],
           "last_error": {
-            "date": "2026-11-27",
+            "date": "2026-11-28",
             "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.bunnings.com.au/samsung-galaxy-tab-a11-wi-fi-6gb-128gb-11-grey_p1047164)"
           }
         },
@@ -10792,6 +10946,11 @@
           "all_time_low_date": "2026-11-27",
           "history": [
             {
+              "date": "2026-11-28",
+              "price": null,
+              "available": false
+            },
+            {
               "date": "2026-11-27",
               "price": 499.0,
               "available": true
@@ -10801,14 +10960,18 @@
               "price": null,
               "available": false
             }
-          ]
+          ],
+          "last_error": {
+            "date": "2026-11-28",
+            "error": "Failed to fetch page after retries (HTTPError: 403 Client Error: Forbidden for url: https://www.woolworths.com.au/shop/productdetails/1126599271)"
+          }
         }
       },
-      "best_current_price": 289.99,
+      "best_current_price": 269.99,
       "best_current_source": "Costco",
-      "overall_all_time_low": 279.0,
-      "overall_all_time_low_date": "2026-11-26",
-      "overall_all_time_low_source": "Mwave"
+      "overall_all_time_low": 269.99,
+      "overall_all_time_low_date": "2026-11-28",
+      "overall_all_time_low_source": "Costco"
     }
   }
 }
